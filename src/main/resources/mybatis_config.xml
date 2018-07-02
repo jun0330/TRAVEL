@@ -58,8 +58,8 @@
 		<property name="dataSource" ref="dataSource"></property>
 	</bean>
 	<!-- 事务配置注解 -->
+	<!-- <tx:annotation-driven transaction-manager="transactionManager" /> -->
 	<tx:annotation-driven transaction-manager="transactionManager" />
-	
 	<!-- 配置监控JDBC spring_jdbc -->
 	<bean id="druid-stat-interceptor"
 		class="com.alibaba.druid.support.spring.stat.DruidStatInterceptor">

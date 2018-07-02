@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.etc.dao.AdminMapper">
+  <resultMap id="BaseResultMap" type="com.etc.entity.Admin">
+    <id column="adminId" jdbcType="INTEGER" property="adminid" />
+    <result column="adminName" jdbcType="VARCHAR" property="adminname" />
+    <result column="adminPwd" jdbcType="VARCHAR" property="adminpwd" />
+    <result column="regDate" jdbcType="TIMESTAMP" property="regdate" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    adminId, adminName, adminPwd, regDate
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from admin
+    where adminId = #{adminid,jdbcType=INTEGER}
+  </select>
+  <!-- 管理员删除  根据管理员的id -->
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from admin
+    where adminId = #{adminid,jdbcType=INTEGER}
+  </delete>
+  <!-- 管理员注册  -->
+  <insert id="insert" parameterType="com.etc.entity.Admin">
+    insert into admin (adminId, adminName, adminPwd, 
+      regDate)
+    values (#{adminid,jdbcType=INTEGER}, #{adminname,jdbcType=VARCHAR}, #{adminpwd,jdbcType=VARCHAR}, 
+      #{regdate,jdbcType=TIMESTAMP})
+  </insert>
+  <!-- 用户添加,灵活  -->
+  <insert id="insertSelective" parameterType="com.etc.entity.Admin">
+    insert into admin
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="adminid != null">
+        adminId,
+      </if>
+      <if test="adminname != null">
+        adminName,
+      </if>
+      <if test="adminpwd != null">
+        adminPwd,
+      </if>
+      <if test="regdate != null">
+        regDate,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="adminid != null">
+        #{adminid,jdbcType=INTEGER},
+      </if>
+      <if test="adminname != null">
+        #{adminname,jdbcType=VARCHAR},
+      </if>
+      <if test="adminpwd != null">
+        #{adminpwd,jdbcType=VARCHAR},
+      </if>
+      <if test="regdate != null">
+        #{regdate,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <!-- 管理员修改信息,根据管理员ID确定修改的目标 灵活 -->
+  <update id="updateByPrimaryKeySelective" parameterType="com.etc.entity.Admin">
+    update admin
+    <set>
+      <if test="adminname != null">
+        adminName = #{adminname,jdbcType=VARCHAR},
+      </if>
+      <if test="adminpwd != null">
+        adminPwd = #{adminpwd,jdbcType=VARCHAR},
+      </if>
+      <if test="regdate != null">
+        regDate = #{regdate,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where adminId = #{adminid,jdbcType=INTEGER}
+  </update>
+  <!-- 管理员修改基本信息  -->
+  <update id="updateByPrimaryKey" parameterType="com.etc.entity.Admin">
+    update admin
+    set adminName = #{adminname,jdbcType=VARCHAR},
+      adminPwd = #{adminpwd,jdbcType=VARCHAR},
+      regDate = #{regdate,jdbcType=TIMESTAMP}
+    where adminId = #{adminid,jdbcType=INTEGER}
+  </update>
+</mapper>

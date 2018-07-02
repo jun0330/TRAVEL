@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.etc.dao.ViewMapper">
+  <resultMap id="BaseResultMap" type="com.etc.entity.View">
+    <id column="viewId" jdbcType="INTEGER" property="viewid" />
+    <result column="scenicPic" jdbcType="VARCHAR" property="scenicpic" />
+    <result column="viewName" jdbcType="VARCHAR" property="viewname" />
+    <result column="viewAddress" jdbcType="VARCHAR" property="viewaddress" />
+    <result column="viewJobTime" jdbcType="TIMESTAMP" property="viewjobtime" />
+    <result column="viewPrice" jdbcType="DOUBLE" property="viewprice" />
+    <result column="viewIntro" jdbcType="VARCHAR" property="viewintro" />
+    <result column="viewPic1" jdbcType="VARCHAR" property="viewpic1" />
+    <result column="viewPic2" jdbcType="VARCHAR" property="viewpic2" />
+    <result column="viewPic3" jdbcType="VARCHAR" property="viewpic3" />
+    <result column="viewPic4" jdbcType="VARCHAR" property="viewpic4" />
+    <result column="viewPic5" jdbcType="VARCHAR" property="viewpic5" />
+    <result column="scenicId" jdbcType="INTEGER" property="scenicid" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    viewId, scenicPic, viewName, viewAddress, viewJobTime, viewPrice, viewIntro, viewPic1, 
+    viewPic2, viewPic3, viewPic4, viewPic5, scenicId
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from view
+    where viewId = #{viewid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from view
+    where viewId = #{viewid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.etc.entity.View">
+    insert into view (viewId, scenicPic, viewName, 
+      viewAddress, viewJobTime, viewPrice, 
+      viewIntro, viewPic1, viewPic2, 
+      viewPic3, viewPic4, viewPic5, 
+      scenicId)
+    values (#{viewid,jdbcType=INTEGER}, #{scenicpic,jdbcType=VARCHAR}, #{viewname,jdbcType=VARCHAR}, 
+      #{viewaddress,jdbcType=VARCHAR}, #{viewjobtime,jdbcType=TIMESTAMP}, #{viewprice,jdbcType=DOUBLE}, 
+      #{viewintro,jdbcType=VARCHAR}, #{viewpic1,jdbcType=VARCHAR}, #{viewpic2,jdbcType=VARCHAR}, 
+      #{viewpic3,jdbcType=VARCHAR}, #{viewpic4,jdbcType=VARCHAR}, #{viewpic5,jdbcType=VARCHAR}, 
+      #{scenicid,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.etc.entity.View">
+    insert into view
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="viewid != null">
+        viewId,
+      </if>
+      <if test="scenicpic != null">
+        scenicPic,
+      </if>
+      <if test="viewname != null">
+        viewName,
+      </if>
+      <if test="viewaddress != null">
+        viewAddress,
+      </if>
+      <if test="viewjobtime != null">
+        viewJobTime,
+      </if>
+      <if test="viewprice != null">
+        viewPrice,
+      </if>
+      <if test="viewintro != null">
+        viewIntro,
+      </if>
+      <if test="viewpic1 != null">
+        viewPic1,
+      </if>
+      <if test="viewpic2 != null">
+        viewPic2,
+      </if>
+      <if test="viewpic3 != null">
+        viewPic3,
+      </if>
+      <if test="viewpic4 != null">
+        viewPic4,
+      </if>
+      <if test="viewpic5 != null">
+        viewPic5,
+      </if>
+      <if test="scenicid != null">
+        scenicId,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="viewid != null">
+        #{viewid,jdbcType=INTEGER},
+      </if>
+      <if test="scenicpic != null">
+        #{scenicpic,jdbcType=VARCHAR},
+      </if>
+      <if test="viewname != null">
+        #{viewname,jdbcType=VARCHAR},
+      </if>
+      <if test="viewaddress != null">
+        #{viewaddress,jdbcType=VARCHAR},
+      </if>
+      <if test="viewjobtime != null">
+        #{viewjobtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="viewprice != null">
+        #{viewprice,jdbcType=DOUBLE},
+      </if>
+      <if test="viewintro != null">
+        #{viewintro,jdbcType=VARCHAR},
+      </if>
+      <if test="viewpic1 != null">
+        #{viewpic1,jdbcType=VARCHAR},
+      </if>
+      <if test="viewpic2 != null">
+        #{viewpic2,jdbcType=VARCHAR},
+      </if>
+      <if test="viewpic3 != null">
+        #{viewpic3,jdbcType=VARCHAR},
+      </if>
+      <if test="viewpic4 != null">
+        #{viewpic4,jdbcType=VARCHAR},
+      </if>
+      <if test="viewpic5 != null">
+        #{viewpic5,jdbcType=VARCHAR},
+      </if>
+      <if test="scenicid != null">
+        #{scenicid,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.etc.entity.View">
+    update view
+    <set>
+      <if test="scenicpic != null">
+        scenicPic = #{scenicpic,jdbcType=VARCHAR},
+      </if>
+      <if test="viewname != null">
+        viewName = #{viewname,jdbcType=VARCHAR},
+      </if>
+      <if test="viewaddress != null">
+        viewAddress = #{viewaddress,jdbcType=VARCHAR},
+      </if>
+      <if test="viewjobtime != null">
+        viewJobTime = #{viewjobtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="viewprice != null">
+        viewPrice = #{viewprice,jdbcType=DOUBLE},
+      </if>
+      <if test="viewintro != null">
+        viewIntro = #{viewintro,jdbcType=VARCHAR},
+      </if>
+      <if test="viewpic1 != null">
+        viewPic1 = #{viewpic1,jdbcType=VARCHAR},
+      </if>
+      <if test="viewpic2 != null">
+        viewPic2 = #{viewpic2,jdbcType=VARCHAR},
+      </if>
+      <if test="viewpic3 != null">
+        viewPic3 = #{viewpic3,jdbcType=VARCHAR},
+      </if>
+      <if test="viewpic4 != null">
+        viewPic4 = #{viewpic4,jdbcType=VARCHAR},
+      </if>
+      <if test="viewpic5 != null">
+        viewPic5 = #{viewpic5,jdbcType=VARCHAR},
+      </if>
+      <if test="scenicid != null">
+        scenicId = #{scenicid,jdbcType=INTEGER},
+      </if>
+    </set>
+    where viewId = #{viewid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.etc.entity.View">
+    update view
+    set scenicPic = #{scenicpic,jdbcType=VARCHAR},
+      viewName = #{viewname,jdbcType=VARCHAR},
+      viewAddress = #{viewaddress,jdbcType=VARCHAR},
+      viewJobTime = #{viewjobtime,jdbcType=TIMESTAMP},
+      viewPrice = #{viewprice,jdbcType=DOUBLE},
+      viewIntro = #{viewintro,jdbcType=VARCHAR},
+      viewPic1 = #{viewpic1,jdbcType=VARCHAR},
+      viewPic2 = #{viewpic2,jdbcType=VARCHAR},
+      viewPic3 = #{viewpic3,jdbcType=VARCHAR},
+      viewPic4 = #{viewpic4,jdbcType=VARCHAR},
+      viewPic5 = #{viewpic5,jdbcType=VARCHAR},
+      scenicId = #{scenicid,jdbcType=INTEGER}
+    where viewId = #{viewid,jdbcType=INTEGER}
+  </update>
+</mapper>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.etc.dao.ScommentMapper">
+  <resultMap id="BaseResultMap" type="com.etc.entity.Scomment">
+    <id column="sCommentId" jdbcType="INTEGER" property="scommentid" />
+    <result column="sCommentContent" jdbcType="VARCHAR" property="scommentcontent" />
+    <result column="sCommentDate" jdbcType="TIMESTAMP" property="scommentdate" />
+    <result column="userNickName" jdbcType="VARCHAR" property="usernickname" />
+    <result column="viewId" jdbcType="INTEGER" property="viewid" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    sCommentId, sCommentContent, sCommentDate, userNickName, viewId
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from scomment
+    where sCommentId = #{scommentid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from scomment
+    where sCommentId = #{scommentid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.etc.entity.Scomment">
+    insert into scomment (sCommentId, sCommentContent, sCommentDate, 
+      userNickName, viewId)
+    values (#{scommentid,jdbcType=INTEGER}, #{scommentcontent,jdbcType=VARCHAR}, #{scommentdate,jdbcType=TIMESTAMP}, 
+      #{usernickname,jdbcType=VARCHAR}, #{viewid,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.etc.entity.Scomment">
+    insert into scomment
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="scommentid != null">
+        sCommentId,
+      </if>
+      <if test="scommentcontent != null">
+        sCommentContent,
+      </if>
+      <if test="scommentdate != null">
+        sCommentDate,
+      </if>
+      <if test="usernickname != null">
+        userNickName,
+      </if>
+      <if test="viewid != null">
+        viewId,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="scommentid != null">
+        #{scommentid,jdbcType=INTEGER},
+      </if>
+      <if test="scommentcontent != null">
+        #{scommentcontent,jdbcType=VARCHAR},
+      </if>
+      <if test="scommentdate != null">
+        #{scommentdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="usernickname != null">
+        #{usernickname,jdbcType=VARCHAR},
+      </if>
+      <if test="viewid != null">
+        #{viewid,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.etc.entity.Scomment">
+    update scomment
+    <set>
+      <if test="scommentcontent != null">
+        sCommentContent = #{scommentcontent,jdbcType=VARCHAR},
+      </if>
+      <if test="scommentdate != null">
+        sCommentDate = #{scommentdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="usernickname != null">
+        userNickName = #{usernickname,jdbcType=VARCHAR},
+      </if>
+      <if test="viewid != null">
+        viewId = #{viewid,jdbcType=INTEGER},
+      </if>
+    </set>
+    where sCommentId = #{scommentid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.etc.entity.Scomment">
+    update scomment
+    set sCommentContent = #{scommentcontent,jdbcType=VARCHAR},
+      sCommentDate = #{scommentdate,jdbcType=TIMESTAMP},
+      userNickName = #{usernickname,jdbcType=VARCHAR},
+      viewId = #{viewid,jdbcType=INTEGER}
+    where sCommentId = #{scommentid,jdbcType=INTEGER}
+  </update>
+</mapper>

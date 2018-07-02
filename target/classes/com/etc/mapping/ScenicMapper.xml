@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.etc.dao.ScenicMapper">
+  <resultMap id="BaseResultMap" type="com.etc.entity.Scenic">
+    <id column="scenicId" jdbcType="INTEGER" property="scenicid" />
+    <result column="scenicName" jdbcType="VARCHAR" property="scenicname" />
+    <result column="scenicPrice" jdbcType="DOUBLE" property="scenicprice" />
+    <result column="scenidPic" jdbcType="VARCHAR" property="scenidpic" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    scenicId, scenicName, scenicPrice, scenidPic
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from scenic
+    where scenicId = #{scenicid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from scenic
+    where scenicId = #{scenicid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.etc.entity.Scenic">
+    insert into scenic (scenicId, scenicName, scenicPrice, 
+      scenidPic)
+    values (#{scenicid,jdbcType=INTEGER}, #{scenicname,jdbcType=VARCHAR}, #{scenicprice,jdbcType=DOUBLE}, 
+      #{scenidpic,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.etc.entity.Scenic">
+    insert into scenic
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="scenicid != null">
+        scenicId,
+      </if>
+      <if test="scenicname != null">
+        scenicName,
+      </if>
+      <if test="scenicprice != null">
+        scenicPrice,
+      </if>
+      <if test="scenidpic != null">
+        scenidPic,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="scenicid != null">
+        #{scenicid,jdbcType=INTEGER},
+      </if>
+      <if test="scenicname != null">
+        #{scenicname,jdbcType=VARCHAR},
+      </if>
+      <if test="scenicprice != null">
+        #{scenicprice,jdbcType=DOUBLE},
+      </if>
+      <if test="scenidpic != null">
+        #{scenidpic,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.etc.entity.Scenic">
+    update scenic
+    <set>
+      <if test="scenicname != null">
+        scenicName = #{scenicname,jdbcType=VARCHAR},
+      </if>
+      <if test="scenicprice != null">
+        scenicPrice = #{scenicprice,jdbcType=DOUBLE},
+      </if>
+      <if test="scenidpic != null">
+        scenidPic = #{scenidpic,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where scenicId = #{scenicid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.etc.entity.Scenic">
+    update scenic
+    set scenicName = #{scenicname,jdbcType=VARCHAR},
+      scenicPrice = #{scenicprice,jdbcType=DOUBLE},
+      scenidPic = #{scenidpic,jdbcType=VARCHAR}
+    where scenicId = #{scenicid,jdbcType=INTEGER}
+  </update>
+</mapper>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.etc.dao.HotelInfoMapper">
+  <resultMap id="BaseResultMap" type="com.etc.entity.HotelInfo">
+    <id column="hotelInfoId" jdbcType="INTEGER" property="hotelinfoid" />
+    <result column="hotelInfoName" jdbcType="VARCHAR" property="hotelinfoname" />
+    <result column="hotelInfoAddress" jdbcType="VARCHAR" property="hotelinfoaddress" />
+    <result column="hotelInfoPrice" jdbcType="DOUBLE" property="hotelinfoprice" />
+    <result column="hotelInfoIntro" jdbcType="VARCHAR" property="hotelinfointro" />
+    <result column="hotelInfoPic1" jdbcType="VARCHAR" property="hotelinfopic1" />
+    <result column="hotelInfoPic2" jdbcType="VARCHAR" property="hotelinfopic2" />
+    <result column="hotelInfoPic3" jdbcType="VARCHAR" property="hotelinfopic3" />
+    <result column="hotelInfoPic4" jdbcType="VARCHAR" property="hotelinfopic4" />
+    <result column="hotelInfoPic5" jdbcType="VARCHAR" property="hotelinfopic5" />
+    <result column="hotelInfoPic6" jdbcType="VARCHAR" property="hotelinfopic6" />
+    <result column="hotelId" jdbcType="INTEGER" property="hotelid" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    hotelInfoId, hotelInfoName, hotelInfoAddress, hotelInfoPrice, hotelInfoIntro, hotelInfoPic1, 
+    hotelInfoPic2, hotelInfoPic3, hotelInfoPic4, hotelInfoPic5, hotelInfoPic6, hotelId
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from hotelinfo
+    where hotelInfoId = #{hotelinfoid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from hotelinfo
+    where hotelInfoId = #{hotelinfoid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.etc.entity.HotelInfo">
+    insert into hotelinfo (hotelInfoId, hotelInfoName, hotelInfoAddress, 
+      hotelInfoPrice, hotelInfoIntro, hotelInfoPic1, 
+      hotelInfoPic2, hotelInfoPic3, hotelInfoPic4, 
+      hotelInfoPic5, hotelInfoPic6, hotelId
+      )
+    values (#{hotelinfoid,jdbcType=INTEGER}, #{hotelinfoname,jdbcType=VARCHAR}, #{hotelinfoaddress,jdbcType=VARCHAR}, 
+      #{hotelinfoprice,jdbcType=DOUBLE}, #{hotelinfointro,jdbcType=VARCHAR}, #{hotelinfopic1,jdbcType=VARCHAR}, 
+      #{hotelinfopic2,jdbcType=VARCHAR}, #{hotelinfopic3,jdbcType=VARCHAR}, #{hotelinfopic4,jdbcType=VARCHAR}, 
+      #{hotelinfopic5,jdbcType=VARCHAR}, #{hotelinfopic6,jdbcType=VARCHAR}, #{hotelid,jdbcType=INTEGER}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.etc.entity.HotelInfo">
+    insert into hotelinfo
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="hotelinfoid != null">
+        hotelInfoId,
+      </if>
+      <if test="hotelinfoname != null">
+        hotelInfoName,
+      </if>
+      <if test="hotelinfoaddress != null">
+        hotelInfoAddress,
+      </if>
+      <if test="hotelinfoprice != null">
+        hotelInfoPrice,
+      </if>
+      <if test="hotelinfointro != null">
+        hotelInfoIntro,
+      </if>
+      <if test="hotelinfopic1 != null">
+        hotelInfoPic1,
+      </if>
+      <if test="hotelinfopic2 != null">
+        hotelInfoPic2,
+      </if>
+      <if test="hotelinfopic3 != null">
+        hotelInfoPic3,
+      </if>
+      <if test="hotelinfopic4 != null">
+        hotelInfoPic4,
+      </if>
+      <if test="hotelinfopic5 != null">
+        hotelInfoPic5,
+      </if>
+      <if test="hotelinfopic6 != null">
+        hotelInfoPic6,
+      </if>
+      <if test="hotelid != null">
+        hotelId,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="hotelinfoid != null">
+        #{hotelinfoid,jdbcType=INTEGER},
+      </if>
+      <if test="hotelinfoname != null">
+        #{hotelinfoname,jdbcType=VARCHAR},
+      </if>
+      <if test="hotelinfoaddress != null">
+        #{hotelinfoaddress,jdbcType=VARCHAR},
+      </if>
+      <if test="hotelinfoprice != null">
+        #{hotelinfoprice,jdbcType=DOUBLE},
+      </if>
+      <if test="hotelinfointro != null">
+        #{hotelinfointro,jdbcType=VARCHAR},
+      </if>
+      <if test="hotelinfopic1 != null">
+        #{hotelinfopic1,jdbcType=VARCHAR},
+      </if>
+      <if test="hotelinfopic2 != null">
+        #{hotelinfopic2,jdbcType=VARCHAR},
+      </if>
+      <if test="hotelinfopic3 != null">
+        #{hotelinfopic3,jdbcType=VARCHAR},
+      </if>
+      <if test="hotelinfopic4 != null">
+        #{hotelinfopic4,jdbcType=VARCHAR},
+      </if>
+      <if test="hotelinfopic5 != null">
+        #{hotelinfopic5,jdbcType=VARCHAR},
+      </if>
+      <if test="hotelinfopic6 != null">
+        #{hotelinfopic6,jdbcType=VARCHAR},
+      </if>
+      <if test="hotelid != null">
+        #{hotelid,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.etc.entity.HotelInfo">
+    update hotelinfo
+    <set>
+      <if test="hotelinfoname != null">
+        hotelInfoName = #{hotelinfoname,jdbcType=VARCHAR},
+      </if>
+      <if test="hotelinfoaddress != null">
+        hotelInfoAddress = #{hotelinfoaddress,jdbcType=VARCHAR},
+      </if>
+      <if test="hotelinfoprice != null">
+        hotelInfoPrice = #{hotelinfoprice,jdbcType=DOUBLE},
+      </if>
+      <if test="hotelinfointro != null">
+        hotelInfoIntro = #{hotelinfointro,jdbcType=VARCHAR},
+      </if>
+      <if test="hotelinfopic1 != null">
+        hotelInfoPic1 = #{hotelinfopic1,jdbcType=VARCHAR},
+      </if>
+      <if test="hotelinfopic2 != null">
+        hotelInfoPic2 = #{hotelinfopic2,jdbcType=VARCHAR},
+      </if>
+      <if test="hotelinfopic3 != null">
+        hotelInfoPic3 = #{hotelinfopic3,jdbcType=VARCHAR},
+      </if>
+      <if test="hotelinfopic4 != null">
+        hotelInfoPic4 = #{hotelinfopic4,jdbcType=VARCHAR},
+      </if>
+      <if test="hotelinfopic5 != null">
+        hotelInfoPic5 = #{hotelinfopic5,jdbcType=VARCHAR},
+      </if>
+      <if test="hotelinfopic6 != null">
+        hotelInfoPic6 = #{hotelinfopic6,jdbcType=VARCHAR},
+      </if>
+      <if test="hotelid != null">
+        hotelId = #{hotelid,jdbcType=INTEGER},
+      </if>
+    </set>
+    where hotelInfoId = #{hotelinfoid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.etc.entity.HotelInfo">
+    update hotelinfo
+    set hotelInfoName = #{hotelinfoname,jdbcType=VARCHAR},
+      hotelInfoAddress = #{hotelinfoaddress,jdbcType=VARCHAR},
+      hotelInfoPrice = #{hotelinfoprice,jdbcType=DOUBLE},
+      hotelInfoIntro = #{hotelinfointro,jdbcType=VARCHAR},
+      hotelInfoPic1 = #{hotelinfopic1,jdbcType=VARCHAR},
+      hotelInfoPic2 = #{hotelinfopic2,jdbcType=VARCHAR},
+      hotelInfoPic3 = #{hotelinfopic3,jdbcType=VARCHAR},
+      hotelInfoPic4 = #{hotelinfopic4,jdbcType=VARCHAR},
+      hotelInfoPic5 = #{hotelinfopic5,jdbcType=VARCHAR},
+      hotelInfoPic6 = #{hotelinfopic6,jdbcType=VARCHAR},
+      hotelId = #{hotelid,jdbcType=INTEGER}
+    where hotelInfoId = #{hotelinfoid,jdbcType=INTEGER}
+  </update>
+</mapper>

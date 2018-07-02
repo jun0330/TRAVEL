@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.etc.dao.RoomMapper">
+  <resultMap id="BaseResultMap" type="com.etc.entity.Room">
+    <id column="roomId" jdbcType="INTEGER" property="roomid" />
+    <result column="roomTypeOne" jdbcType="VARCHAR" property="roomtypeone" />
+    <result column="roomPriceOne" jdbcType="DOUBLE" property="roompriceone" />
+    <result column="roomImgOne" jdbcType="VARCHAR" property="roomimgone" />
+    <result column="roomTypeTwo" jdbcType="VARCHAR" property="roomtypetwo" />
+    <result column="roomPriceTwo" jdbcType="DOUBLE" property="roompricetwo" />
+    <result column="roomImgTwo" jdbcType="VARCHAR" property="roomimgtwo" />
+    <result column="roomTypeThree" jdbcType="VARCHAR" property="roomtypethree" />
+    <result column="roomPriceThree" jdbcType="DOUBLE" property="roompricethree" />
+    <result column="roomImgThree" jdbcType="VARCHAR" property="roomimgthree" />
+    <result column="hotelInfoId" jdbcType="INTEGER" property="hotelinfoid" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    roomId, roomTypeOne, roomPriceOne, roomImgOne, roomTypeTwo, roomPriceTwo, roomImgTwo, 
+    roomTypeThree, roomPriceThree, roomImgThree, hotelInfoId
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from room
+    where roomId = #{roomid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from room
+    where roomId = #{roomid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.etc.entity.Room">
+    insert into room (roomId, roomTypeOne, roomPriceOne, 
+      roomImgOne, roomTypeTwo, roomPriceTwo, 
+      roomImgTwo, roomTypeThree, roomPriceThree, 
+      roomImgThree, hotelInfoId)
+    values (#{roomid,jdbcType=INTEGER}, #{roomtypeone,jdbcType=VARCHAR}, #{roompriceone,jdbcType=DOUBLE}, 
+      #{roomimgone,jdbcType=VARCHAR}, #{roomtypetwo,jdbcType=VARCHAR}, #{roompricetwo,jdbcType=DOUBLE}, 
+      #{roomimgtwo,jdbcType=VARCHAR}, #{roomtypethree,jdbcType=VARCHAR}, #{roompricethree,jdbcType=DOUBLE}, 
+      #{roomimgthree,jdbcType=VARCHAR}, #{hotelinfoid,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.etc.entity.Room">
+    insert into room
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="roomid != null">
+        roomId,
+      </if>
+      <if test="roomtypeone != null">
+        roomTypeOne,
+      </if>
+      <if test="roompriceone != null">
+        roomPriceOne,
+      </if>
+      <if test="roomimgone != null">
+        roomImgOne,
+      </if>
+      <if test="roomtypetwo != null">
+        roomTypeTwo,
+      </if>
+      <if test="roompricetwo != null">
+        roomPriceTwo,
+      </if>
+      <if test="roomimgtwo != null">
+        roomImgTwo,
+      </if>
+      <if test="roomtypethree != null">
+        roomTypeThree,
+      </if>
+      <if test="roompricethree != null">
+        roomPriceThree,
+      </if>
+      <if test="roomimgthree != null">
+        roomImgThree,
+      </if>
+      <if test="hotelinfoid != null">
+        hotelInfoId,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="roomid != null">
+        #{roomid,jdbcType=INTEGER},
+      </if>
+      <if test="roomtypeone != null">
+        #{roomtypeone,jdbcType=VARCHAR},
+      </if>
+      <if test="roompriceone != null">
+        #{roompriceone,jdbcType=DOUBLE},
+      </if>
+      <if test="roomimgone != null">
+        #{roomimgone,jdbcType=VARCHAR},
+      </if>
+      <if test="roomtypetwo != null">
+        #{roomtypetwo,jdbcType=VARCHAR},
+      </if>
+      <if test="roompricetwo != null">
+        #{roompricetwo,jdbcType=DOUBLE},
+      </if>
+      <if test="roomimgtwo != null">
+        #{roomimgtwo,jdbcType=VARCHAR},
+      </if>
+      <if test="roomtypethree != null">
+        #{roomtypethree,jdbcType=VARCHAR},
+      </if>
+      <if test="roompricethree != null">
+        #{roompricethree,jdbcType=DOUBLE},
+      </if>
+      <if test="roomimgthree != null">
+        #{roomimgthree,jdbcType=VARCHAR},
+      </if>
+      <if test="hotelinfoid != null">
+        #{hotelinfoid,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.etc.entity.Room">
+    update room
+    <set>
+      <if test="roomtypeone != null">
+        roomTypeOne = #{roomtypeone,jdbcType=VARCHAR},
+      </if>
+      <if test="roompriceone != null">
+        roomPriceOne = #{roompriceone,jdbcType=DOUBLE},
+      </if>
+      <if test="roomimgone != null">
+        roomImgOne = #{roomimgone,jdbcType=VARCHAR},
+      </if>
+      <if test="roomtypetwo != null">
+        roomTypeTwo = #{roomtypetwo,jdbcType=VARCHAR},
+      </if>
+      <if test="roompricetwo != null">
+        roomPriceTwo = #{roompricetwo,jdbcType=DOUBLE},
+      </if>
+      <if test="roomimgtwo != null">
+        roomImgTwo = #{roomimgtwo,jdbcType=VARCHAR},
+      </if>
+      <if test="roomtypethree != null">
+        roomTypeThree = #{roomtypethree,jdbcType=VARCHAR},
+      </if>
+      <if test="roompricethree != null">
+        roomPriceThree = #{roompricethree,jdbcType=DOUBLE},
+      </if>
+      <if test="roomimgthree != null">
+        roomImgThree = #{roomimgthree,jdbcType=VARCHAR},
+      </if>
+      <if test="hotelinfoid != null">
+        hotelInfoId = #{hotelinfoid,jdbcType=INTEGER},
+      </if>
+    </set>
+    where roomId = #{roomid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.etc.entity.Room">
+    update room
+    set roomTypeOne = #{roomtypeone,jdbcType=VARCHAR},
+      roomPriceOne = #{roompriceone,jdbcType=DOUBLE},
+      roomImgOne = #{roomimgone,jdbcType=VARCHAR},
+      roomTypeTwo = #{roomtypetwo,jdbcType=VARCHAR},
+      roomPriceTwo = #{roompricetwo,jdbcType=DOUBLE},
+      roomImgTwo = #{roomimgtwo,jdbcType=VARCHAR},
+      roomTypeThree = #{roomtypethree,jdbcType=VARCHAR},
+      roomPriceThree = #{roompricethree,jdbcType=DOUBLE},
+      roomImgThree = #{roomimgthree,jdbcType=VARCHAR},
+      hotelInfoId = #{hotelinfoid,jdbcType=INTEGER}
+    where roomId = #{roomid,jdbcType=INTEGER}
+  </update>
+</mapper>

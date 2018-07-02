@@ -1,5 +1,7 @@
 package com.etc.service.impl;
 
+import java.util.List;
+
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Repository;
@@ -32,7 +34,7 @@ public class HotelInfoServiceImpl implements HotelInfoService {
 	}
 
 	@Override
-	public HotelInfo selectById(Integer hotelinfoId) {
+	public List<HotelInfo> selectById(Integer hotelinfoId) {
 		// TODO Auto-generated method stub
 		return hm.selectByPrimaryKey(hotelinfoId);
 	}

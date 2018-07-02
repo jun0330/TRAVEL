@@ -1,5 +1,7 @@
 package com.etc.service;
 
+import java.util.List;
+
 import org.springframework.stereotype.Repository;
 
 import com.etc.entity.HotelOrder;
@@ -12,7 +14,7 @@ public interface HotelOrderService {
 
     int addSelective(HotelOrder hotelOrder);
 
-    HotelOrder selectById(Integer horderId);
+    List<HotelOrder> selectById(Integer horderId);
 
     int updateByIdSelective(HotelOrder hotelOrder);
 

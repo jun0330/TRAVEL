@@ -1,5 +1,7 @@
 package com.etc.dao;
 
+import java.util.List;
+
 import org.springframework.stereotype.Repository;
 
 import com.etc.entity.Users;
@@ -12,7 +14,7 @@ public interface UsersMapper {
 
     int insertSelective(Users record);
 
-    Users selectByPrimaryKey(Integer userid);
+    List<Users> selectByPrimaryKey(Integer userid);
 
     int updateByPrimaryKeySelective(Users record);
 

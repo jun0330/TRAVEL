@@ -16,7 +16,7 @@ public class ViewOrder {
 
     private Double ticketprice;
 
-    private String ticketdate;
+    private Date ticketdate;
 
     private Double ticketcount;
 
@@ -28,83 +28,111 @@ public class ViewOrder {
 
     private Integer userid;
 
-    public Integer getVorderid() {
-        return vorderid;
-    }
+	public Integer getVorderid() {
+		return vorderid;
+	}
 
-    public void setVorderid(Integer vorderid) {
-        this.vorderid = vorderid;
-    }
 
-    public String getScenicname() {
-        return scenicname;
-    }
+	public void setVorderid(Integer vorderid) {
+		this.vorderid = vorderid;
+	}
 
-    public void setScenicname(String scenicname) {
-        this.scenicname = scenicname == null ? null : scenicname.trim();
-    }
 
-    public Date getVorderdate() {
-        return vorderdate;
-    }
+	public String getScenicname() {
+		return scenicname;
+	}
 
-    public void setVorderdate(Date vorderdate) {
-        this.vorderdate = vorderdate;
-    }
 
-    public Double getTicketprice() {
-        return ticketprice;
-    }
+	public void setScenicname(String scenicname) {
+		this.scenicname = scenicname;
+	}
 
-    public void setTicketprice(Double ticketprice) {
-        this.ticketprice = ticketprice;
-    }
 
-    public String getTicketdate() {
-        return ticketdate;
-    }
+	public Date getVorderdate() {
+		return vorderdate;
+	}
 
-    public void setTicketdate(String ticketdate) {
-        this.ticketdate = ticketdate == null ? null : ticketdate.trim();
-    }
 
-    public Double getTicketcount() {
-        return ticketcount;
-    }
+	public void setVorderdate(Date vorderdate) {
+		this.vorderdate = vorderdate;
+	}
 
-    public void setTicketcount(Double ticketcount) {
-        this.ticketcount = ticketcount;
-    }
 
-    public String getUsername() {
-        return username;
-    }
+	public Double getTicketprice() {
+		return ticketprice;
+	}
 
-    public void setUsername(String username) {
-        this.username = username == null ? null : username.trim();
-    }
 
-    public Integer getUserphone() {
-        return userphone;
-    }
+	public void setTicketprice(Double ticketprice) {
+		this.ticketprice = ticketprice;
+	}
 
-    public void setUserphone(Integer userphone) {
-        this.userphone = userphone;
-    }
 
-    public Integer getUsercard() {
-        return usercard;
-    }
+	public Date getTicketdate() {
+		return ticketdate;
+	}
 
-    public void setUsercard(Integer usercard) {
-        this.usercard = usercard;
-    }
 
-    public Integer getUserid() {
-        return userid;
-    }
+	public void setTicketdate(Date ticketdate) {
+		this.ticketdate = ticketdate;
+	}
 
-    public void setUserid(Integer userid) {
-        this.userid = userid;
-    }
+
+	public Double getTicketcount() {
+		return ticketcount;
+	}
+
+
+	public void setTicketcount(Double ticketcount) {
+		this.ticketcount = ticketcount;
+	}
+
+
+	public String getUsername() {
+		return username;
+	}
+
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+
+	public Integer getUserphone() {
+		return userphone;
+	}
+
+
+	public void setUserphone(Integer userphone) {
+		this.userphone = userphone;
+	}
+
+
+	public Integer getUsercard() {
+		return usercard;
+	}
+
+
+	public void setUsercard(Integer usercard) {
+		this.usercard = usercard;
+	}
+
+
+	public Integer getUserid() {
+		return userid;
+	}
+
+
+	public void setUserid(Integer userid) {
+		this.userid = userid;
+	}
+
+
+	@Override
+	public String toString() {
+		return "ViewOrder [vorderid=" + vorderid + ", scenicname=" + scenicname + ", vorderdate=" + vorderdate
+				+ ", ticketprice=" + ticketprice + ", ticketdate=" + ticketdate + ", ticketcount=" + ticketcount
+				+ ", username=" + username + ", userphone=" + userphone + ", usercard=" + usercard + ", userid="
+				+ userid + "]";
+	}
 }

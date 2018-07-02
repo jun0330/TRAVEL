@@ -1,5 +1,7 @@
 package com.etc.service.impl;
 
+import java.util.List;
+
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Repository;
@@ -33,7 +35,7 @@ public class CommentServiceImpl implements CommentService {
 	}
 
 	@Override
-	public Comment selectById(Integer hcommentId) {
+	public List<Comment> selectById(Integer hcommentId) {
 		// TODO Auto-generated method stub
 		return cm.selectByPrimaryKey(hcommentId);
 	}

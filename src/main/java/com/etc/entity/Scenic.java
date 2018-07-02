@@ -45,4 +45,11 @@ public class Scenic {
     public void setScenidpic(String scenidpic) {
         this.scenidpic = scenidpic == null ? null : scenidpic.trim();
     }
+
+	@Override
+	public String toString() {
+		return "Scenic [scenicid=" + scenicid + ", scenicname=" + scenicname + ", scenicprice=" + scenicprice
+				+ ", scenidpic=" + scenidpic + "]";
+	}
+    
 }

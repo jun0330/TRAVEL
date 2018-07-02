@@ -1,5 +1,7 @@
 package com.etc.service;
 
+import java.util.List;
+
 import org.springframework.stereotype.Repository;
 
 import com.etc.entity.Scenic;
@@ -12,7 +14,7 @@ public interface ScenicService {
 
     int addSelective(Scenic scenic);
 
-    Scenic selectById(Integer scenicId);
+    List<Scenic> selectById(Integer scenicId);
 
     int updateByIdSelective(Scenic scenic);
 

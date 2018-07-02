@@ -1,5 +1,7 @@
 package com.etc.dao;
 
+import java.util.List;
+
 import org.springframework.stereotype.Repository;
 
 import com.etc.entity.View;
@@ -12,7 +14,7 @@ public interface ViewMapper {
 
     int insertSelective(View record);
 
-    View selectByPrimaryKey(Integer viewid);
+    List<View> selectByPrimaryKey(Integer viewid);
 
     int updateByPrimaryKeySelective(View record);
 

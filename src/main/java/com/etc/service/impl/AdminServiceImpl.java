@@ -1,5 +1,7 @@
 package com.etc.service.impl;
 
+import java.util.List;
+
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Repository;
@@ -33,7 +35,7 @@ public class AdminServiceImpl implements AdminService {
 	}
 
 	@Override
-	public Admin queryAdmin(Integer adminId) {
+	public List<Admin> queryAdmin(Integer adminId) {
 		// TODO Auto-generated method stub
 		return am.selectByPrimaryKey(adminId);
 	}
@@ -48,6 +50,12 @@ public class AdminServiceImpl implements AdminService {
 	public int updateById(Admin admin) {
 		// TODO Auto-generated method stub
 		return am.updateByPrimaryKeySelective(admin);
+	}
+	
+	@Override
+	public List<Admin> queryAll() {
+		// TODO Auto-generated method stub
+		return am.getAll();
 	}
 
 }

@@ -1,5 +1,7 @@
 package com.etc.service;
 
+import java.util.List;
+
 import org.springframework.stereotype.Repository;
 
 import com.etc.entity.ViewOrder;
@@ -13,7 +15,7 @@ public interface ViewOrderService {
 
     int addSelective(ViewOrder viewOrder);
 
-    ViewOrder selectById(Integer vorderId);
+    List<ViewOrder> selectById(Integer vorderId);
 
     int updateByIdSelective(ViewOrder viewOrder);
 

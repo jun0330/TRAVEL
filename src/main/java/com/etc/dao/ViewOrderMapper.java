@@ -1,5 +1,7 @@
 package com.etc.dao;
 
+import java.util.List;
+
 import org.springframework.stereotype.Repository;
 
 import com.etc.entity.ViewOrder;
@@ -12,7 +14,7 @@ public interface ViewOrderMapper {
 
     int insertSelective(ViewOrder record);
 
-    ViewOrder selectByPrimaryKey(Integer vorderid);
+    List<ViewOrder> selectByPrimaryKey(Integer vorderid);
 
     int updateByPrimaryKeySelective(ViewOrder record);
 

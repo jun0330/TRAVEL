@@ -1,5 +1,7 @@
 package com.etc.dao;
 
+import java.util.List;
+
 import org.springframework.stereotype.Repository;
 
 import com.etc.entity.Comment;
@@ -17,7 +19,7 @@ public interface CommentMapper {
 
     int insertSelective(Comment record);
 
-    Comment selectByPrimaryKey(Integer hcommentid);
+    List<Comment> selectByPrimaryKey(Integer hcommentid);
 
     int updateByPrimaryKeySelective(Comment record);
 

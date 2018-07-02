@@ -16,7 +16,7 @@ public class Users {
 
     private String userpwd;
 
-    private Date regdate;
+    private String regdate;
 
     public Integer getUserid() {
         return userid;
@@ -50,11 +50,19 @@ public class Users {
         this.userpwd = userpwd == null ? null : userpwd.trim();
     }
 
-    public Date getRegdate() {
-        return regdate;
-    }
+	public String getRegdate() {
+		return regdate;
+	}
 
-    public void setRegdate(Date regdate) {
-        this.regdate = regdate;
-    }
+	public void setRegdate(String regdate) {
+		this.regdate = regdate;
+	}
+
+	@Override
+	public String toString() {
+		return "Users [userid=" + userid + ", useremail=" + useremail + ", usernickname=" + usernickname + ", userpwd="
+				+ userpwd + ", regdate=" + regdate + "]";
+	}
+
+   
 }

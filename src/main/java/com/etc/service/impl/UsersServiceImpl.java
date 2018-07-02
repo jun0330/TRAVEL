@@ -1,5 +1,7 @@
 package com.etc.service.impl;
 
+import java.util.List;
+
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Repository;
@@ -32,7 +34,7 @@ public class UsersServiceImpl implements UsersService {
 	}
 
 	@Override
-	public Users selectById(Integer userId) {
+	public List<Users> selectById(Integer userId) {
 		// TODO Auto-generated method stub
 		return um.selectByPrimaryKey(userId);
 	}

@@ -1,5 +1,7 @@
 package com.etc.dao;
 
+import java.util.List;
+
 import org.springframework.stereotype.Repository;
 
 import com.etc.entity.HotelOrder;
@@ -12,7 +14,7 @@ public interface HotelOrderMapper {
 
     int insertSelective(HotelOrder record);
 
-    HotelOrder selectByPrimaryKey(Integer horderid);
+    List<HotelOrder> selectByPrimaryKey(Integer horderid);
 
     int updateByPrimaryKeySelective(HotelOrder record);
 

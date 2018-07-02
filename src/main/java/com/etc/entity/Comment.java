@@ -12,13 +12,20 @@ public class Comment {
 
     private String hcommentcontent;
 
-    private Date hcommentdate;
+    private String hcommentdate;
 
     private String usernickname;
 
     private Integer hotelinfoid;
 
-    public Integer getHcommentid() {
+    public Comment(String hcommentcontent, String usernickname, Integer hotelinfoid) {
+		super();
+		this.hcommentcontent = hcommentcontent;
+		this.usernickname = usernickname;
+		this.hotelinfoid = hotelinfoid;
+	}
+
+	public Integer getHcommentid() {
         return hcommentid;
     }
 
@@ -34,15 +41,15 @@ public class Comment {
         this.hcommentcontent = hcommentcontent == null ? null : hcommentcontent.trim();
     }
 
-    public Date getHcommentdate() {
-        return hcommentdate;
-    }
+    public String getHcommentdate() {
+		return hcommentdate;
+	}
 
-    public void setHcommentdate(Date hcommentdate) {
-        this.hcommentdate = hcommentdate;
-    }
+	public void setHcommentdate(String hcommentdate) {
+		this.hcommentdate = hcommentdate;
+	}
 
-    public String getUsernickname() {
+	public String getUsernickname() {
         return usernickname;
     }
 
@@ -57,4 +64,11 @@ public class Comment {
     public void setHotelinfoid(Integer hotelinfoid) {
         this.hotelinfoid = hotelinfoid;
     }
+
+	@Override
+	public String toString() {
+		return "Comment [hcommentid=" + hcommentid + ", hcommentcontent=" + hcommentcontent + ", hcommentdate="
+				+ hcommentdate + ", usernickname=" + usernickname + ", hotelinfoid=" + hotelinfoid + "]";
+	}
+    
 }

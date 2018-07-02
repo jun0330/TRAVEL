@@ -1,5 +1,7 @@
 package com.etc.service;
 
+import java.util.List;
+
 import org.springframework.stereotype.Repository;
 
 import com.etc.entity.Scomment;
@@ -12,7 +14,7 @@ public interface ScommentService {
 
     int addSelective(Scomment scomment);
 
-    Scomment selectById(Integer scommentId);
+    List<Scomment> selectById(Integer scommentId);
 
     int updateByIdSelective(Scomment scomment);
 

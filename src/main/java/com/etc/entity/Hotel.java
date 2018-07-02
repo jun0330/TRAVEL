@@ -45,4 +45,11 @@ public class Hotel {
     public void setHotelprice(Double hotelprice) {
         this.hotelprice = hotelprice;
     }
+
+	@Override
+	public String toString() {
+		return "Hotel [hotelid=" + hotelid + ", hotelpic=" + hotelpic + ", hotelname=" + hotelname + ", hotelprice="
+				+ hotelprice + "]";
+	}
+    
 }

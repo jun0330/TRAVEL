@@ -1,5 +1,7 @@
 package com.etc.service.impl;
 
+import java.util.List;
+
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Repository;
@@ -32,7 +34,7 @@ public class RoomServiceImpl implements RoomService {
 	}
 
 	@Override
-	public Room selectById(Integer roomId) {
+	public List<Room> selectById(Integer roomId) {
 		// TODO Auto-generated method stub
 		return rm.selectByPrimaryKey(roomId);
 	}

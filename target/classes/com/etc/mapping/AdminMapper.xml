@@ -16,6 +16,12 @@
     from admin
     where adminId = #{adminid,jdbcType=INTEGER}
   </select>
+  
+  <!-- 查询所有 -->
+  <select id="getAll" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+  select * from admin
+  </select> 
+  
   <!-- 管理员删除  根据管理员的id -->
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from admin
@@ -26,7 +32,7 @@
     insert into admin (adminId, adminName, adminPwd, 
       regDate)
     values (#{adminid,jdbcType=INTEGER}, #{adminname,jdbcType=VARCHAR}, #{adminpwd,jdbcType=VARCHAR}, 
-      #{regdate,jdbcType=TIMESTAMP})
+      NOW())
   </insert>
   <!-- 用户添加,灵活  -->
   <insert id="insertSelective" parameterType="com.etc.entity.Admin">

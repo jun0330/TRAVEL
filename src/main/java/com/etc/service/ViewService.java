@@ -1,5 +1,7 @@
 package com.etc.service;
 
+import java.util.List;
+
 import org.springframework.stereotype.Repository;
 
 import com.etc.entity.View;
@@ -13,7 +15,7 @@ public interface ViewService {
 
     int addSelective(View view);
 
-    View selectById(Integer viewId);
+    List<View> selectById(Integer viewId);
 
     int updateByIdSelective(View view);
 

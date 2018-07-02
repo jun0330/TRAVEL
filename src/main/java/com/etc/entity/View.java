@@ -15,7 +15,7 @@ public class View {
 
     private String viewaddress;
 
-    private Date viewjobtime;
+    private String viewjobtime;
 
     private Double viewprice;
 
@@ -65,15 +65,15 @@ public class View {
         this.viewaddress = viewaddress == null ? null : viewaddress.trim();
     }
 
-    public Date getViewjobtime() {
-        return viewjobtime;
-    }
+    public String getViewjobtime() {
+		return viewjobtime;
+	}
 
-    public void setViewjobtime(Date viewjobtime) {
-        this.viewjobtime = viewjobtime;
-    }
+	public void setViewjobtime(String viewjobtime) {
+		this.viewjobtime = viewjobtime;
+	}
 
-    public Double getViewprice() {
+	public Double getViewprice() {
         return viewprice;
     }
 
@@ -136,4 +136,13 @@ public class View {
     public void setScenicid(Integer scenicid) {
         this.scenicid = scenicid;
     }
+
+	@Override
+	public String toString() {
+		return "View [viewid=" + viewid + ", scenicpic=" + scenicpic + ", viewname=" + viewname + ", viewaddress="
+				+ viewaddress + ", viewjobtime=" + viewjobtime + ", viewprice=" + viewprice + ", viewintro=" + viewintro
+				+ ", viewpic1=" + viewpic1 + ", viewpic2=" + viewpic2 + ", viewpic3=" + viewpic3 + ", viewpic4="
+				+ viewpic4 + ", viewpic5=" + viewpic5 + ", scenicid=" + scenicid + "]";
+	}
+    
 }

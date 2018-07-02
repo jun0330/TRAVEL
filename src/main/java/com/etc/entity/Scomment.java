@@ -33,15 +33,15 @@ public class Scomment {
         this.scommentcontent = scommentcontent == null ? null : scommentcontent.trim();
     }
 
-    public Date getScommentdate() {
-        return scommentdate;
-    }
+	public Date getScommentdate() {
+		return scommentdate;
+	}
 
-    public void setScommentdate(Date scommentdate) {
-        this.scommentdate = scommentdate;
-    }
+	public void setScommentdate(Date scommentdate) {
+		this.scommentdate = scommentdate;
+	}
 
-    public String getUsernickname() {
+	public String getUsernickname() {
         return usernickname;
     }
 
@@ -56,4 +56,11 @@ public class Scomment {
     public void setViewid(Integer viewid) {
         this.viewid = viewid;
     }
+
+	@Override
+	public String toString() {
+		return "Scomment [scommentid=" + scommentid + ", scommentcontent=" + scommentcontent + ", scommentdate="
+				+ scommentdate + ", usernickname=" + usernickname + ", viewid=" + viewid + "]";
+	}
+    
 }

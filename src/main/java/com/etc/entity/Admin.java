@@ -16,35 +16,50 @@ public class Admin {
 
     private Date regdate;
 
-    public Integer getAdminid() {
-        return adminid;
-    }
+	public Admin(String adminname, String adminpwd) {
+		super();
+		this.adminname = adminname;
+		this.adminpwd = adminpwd;
+	}
 
-    public void setAdminid(Integer adminid) {
-        this.adminid = adminid;
-    }
+	public Integer getAdminid() {
+		return adminid;
+	}
 
-    public String getAdminname() {
-        return adminname;
-    }
+	public void setAdminid(Integer adminid) {
+		this.adminid = adminid;
+	}
 
-    public void setAdminname(String adminname) {
-        this.adminname = adminname == null ? null : adminname.trim();
-    }
+	public String getAdminname() {
+		return adminname;
+	}
 
-    public String getAdminpwd() {
-        return adminpwd;
-    }
+	public void setAdminname(String adminname) {
+		this.adminname = adminname;
+	}
 
-    public void setAdminpwd(String adminpwd) {
-        this.adminpwd = adminpwd == null ? null : adminpwd.trim();
-    }
+	public String getAdminpwd() {
+		return adminpwd;
+	}
 
-    public Date getRegdate() {
-        return regdate;
-    }
+	public void setAdminpwd(String adminpwd) {
+		this.adminpwd = adminpwd;
+	}
 
-    public void setRegdate(Date regdate) {
-        this.regdate = regdate;
-    }
+	public Date getRegdate() {
+		return regdate;
+	}
+
+	public void setRegdate(Date regdate) {
+		this.regdate = regdate;
+	}
+
+	@Override
+	public String toString() {
+		return "Admin [adminid=" + adminid + ", adminname=" + adminname + ", adminpwd=" + adminpwd + ", regdate="
+				+ regdate + "]";
+	}
+
+    
+ 
 }

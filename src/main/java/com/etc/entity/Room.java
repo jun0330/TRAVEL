@@ -115,4 +115,13 @@ public class Room {
     public void setHotelinfoid(Integer hotelinfoid) {
         this.hotelinfoid = hotelinfoid;
     }
+
+	@Override
+	public String toString() {
+		return "Room [roomid=" + roomid + ", roomtypeone=" + roomtypeone + ", roompriceone=" + roompriceone
+				+ ", roomimgone=" + roomimgone + ", roomtypetwo=" + roomtypetwo + ", roompricetwo=" + roompricetwo
+				+ ", roomimgtwo=" + roomimgtwo + ", roomtypethree=" + roomtypethree + ", roompricethree="
+				+ roompricethree + ", roomimgthree=" + roomimgthree + ", hotelinfoid=" + hotelinfoid + "]";
+	}
+    
 }

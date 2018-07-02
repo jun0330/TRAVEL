@@ -1,5 +1,7 @@
 package com.etc.service.impl;
 
+import java.util.List;
+
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Repository;
@@ -32,7 +34,7 @@ public class ScenicServiceImpl implements ScenicService {
 	}
 
 	@Override
-	public Scenic selectById(Integer scenicId) {
+	public List<Scenic> selectById(Integer scenicId) {
 		// TODO Auto-generated method stub
 		return sm.selectByPrimaryKey(scenicId);
 	}

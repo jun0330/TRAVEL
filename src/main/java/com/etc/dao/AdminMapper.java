@@ -1,5 +1,7 @@
 package com.etc.dao;
 
+import java.util.List;
+
 import org.springframework.stereotype.Repository;
 
 import com.etc.entity.Admin;
@@ -18,9 +20,11 @@ public interface AdminMapper {
 
     int insertSelective(Admin record);
 
-    Admin selectByPrimaryKey(Integer adminid);
+    List<Admin> selectByPrimaryKey(Integer adminid);
 
     int updateByPrimaryKeySelective(Admin record);
 
     int updateByPrimaryKey(Admin record);
+    
+    List<Admin> getAll();
 }

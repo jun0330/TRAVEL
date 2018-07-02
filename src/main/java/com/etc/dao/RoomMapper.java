@@ -1,5 +1,7 @@
 package com.etc.dao;
 
+import java.util.List;
+
 import org.springframework.stereotype.Repository;
 
 import com.etc.entity.Room;
@@ -12,7 +14,7 @@ public interface RoomMapper {
 
     int insertSelective(Room record);
 
-    Room selectByPrimaryKey(Integer roomid);
+    List<Room> selectByPrimaryKey(Integer roomid);
 
     int updateByPrimaryKeySelective(Room record);
 

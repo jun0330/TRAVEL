@@ -1,5 +1,7 @@
 package com.etc.service.impl;
 
+import java.util.List;
+
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Repository;
@@ -32,7 +34,7 @@ public class ViewServiceImpl implements ViewService {
 	}
 
 	@Override
-	public View selectById(Integer viewId) {
+	public List<View> selectById(Integer viewId) {
 		// TODO Auto-generated method stub
 		return vm.selectByPrimaryKey(viewId);
 	}

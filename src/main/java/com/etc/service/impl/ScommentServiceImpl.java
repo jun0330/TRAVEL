@@ -1,5 +1,7 @@
 package com.etc.service.impl;
 
+import java.util.List;
+
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Repository;
@@ -32,7 +34,7 @@ public class ScommentServiceImpl implements ScommentService {
 	}
 
 	@Override
-	public Scomment selectById(Integer scommentId) {
+	public List<Scomment> selectById(Integer scommentId) {
 		// TODO Auto-generated method stub
 		return scm.selectByPrimaryKey(scommentId);
 	}

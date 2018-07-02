@@ -1,5 +1,7 @@
 package com.etc.service;
 
+import java.util.List;
+
 import org.springframework.stereotype.Repository;
 
 import com.etc.entity.Comment;
@@ -16,7 +18,7 @@ public interface CommentService {
 
     int addSelective(Comment comment);
 
-    Comment selectById(Integer hcommentId);
+    List<Comment> selectById(Integer hcommentId);
 
     int updateByIdySelective(Comment comment);
 

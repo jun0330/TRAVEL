@@ -27,7 +27,7 @@
   <insert id="insert" parameterType="com.etc.entity.Comment">
     insert into comment (hCommentId, hCommentContent, hCommentDate, 
       userNickName, hotelInfoId)
-    values (#{hcommentid,jdbcType=INTEGER}, #{hcommentcontent,jdbcType=VARCHAR}, #{hcommentdate,jdbcType=TIMESTAMP}, 
+    values (#{hcommentid,jdbcType=INTEGER}, #{hcommentcontent,jdbcType=VARCHAR}, #{NOW()}, 
       #{usernickname,jdbcType=VARCHAR}, #{hotelinfoid,jdbcType=INTEGER})
   </insert>
   <!-- 用户留言~灵活 -->

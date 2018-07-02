@@ -1,5 +1,7 @@
 package com.etc.dao;
 
+import java.util.List;
+
 import org.springframework.stereotype.Repository;
 
 import com.etc.entity.Scenic;
@@ -12,7 +14,7 @@ public interface ScenicMapper {
 
     int insertSelective(Scenic record);
 
-    Scenic selectByPrimaryKey(Integer scenicid);
+    List<Scenic> selectByPrimaryKey(Integer scenicid);
 
     int updateByPrimaryKeySelective(Scenic record);
 

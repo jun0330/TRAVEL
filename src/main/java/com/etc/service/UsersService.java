@@ -1,5 +1,7 @@
 package com.etc.service;
 
+import java.util.List;
+
 import org.springframework.stereotype.Repository;
 
 import com.etc.entity.Users;
@@ -12,7 +14,7 @@ public interface UsersService {
 
     int regUsersSelective(Users users);
 
-    Users selectById(Integer userId);
+    List<Users> selectById(Integer userId);
 
     int updateByIdSelective(Users users);
 

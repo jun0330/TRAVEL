@@ -1,5 +1,7 @@
 package com.etc.service;
 
+import java.util.List;
+
 import org.springframework.stereotype.Repository;
 
 import com.etc.entity.Room;
@@ -12,7 +14,7 @@ public interface RoomService {
 
     int addSelective(Room room);
 
-    Room selectById(Integer roomId);
+    List<Room> selectById(Integer roomId);
 
     int updateByIdSelective(Room room);
 

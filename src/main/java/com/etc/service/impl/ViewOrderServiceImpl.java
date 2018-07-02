@@ -1,5 +1,7 @@
 package com.etc.service.impl;
 
+import java.util.List;
+
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Repository;
@@ -32,7 +34,7 @@ public class ViewOrderServiceImpl implements ViewOrderService {
 	}
 
 	@Override
-	public ViewOrder selectById(Integer vorderId) {
+	public List<ViewOrder> selectById(Integer vorderId) {
 		// TODO Auto-generated method stub
 		return vom.selectByPrimaryKey(vorderId);
 	}

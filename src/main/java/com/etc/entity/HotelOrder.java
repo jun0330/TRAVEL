@@ -23,83 +23,88 @@ public class HotelOrder {
 
     private Integer userid;
 
-    public Integer getHorderid() {
-        return horderid;
-    }
+	public Integer getHorderid() {
+		return horderid;
+	}
 
-    public void setHorderid(Integer horderid) {
-        this.horderid = horderid;
-    }
+	public void setHorderid(Integer horderid) {
+		this.horderid = horderid;
+	}
 
-    public String getHotelname() {
-        return hotelname;
-    }
+	public String getHotelname() {
+		return hotelname;
+	}
 
-    public void setHotelname(String hotelname) {
-        this.hotelname = hotelname == null ? null : hotelname.trim();
-    }
+	public void setHotelname(String hotelname) {
+		this.hotelname = hotelname;
+	}
 
-    public String getRoomtype() {
-        return roomtype;
-    }
+	public String getRoomtype() {
+		return roomtype;
+	}
 
-    public void setRoomtype(String roomtype) {
-        this.roomtype = roomtype == null ? null : roomtype.trim();
-    }
+	public void setRoomtype(String roomtype) {
+		this.roomtype = roomtype;
+	}
 
-    public Date getRoomdate() {
-        return roomdate;
-    }
+	public void setOrderdate(Date orderdate) {
+		this.orderdate = orderdate;
+	}
 
-    public void setRoomdate(Date roomdate) {
-        this.roomdate = roomdate;
-    }
+	public Double getRoomprice() {
+		return roomprice;
+	}
 
-    public Double getRoomprice() {
-        return roomprice;
-    }
+	public void setRoomprice(Double roomprice) {
+		this.roomprice = roomprice;
+	}
 
-    public void setRoomprice(Double roomprice) {
-        this.roomprice = roomprice;
-    }
+	public String getUsername() {
+		return username;
+	}
 
-    public String getUsername() {
-        return username;
-    }
+	public void setUsername(String username) {
+		this.username = username;
+	}
 
-    public void setUsername(String username) {
-        this.username = username == null ? null : username.trim();
-    }
+	public Double getUserphone() {
+		return userphone;
+	}
 
-    public Double getUserphone() {
-        return userphone;
-    }
+	public void setUserphone(Double userphone) {
+		this.userphone = userphone;
+	}
 
-    public void setUserphone(Double userphone) {
-        this.userphone = userphone;
-    }
+	public Double getUsercard() {
+		return usercard;
+	}
 
-    public Double getUsercard() {
-        return usercard;
-    }
+	public void setUsercard(Double usercard) {
+		this.usercard = usercard;
+	}
 
-    public void setUsercard(Double usercard) {
-        this.usercard = usercard;
-    }
+	public Date getRoomdate() {
+		return roomdate;
+	}
 
-    public Date getOrderdate() {
-        return orderdate;
-    }
+	public void setRoomdate(Date roomdate) {
+		this.roomdate = roomdate;
+	}
 
-    public void setOrderdate(Date orderdate) {
-        this.orderdate = orderdate;
-    }
+	public Integer getUserid() {
+		return userid;
+	}
 
-    public Integer getUserid() {
-        return userid;
-    }
+	public void setUserid(Integer userid) {
+		this.userid = userid;
+	}
 
-    public void setUserid(Integer userid) {
-        this.userid = userid;
-    }
+	@Override
+	public String toString() {
+		return "HotelOrder [horderid=" + horderid + ", hotelname=" + hotelname + ", roomtype=" + roomtype
+				+ ", roomdate=" + roomdate + ", roomprice=" + roomprice + ", username=" + username + ", userphone="
+				+ userphone + ", usercard=" + usercard + ", orderdate=" + orderdate + ", userid=" + userid + "]";
+	}
+
+ 
 }

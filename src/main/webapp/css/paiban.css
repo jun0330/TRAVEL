@@ -1,0 +1,32 @@
+	.Scenic{
+		cursor:pointer;
+	}
+	.Scenic:hover .Scenic-tit2{
+		color:Orange;
+		font-size:14px;
+	}
+	.Scenic-img{
+		width:280px; 
+		height:170px;
+	}
+	
+	.Scenic-img:hover{
+		box-shadow:0px 0px  10px 5px #aaa;
+	}
+	
+	.Scenic-info{
+		width:280px;
+		height:65px;
+		background:white;
+		font-size:10px;
+	}
+	.Scenic-tit1{
+		color:green;
+	}
+	.Scenic-tit2{
+		color:black;
+	}
+	.Scenic-price{
+		color:Orange;
+		font-size:20px;
+	}

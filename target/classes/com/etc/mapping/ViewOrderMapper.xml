@@ -13,20 +13,28 @@
     <result column="userCard" jdbcType="INTEGER" property="usercard" />
     <result column="userId" jdbcType="INTEGER" property="userid" />
   </resultMap>
+  
   <sql id="Base_Column_List">
     vOrderId, scenicName, vOrderDate, ticketPrice, ticketDate, ticketCount, userName, 
     userPhone, userCard, userId
   </sql>
+  
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
     from vieworder
     where vOrderId = #{vorderid,jdbcType=INTEGER}
   </select>
+  
+  <select id="getAll" resultType="com.etc.entity.ViewOrder">
+  select * from vieworder
+  </select>
+  
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from vieworder
     where vOrderId = #{vorderid,jdbcType=INTEGER}
   </delete>
+  
   <insert id="insert" parameterType="com.etc.entity.ViewOrder">
     insert into vieworder (vOrderId, scenicName, vOrderDate, 
       ticketPrice, ticketDate, ticketCount, 
@@ -37,6 +45,7 @@
       #{username,jdbcType=VARCHAR}, #{userphone,jdbcType=INTEGER}, #{usercard,jdbcType=INTEGER}, 
       #{userid,jdbcType=INTEGER})
   </insert>
+  
   <insert id="insertSelective" parameterType="com.etc.entity.ViewOrder">
     insert into vieworder
     <trim prefix="(" suffix=")" suffixOverrides=",">

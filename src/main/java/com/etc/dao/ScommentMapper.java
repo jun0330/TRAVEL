@@ -4,19 +4,22 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
+import com.etc.entity.Room;
 import com.etc.entity.Scomment;
 
 @Repository(value="scommentMapper")
 public interface ScommentMapper {
-    int deleteByPrimaryKey(Integer scommentid);
+	boolean deleteByPrimaryKey(Integer scommentid);
 
-    int insert(Scomment record);
+	boolean insert(Scomment record);
 
-    int insertSelective(Scomment record);
+	boolean insertSelective(Scomment record);
 
     List<Scomment> selectByPrimaryKey(Integer scommentid);
 
-    int updateByPrimaryKeySelective(Scomment record);
+    boolean updateByPrimaryKeySelective(Scomment record);
 
-    int updateByPrimaryKey(Scomment record);
+    boolean updateByPrimaryKey(Scomment record);
+    //²éÑ¯ËùÓÐ
+    List<Scomment> getAll();
 }

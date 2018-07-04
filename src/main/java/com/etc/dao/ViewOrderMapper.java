@@ -4,19 +4,22 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
+import com.etc.entity.Room;
 import com.etc.entity.ViewOrder;
 
 @Repository(value="viewOrderMapper")
 public interface ViewOrderMapper {
-    int deleteByPrimaryKey(Integer vorderid);
+	boolean deleteByPrimaryKey(Integer vorderid);
 
-    int insert(ViewOrder record);
+	boolean insert(ViewOrder record);
 
-    int insertSelective(ViewOrder record);
+	boolean insertSelective(ViewOrder record);
 
     List<ViewOrder> selectByPrimaryKey(Integer vorderid);
 
-    int updateByPrimaryKeySelective(ViewOrder record);
+    boolean updateByPrimaryKeySelective(ViewOrder record);
 
-    int updateByPrimaryKey(ViewOrder record);
+    boolean updateByPrimaryKey(ViewOrder record);
+    //²éÑ¯ËùÓÐ
+    List<ViewOrder> getAll();
 }

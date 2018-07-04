@@ -16,19 +16,19 @@ public class UsersServiceImpl implements UsersService {
 	@Resource(name="userMapper")
 	private UsersMapper um;
 	@Override
-	public int deleteById(Integer userId) {
+	public boolean deleteById(Integer userId) {
 		// TODO Auto-generated method stub
 		return um.deleteByPrimaryKey(userId);
 	}
 
 	@Override
-	public int regUsers(Users users) {
+	public boolean regUsers(Users users) {
 		// TODO Auto-generated method stub
 		return um.insert(users);
 	}
 
 	@Override
-	public int regUsersSelective(Users users) {
+	public boolean regUsersSelective(Users users) {
 		// TODO Auto-generated method stub
 		return um.insertSelective(users);
 	}
@@ -40,15 +40,21 @@ public class UsersServiceImpl implements UsersService {
 	}
 
 	@Override
-	public int updateByIdSelective(Users users) {
+	public boolean updateByIdSelective(Users users) {
 		// TODO Auto-generated method stub
 		return um.updateByPrimaryKeySelective(users);
 	}
 
 	@Override
-	public int updateById(Users users) {
+	public boolean updateById(Users users) {
 		// TODO Auto-generated method stub
 		return um.updateByPrimaryKey(users);
+	}
+	
+	@Override
+	public List<Users> queryAll() {
+		// TODO Auto-generated method stub
+		return um.getAll();
 	}
 
 }

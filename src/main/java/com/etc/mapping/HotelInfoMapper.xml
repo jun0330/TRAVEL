@@ -19,16 +19,23 @@
     hotelInfoId, hotelInfoName, hotelInfoAddress, hotelInfoPrice, hotelInfoIntro, hotelInfoPic1, 
     hotelInfoPic2, hotelInfoPic3, hotelInfoPic4, hotelInfoPic5, hotelInfoPic6, hotelId
   </sql>
+  
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
     from hotelinfo
     where hotelInfoId = #{hotelinfoid,jdbcType=INTEGER}
   </select>
+  
+  <select id="queryHotelInfo" resultType="com.etc.entity.HotelInfo">
+  select * from hotelinfo
+  </select>
+  
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from hotelinfo
     where hotelInfoId = #{hotelinfoid,jdbcType=INTEGER}
   </delete>
+  
   <insert id="insert" parameterType="com.etc.entity.HotelInfo">
     insert into hotelinfo (hotelInfoId, hotelInfoName, hotelInfoAddress, 
       hotelInfoPrice, hotelInfoIntro, hotelInfoPic1, 
@@ -41,6 +48,7 @@
       #{hotelinfopic5,jdbcType=VARCHAR}, #{hotelinfopic6,jdbcType=VARCHAR}, #{hotelid,jdbcType=INTEGER}
       )
   </insert>
+  
   <insert id="insertSelective" parameterType="com.etc.entity.HotelInfo">
     insert into hotelinfo
     <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -120,6 +128,7 @@
       </if>
     </trim>
   </insert>
+  
   <update id="updateByPrimaryKeySelective" parameterType="com.etc.entity.HotelInfo">
     update hotelinfo
     <set>
@@ -159,6 +168,7 @@
     </set>
     where hotelInfoId = #{hotelinfoid,jdbcType=INTEGER}
   </update>
+  
   <update id="updateByPrimaryKey" parameterType="com.etc.entity.HotelInfo">
     update hotelinfo
     set hotelInfoName = #{hotelinfoname,jdbcType=VARCHAR},
@@ -174,4 +184,5 @@
       hotelId = #{hotelid,jdbcType=INTEGER}
     where hotelInfoId = #{hotelinfoid,jdbcType=INTEGER}
   </update>
+  
 </mapper>

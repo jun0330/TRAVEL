@@ -7,25 +7,34 @@
     <result column="scenicPrice" jdbcType="DOUBLE" property="scenicprice" />
     <result column="scenidPic" jdbcType="VARCHAR" property="scenidpic" />
   </resultMap>
+  
   <sql id="Base_Column_List">
     scenicId, scenicName, scenicPrice, scenidPic
   </sql>
+  
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
     from scenic
     where scenicId = #{scenicid,jdbcType=INTEGER}
   </select>
+  
+  <select id="getAll" resultType="com.etc.entity.Scenic">
+  select * from scenic
+  </select>
+  
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from scenic
     where scenicId = #{scenicid,jdbcType=INTEGER}
   </delete>
+  
   <insert id="insert" parameterType="com.etc.entity.Scenic">
     insert into scenic (scenicId, scenicName, scenicPrice, 
       scenidPic)
     values (#{scenicid,jdbcType=INTEGER}, #{scenicname,jdbcType=VARCHAR}, #{scenicprice,jdbcType=DOUBLE}, 
       #{scenidpic,jdbcType=VARCHAR})
   </insert>
+  
   <insert id="insertSelective" parameterType="com.etc.entity.Scenic">
     insert into scenic
     <trim prefix="(" suffix=")" suffixOverrides=",">

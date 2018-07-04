@@ -8,15 +8,17 @@ import com.etc.entity.HotelOrder;
 
 @Repository(value="hotelOrderMapper")
 public interface HotelOrderMapper {
-    int deleteByPrimaryKey(Integer horderid);
+	boolean deleteByPrimaryKey(Integer horderid);
 
-    int insert(HotelOrder record);
+	boolean insert(HotelOrder record);
 
-    int insertSelective(HotelOrder record);
+	boolean insertSelective(HotelOrder record);
 
     List<HotelOrder> selectByPrimaryKey(Integer horderid);
 
-    int updateByPrimaryKeySelective(HotelOrder record);
+    boolean updateByPrimaryKeySelective(HotelOrder record);
 
-    int updateByPrimaryKey(HotelOrder record);
+    boolean updateByPrimaryKey(HotelOrder record);
+    //²éÑ¯ËùÓÐ
+    List<HotelOrder> getAll();
 }

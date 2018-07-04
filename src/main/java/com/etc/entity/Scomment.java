@@ -17,7 +17,12 @@ public class Scomment {
 
     private Integer viewid;
 
-    public Integer getScommentid() {
+    public Scomment() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Integer getScommentid() {
         return scommentid;
     }
 

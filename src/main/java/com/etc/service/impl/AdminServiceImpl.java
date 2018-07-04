@@ -17,19 +17,19 @@ public class AdminServiceImpl implements AdminService {
 	private AdminMapper am;
 	
 	@Override
-	public int deleteById(int adminId) {
+	public boolean deleteById(int adminId) {
 		// TODO Auto-generated method stub
 		return am.deleteByPrimaryKey(adminId);
 	}
 
 	@Override
-	public int regAdmin(Admin admin) {
+	public boolean regAdmin(Admin admin) {
 		// TODO Auto-generated method stub
 		return am.insert(admin);
 	}
 
 	@Override
-	public int regAdminSelective(Admin admin) {
+	public boolean regAdminSelective(Admin admin) {
 		// TODO Auto-generated method stub
 		return am.insertSelective(admin);
 	}
@@ -41,13 +41,13 @@ public class AdminServiceImpl implements AdminService {
 	}
 
 	@Override
-	public int updateAdminById(Admin admin) {
+	public boolean updateAdminById(Admin admin) {
 		// TODO Auto-generated method stub
 		return am.updateByPrimaryKey(admin);
 	}
 
 	@Override
-	public int updateById(Admin admin) {
+	public boolean updateById(Admin admin) {
 		// TODO Auto-generated method stub
 		return am.updateByPrimaryKeySelective(admin);
 	}

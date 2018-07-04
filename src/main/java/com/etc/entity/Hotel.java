@@ -13,8 +13,28 @@ public class Hotel {
     private String hotelname;
 
     private Double hotelprice;
+    
+    public Hotel() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
-    public Integer getHotelid() {
+	public Hotel(Integer hotelid, String hotelpic, String hotelname, Double hotelprice) {
+		super();
+		this.hotelid = hotelid;
+		this.hotelpic = hotelpic;
+		this.hotelname = hotelname;
+		this.hotelprice = hotelprice;
+	}
+
+	public Hotel(String hotelpic, String hotelname, Double hotelprice) {
+		super();
+		this.hotelpic = hotelpic;
+		this.hotelname = hotelname;
+		this.hotelprice = hotelprice;
+	}
+
+	public Integer getHotelid() {
         return hotelid;
     }
 

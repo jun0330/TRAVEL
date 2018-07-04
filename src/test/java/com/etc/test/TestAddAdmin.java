@@ -24,11 +24,11 @@ public class TestAddAdmin {
 	@Test
 	public void addAdmin() {
 		
-		Admin ad = new Admin("测试1", "123321");
+		Admin ad = new Admin("测试2", "123321");
 		
-		int a = as.regAdmin(ad);
+		boolean flag = as.regAdmin(ad);
 		
-		if(a>0) {
+		if(flag) {
 			System.out.println("添加成功~");
 		}else {
 			System.out.println("添加失败");

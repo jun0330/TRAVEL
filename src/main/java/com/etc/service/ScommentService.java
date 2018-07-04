@@ -4,19 +4,22 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
+import com.etc.entity.Admin;
 import com.etc.entity.Scomment;
 
 public interface ScommentService {
 	
-    int deleteById(Integer scommentId);
+	boolean deleteById(Integer scommentId);
 
-    int addScomment(Scomment scomment);
+	boolean addScomment(Scomment scomment);
 
-    int addSelective(Scomment scomment);
+	boolean addSelective(Scomment scomment);
 
     List<Scomment> selectById(Integer scommentId);
 
-    int updateByIdSelective(Scomment scomment);
+    boolean updateByIdSelective(Scomment scomment);
 
-    int updateById(Scomment scomment);
+    boolean updateById(Scomment scomment);
+	//查询所有的service
+	List<Scomment> queryAll();
 }

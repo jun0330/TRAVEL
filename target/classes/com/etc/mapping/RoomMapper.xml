@@ -14,20 +14,28 @@
     <result column="roomImgThree" jdbcType="VARCHAR" property="roomimgthree" />
     <result column="hotelInfoId" jdbcType="INTEGER" property="hotelinfoid" />
   </resultMap>
+  
   <sql id="Base_Column_List">
     roomId, roomTypeOne, roomPriceOne, roomImgOne, roomTypeTwo, roomPriceTwo, roomImgTwo, 
     roomTypeThree, roomPriceThree, roomImgThree, hotelInfoId
   </sql>
+  
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
     from room
     where roomId = #{roomid,jdbcType=INTEGER}
   </select>
+  
+  <select id="getAll" resultType="com.etc.entity.Room">
+  select * from room
+  </select>
+  
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from room
     where roomId = #{roomid,jdbcType=INTEGER}
   </delete>
+  
   <insert id="insert" parameterType="com.etc.entity.Room">
     insert into room (roomId, roomTypeOne, roomPriceOne, 
       roomImgOne, roomTypeTwo, roomPriceTwo, 
@@ -38,6 +46,7 @@
       #{roomimgtwo,jdbcType=VARCHAR}, #{roomtypethree,jdbcType=VARCHAR}, #{roompricethree,jdbcType=DOUBLE}, 
       #{roomimgthree,jdbcType=VARCHAR}, #{hotelinfoid,jdbcType=INTEGER})
   </insert>
+  
   <insert id="insertSelective" parameterType="com.etc.entity.Room">
     insert into room
     <trim prefix="(" suffix=")" suffixOverrides=",">

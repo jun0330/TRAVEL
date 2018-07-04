@@ -16,19 +16,19 @@ public class ScenicServiceImpl implements ScenicService {
 	@Resource(name="scenicMapper")
 	private ScenicMapper sm;
 	@Override
-	public int deleteById(Integer scenicId) {
+	public boolean deleteById(Integer scenicId) {
 		// TODO Auto-generated method stub
 		return sm.deleteByPrimaryKey(scenicId);
 	}
 
 	@Override
-	public int addScenic(Scenic scenic) {
+	public boolean addScenic(Scenic scenic) {
 		// TODO Auto-generated method stub
 		return sm.insert(scenic);
 	}
 
 	@Override
-	public int addSelective(Scenic scenic) {
+	public boolean addSelective(Scenic scenic) {
 		// TODO Auto-generated method stub
 		return sm.insertSelective(scenic);
 	}
@@ -40,15 +40,21 @@ public class ScenicServiceImpl implements ScenicService {
 	}
 
 	@Override
-	public int updateByIdSelective(Scenic scenic) {
+	public boolean updateByIdSelective(Scenic scenic) {
 		// TODO Auto-generated method stub
 		return sm.updateByPrimaryKeySelective(scenic);
 	}
 
 	@Override
-	public int updateById(Scenic scenic) {
+	public boolean updateById(Scenic scenic) {
 		// TODO Auto-generated method stub
 		return sm.updateByPrimaryKey(scenic);
+	}
+	
+	@Override
+	public List<Scenic> queryAll() {
+		// TODO Auto-generated method stub
+		return sm.getAll();
 	}
 
 }

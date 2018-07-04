@@ -13,15 +13,17 @@ import com.etc.entity.Comment;
  */
 @Repository(value="commentMapper")
 public interface CommentMapper {
-    int deleteByPrimaryKey(Integer hcommentid);
+	boolean deleteByPrimaryKey(Integer hcommentid);
 
-    int insert(Comment record);
+	boolean insert(Comment record);
 
-    int insertSelective(Comment record);
-
+	boolean insertSelective(Comment record);
+    //ID条件查询
     List<Comment> selectByPrimaryKey(Integer hcommentid);
 
-    int updateByPrimaryKeySelective(Comment record);
+    boolean updateByPrimaryKeySelective(Comment record);
 
-    int updateByPrimaryKey(Comment record);
+    boolean updateByPrimaryKey(Comment record);
+    //查询所有
+    List<Comment> queryComment();
 }

@@ -4,19 +4,22 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
+import com.etc.entity.Admin;
 import com.etc.entity.Users;
 
 public interface UsersService {
 	
-    int deleteById(Integer userId);
+	boolean deleteById(Integer userId);
 
-    int regUsers(Users users);
+	boolean regUsers(Users users);
 
-    int regUsersSelective(Users users);
+	boolean regUsersSelective(Users users);
 
     List<Users> selectById(Integer userId);
 
-    int updateByIdSelective(Users users);
+    boolean updateByIdSelective(Users users);
 
-    int updateById(Users users);
+    boolean updateById(Users users);
+	//查询所有的service
+	List<Users> queryAll();
 }

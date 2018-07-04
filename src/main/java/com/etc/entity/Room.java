@@ -28,7 +28,12 @@ public class Room {
 
     private Integer hotelinfoid;
 
-    public Integer getRoomid() {
+    public Room() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Integer getRoomid() {
         return roomid;
     }
 

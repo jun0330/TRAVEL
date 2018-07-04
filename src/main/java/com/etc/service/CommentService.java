@@ -12,15 +12,17 @@ import com.etc.entity.Comment;
  *
  */
 public interface CommentService {
-    int deleteById(Integer hcommentId);
+	boolean deleteById(Integer hcommentId);
 
-    int addComment(Comment comment);
+	boolean addComment(Comment comment);
 
-    int addSelective(Comment comment);
+	boolean addSelective(Comment comment);
 
     List<Comment> selectById(Integer hcommentId);
 
-    int updateByIdySelective(Comment comment);
+    boolean updateByIdySelective(Comment comment);
 
-    int updateById(Comment comment);
+    boolean updateById(Comment comment);
+    
+    List<Comment> queryC();
 }

@@ -4,19 +4,22 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
+import com.etc.entity.Admin;
 import com.etc.entity.Scenic;
 
 public interface ScenicService {
 	
-    int deleteById(Integer scenicId);
+	boolean deleteById(Integer scenicId);
 
-    int addScenic(Scenic scenic);
+	boolean addScenic(Scenic scenic);
 
-    int addSelective(Scenic scenic);
+	boolean addSelective(Scenic scenic);
 
     List<Scenic> selectById(Integer scenicId);
 
-    int updateByIdSelective(Scenic scenic);
+    boolean updateByIdSelective(Scenic scenic);
 
-    int updateById(Scenic scenic);
+    boolean updateById(Scenic scenic);
+	//查询所有的service
+	List<Scenic> queryAll();
 }

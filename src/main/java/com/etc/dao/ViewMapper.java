@@ -4,19 +4,22 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
+import com.etc.entity.Room;
 import com.etc.entity.View;
 
 @Repository(value="viewMapper")
 public interface ViewMapper {
-    int deleteByPrimaryKey(Integer viewid);
+	boolean deleteByPrimaryKey(Integer viewid);
 
-    int insert(View record);
+	boolean insert(View record);
 
-    int insertSelective(View record);
+	boolean insertSelective(View record);
 
     List<View> selectByPrimaryKey(Integer viewid);
 
-    int updateByPrimaryKeySelective(View record);
+    boolean updateByPrimaryKeySelective(View record);
 
-    int updateByPrimaryKey(View record);
+    boolean updateByPrimaryKey(View record);
+    //²éÑ¯ËùÓÐ
+    List<View> getAll();
 }

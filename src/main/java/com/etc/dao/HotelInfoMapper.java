@@ -8,15 +8,18 @@ import com.etc.entity.HotelInfo;
 
 @Repository(value="hotelInfoMapper")
 public interface HotelInfoMapper {
-    int deleteByPrimaryKey(Integer hotelinfoid);
+	
+	boolean deleteByPrimaryKey(Integer hotelinfoid);
 
-    int insert(HotelInfo record);
+	boolean insert(HotelInfo record);
 
-    int insertSelective(HotelInfo record);
-
+	boolean insertSelective(HotelInfo record);
+    //ID条件查询
     List<HotelInfo> selectByPrimaryKey(Integer hotelinfoid);
 
-    int updateByPrimaryKeySelective(HotelInfo record);
+    boolean updateByPrimaryKeySelective(HotelInfo record);
 
-    int updateByPrimaryKey(HotelInfo record);
+    boolean updateByPrimaryKey(HotelInfo record);
+    //查询所有
+    List<HotelInfo> getAll();
 }

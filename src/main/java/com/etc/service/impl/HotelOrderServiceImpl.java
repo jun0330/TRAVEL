@@ -16,19 +16,19 @@ public class HotelOrderServiceImpl implements HotelOrderService {
 	@Resource(name="hotelOrderMapper")
 	private HotelOrderMapper hom;
 	@Override
-	public int deleteById(Integer horderId) {
+	public boolean deleteById(Integer horderId) {
 		// TODO Auto-generated method stub
 		return hom.deleteByPrimaryKey(horderId);
 	}
 
 	@Override
-	public int addHotelOrder(HotelOrder hotelOrder) {
+	public boolean addHotelOrder(HotelOrder hotelOrder) {
 		// TODO Auto-generated method stub
 		return hom.insert(hotelOrder);
 	}
 
 	@Override
-	public int addSelective(HotelOrder hotelOrder) {
+	public boolean addSelective(HotelOrder hotelOrder) {
 		// TODO Auto-generated method stub
 		return hom.insertSelective(hotelOrder);
 	}
@@ -40,15 +40,21 @@ public class HotelOrderServiceImpl implements HotelOrderService {
 	}
 
 	@Override
-	public int updateByIdSelective(HotelOrder hotelOrder) {
+	public boolean updateByIdSelective(HotelOrder hotelOrder) {
 		// TODO Auto-generated method stub
 		return hom.updateByPrimaryKeySelective(hotelOrder);
 	}
 
 	@Override
-	public int updateById(HotelOrder hotelOrder) {
+	public boolean updateById(HotelOrder hotelOrder) {
 		// TODO Auto-generated method stub
 		return hom.updateByPrimaryKey(hotelOrder);
+	}
+	
+	@Override
+	public List<HotelOrder> queryAll() {
+		// TODO Auto-generated method stub
+		return hom.getAll();
 	}
 
 }

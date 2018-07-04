@@ -28,6 +28,12 @@ public class ViewOrder {
 
     private Integer userid;
 
+	public ViewOrder() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+
 	public Integer getVorderid() {
 		return vorderid;
 	}

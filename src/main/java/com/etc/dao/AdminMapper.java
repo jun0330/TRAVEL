@@ -14,17 +14,17 @@ import com.etc.entity.Admin;
 @Repository(value="adminMapper")
 public interface AdminMapper {
 	
-    int deleteByPrimaryKey(Integer adminid);
+	boolean deleteByPrimaryKey(Integer adminid);
 
-    int insert(Admin record);
+	boolean insert(Admin record);
 
-    int insertSelective(Admin record);
-
+	boolean insertSelective(Admin record);
+    //id条件查询
     List<Admin> selectByPrimaryKey(Integer adminid);
 
-    int updateByPrimaryKeySelective(Admin record);
+    boolean updateByPrimaryKeySelective(Admin record);
 
-    int updateByPrimaryKey(Admin record);
-    
+    boolean updateByPrimaryKey(Admin record);
+    //查询所有
     List<Admin> getAll();
 }

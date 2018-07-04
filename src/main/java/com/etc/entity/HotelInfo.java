@@ -30,7 +30,13 @@ public class HotelInfo {
 
     private Integer hotelid;
 
-    public Integer getHotelinfoid() {
+    
+    public HotelInfo() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Integer getHotelinfoid() {
         return hotelinfoid;
     }
 

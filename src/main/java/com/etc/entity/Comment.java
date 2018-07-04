@@ -18,7 +18,23 @@ public class Comment {
 
     private Integer hotelinfoid;
 
-    public Comment(String hcommentcontent, String usernickname, Integer hotelinfoid) {
+    
+    public Comment() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Comment(Integer hcommentid, String hcommentcontent, String hcommentdate, String usernickname,
+			Integer hotelinfoid) {
+		super();
+		this.hcommentid = hcommentid;
+		this.hcommentcontent = hcommentcontent;
+		this.hcommentdate = hcommentdate;
+		this.usernickname = usernickname;
+		this.hotelinfoid = hotelinfoid;
+	}
+
+	public Comment(String hcommentcontent, String usernickname, Integer hotelinfoid) {
 		super();
 		this.hcommentcontent = hcommentcontent;
 		this.usernickname = usernickname;

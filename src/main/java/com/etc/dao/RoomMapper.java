@@ -8,15 +8,17 @@ import com.etc.entity.Room;
 
 @Repository(value="roomMapper")
 public interface RoomMapper {
-    int deleteByPrimaryKey(Integer roomid);
+	boolean deleteByPrimaryKey(Integer roomid);
 
-    int insert(Room record);
+	boolean insert(Room record);
 
-    int insertSelective(Room record);
+	boolean insertSelective(Room record);
 
     List<Room> selectByPrimaryKey(Integer roomid);
 
-    int updateByPrimaryKeySelective(Room record);
+    boolean updateByPrimaryKeySelective(Room record);
 
-    int updateByPrimaryKey(Room record);
+    boolean updateByPrimaryKey(Room record);
+    //²éÑ¯ËùÓÐ
+    List<Room> getAll();
 }

@@ -11,27 +11,26 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.ui.Model;
 
-import com.etc.entity.Comment;
-import com.etc.service.CommentService;
+import com.etc.entity.Admin;
+import com.etc.service.AdminService;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations= {"classpath:applicationContext.xml","classpath:mybatis_config.xml"})
-public class TestAddComment {
+public class TestdelAdmin {
 	
-	@Resource(name="commentService")
-	CommentService as;
+	@Resource(name="adminService")
+	AdminService as;
 	
 	@Test
-	public void addComment() {
+	public void addAdmin() {
 		
-		Comment c = new Comment("²âÊÔ2", "hello", 1);
 		
-		boolean flag = as.addComment(c);
+		boolean flag = as.deleteById(4);
 		
 		if(flag) {
-			System.out.println("Ìí¼Ó³É¹¦~");
+			System.out.println("É¾³ý³É¹¦~");
 		}else {
-			System.out.println("Ìí¼ÓÊ§°Ü");
+			System.out.println("É¾³ýÊ§°Ü");
 		}
 		
 	}

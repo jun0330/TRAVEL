@@ -17,19 +17,19 @@ public class CommentServiceImpl implements CommentService {
 	private CommentMapper cm;
 
 	@Override
-	public int deleteById(Integer hcommentId) {
+	public boolean deleteById(Integer hcommentId) {
 		// TODO Auto-generated method stub
 		return cm.deleteByPrimaryKey(hcommentId);
 	}
 
 	@Override
-	public int addComment(Comment comment) {
+	public boolean addComment(Comment comment) {
 		// TODO Auto-generated method stub
 		return cm.insert(comment);
 	}
 
 	@Override
-	public int addSelective(Comment comment) {
+	public boolean addSelective(Comment comment) {
 		// TODO Auto-generated method stub
 		return cm.insertSelective(comment);
 	}
@@ -41,15 +41,21 @@ public class CommentServiceImpl implements CommentService {
 	}
 
 	@Override
-	public int updateByIdySelective(Comment comment) {
+	public boolean updateByIdySelective(Comment comment) {
 		// TODO Auto-generated method stub
 		return cm.updateByPrimaryKeySelective(comment);
 	}
 
 	@Override
-	public int updateById(Comment comment) {
+	public boolean updateById(Comment comment) {
 		// TODO Auto-generated method stub
 		return cm.updateByPrimaryKey(comment);
+	}
+	
+	@Override
+	public List<Comment> queryC() {
+		// TODO Auto-generated method stub
+		return cm.queryComment();
 	}
 
 }

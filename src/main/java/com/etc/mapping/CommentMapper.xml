@@ -11,13 +11,18 @@
   <sql id="Base_Column_List">
     hCommentId, hCommentContent, hCommentDate, userNickName, hotelInfoId
   </sql>
-  <!-- 查询所有的评论记录 -->
+  <!-- 查询所有的评论记录 ID条件-->
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
     from comment
     where hCommentId = #{hcommentid,jdbcType=INTEGER}
   </select>
+  <!-- 查询所有 -->
+  <select id="queryComment" resultType="com.etc.entity.Comment" resultMap="BaseResultMap">
+  select * from comment
+  </select>
+  
   <!-- 以id为条件,删除留言记录 -->
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from comment
@@ -27,7 +32,7 @@
   <insert id="insert" parameterType="com.etc.entity.Comment">
     insert into comment (hCommentId, hCommentContent, hCommentDate, 
       userNickName, hotelInfoId)
-    values (#{hcommentid,jdbcType=INTEGER}, #{hcommentcontent,jdbcType=VARCHAR}, #{NOW()}, 
+    values (#{hcommentid,jdbcType=INTEGER}, #{hcommentcontent,jdbcType=VARCHAR}, NOW(), 
       #{usernickname,jdbcType=VARCHAR}, #{hotelinfoid,jdbcType=INTEGER})
   </insert>
   <!-- 用户留言~灵活 -->

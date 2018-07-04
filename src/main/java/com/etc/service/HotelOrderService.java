@@ -4,19 +4,22 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
+import com.etc.entity.Admin;
 import com.etc.entity.HotelOrder;
 
 public interface HotelOrderService {
 	
-    int deleteById(Integer horderId);
+	boolean deleteById(Integer horderId);
 
-    int addHotelOrder(HotelOrder hotelOrder);
+	boolean addHotelOrder(HotelOrder hotelOrder);
 
-    int addSelective(HotelOrder hotelOrder);
+	boolean addSelective(HotelOrder hotelOrder);
 
     List<HotelOrder> selectById(Integer horderId);
 
-    int updateByIdSelective(HotelOrder hotelOrder);
+    boolean updateByIdSelective(HotelOrder hotelOrder);
 
-    int updateById(HotelOrder hotelOrder);
+    boolean updateById(HotelOrder hotelOrder);
+	//查询所有的service
+	List<HotelOrder> queryAll();
 }

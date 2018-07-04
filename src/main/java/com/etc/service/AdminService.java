@@ -6,17 +6,17 @@ import com.etc.entity.Admin;
 
 public interface AdminService {
 	
-	int deleteById(int adminId);
+	boolean deleteById(int adminId);
 
-    int regAdmin(Admin admin);
+	boolean regAdmin(Admin admin);
 
-    int regAdminSelective(Admin admin);
+	boolean regAdminSelective(Admin admin);
 
     List<Admin> queryAdmin(Integer adminId);
 
-    int updateAdminById(Admin admin);
+    boolean updateAdminById(Admin admin);
 
-    int updateById(Admin admin);
+    boolean updateById(Admin admin);
     
     List<Admin> queryAll();
 

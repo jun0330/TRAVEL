@@ -33,7 +33,12 @@ public class View {
 
     private Integer scenicid;
 
-    public Integer getViewid() {
+    public View() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Integer getViewid() {
         return viewid;
     }
 

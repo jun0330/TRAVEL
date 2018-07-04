@@ -4,20 +4,23 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
+import com.etc.entity.Admin;
 import com.etc.entity.ViewOrder;
 
 @Repository(value="viewOrderMapper")
 public interface ViewOrderService {
 	
-    int deleteById(Integer vorderId);
+	boolean deleteById(Integer vorderId);
 
-    int addViewOrder(ViewOrder viewOrder);
+	boolean addViewOrder(ViewOrder viewOrder);
 
-    int addSelective(ViewOrder viewOrder);
+	boolean addSelective(ViewOrder viewOrder);
 
     List<ViewOrder> selectById(Integer vorderId);
 
-    int updateByIdSelective(ViewOrder viewOrder);
+    boolean updateByIdSelective(ViewOrder viewOrder);
 
-    int updateById(ViewOrder viewOrder);
+    boolean updateById(ViewOrder viewOrder);
+	//查询所有的service
+	List<ViewOrder> queryAll();
 }

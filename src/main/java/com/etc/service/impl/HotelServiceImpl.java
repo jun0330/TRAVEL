@@ -16,19 +16,19 @@ public class HotelServiceImpl implements HotelService {
 	@Resource(name="hotelMapper")
 	private HotelMapper hm;
 	@Override
-	public int deleteById(Integer hotelId) {
+	public boolean deleteById(Integer hotelId) {
 		// TODO Auto-generated method stub
 		return hm.deleteByPrimaryKey(hotelId);
 	}
 
 	@Override
-	public int addHotel(Hotel hotel) {
+	public boolean addHotel(Hotel hotel) {
 		// TODO Auto-generated method stub
 		return hm.insert(hotel);
 	}
 
 	@Override
-	public int addSelective(Hotel hotel) {
+	public boolean addSelective(Hotel hotel) {
 		// TODO Auto-generated method stub
 		return hm.insertSelective(hotel);
 	}
@@ -40,15 +40,21 @@ public class HotelServiceImpl implements HotelService {
 	}
 
 	@Override
-	public int updateByIdSelective(Hotel hotel) {
+	public boolean updateByIdSelective(Hotel hotel) {
 		// TODO Auto-generated method stub
 		return hm.updateByPrimaryKeySelective(hotel);
 	}
 
 	@Override
-	public int updateById(Hotel hotel) {
+	public boolean updateById(Hotel hotel) {
 		// TODO Auto-generated method stub
 		return hm.updateByPrimaryKey(hotel);
+	}
+	
+	@Override
+	public List<Hotel> queryAll() {
+		// TODO Auto-generated method stub
+		return hm.getAll();
 	}
 
 }

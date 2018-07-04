@@ -18,7 +18,12 @@ public class Users {
 
     private String regdate;
 
-    public Integer getUserid() {
+    public Users() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Integer getUserid() {
         return userid;
     }
 

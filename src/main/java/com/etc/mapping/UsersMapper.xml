@@ -8,25 +8,34 @@
     <result column="userPwd" jdbcType="VARCHAR" property="userpwd" />
     <result column="regDate" jdbcType="TIMESTAMP" property="regdate" />
   </resultMap>
+  
   <sql id="Base_Column_List">
     userId, userEmail, userNickName, userPwd, regDate
   </sql>
+  
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
     from users
     where userId = #{userid,jdbcType=INTEGER}
   </select>
+  
+  <select id="getAll" resultType="com.etc.entity.Users">
+  select * from users
+  </select>
+  
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from users
     where userId = #{userid,jdbcType=INTEGER}
   </delete>
+  
   <insert id="insert" parameterType="com.etc.entity.Users">
     insert into users (userId, userEmail, userNickName, 
       userPwd, regDate)
     values (#{userid,jdbcType=INTEGER}, #{useremail,jdbcType=VARCHAR}, #{usernickname,jdbcType=VARCHAR}, 
       #{userpwd,jdbcType=VARCHAR}, #{regdate,jdbcType=TIMESTAMP})
   </insert>
+  
   <insert id="insertSelective" parameterType="com.etc.entity.Users">
     insert into users
     <trim prefix="(" suffix=")" suffixOverrides=",">

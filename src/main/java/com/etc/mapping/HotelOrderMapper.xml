@@ -13,20 +13,28 @@
     <result column="orderDate" jdbcType="TIMESTAMP" property="orderdate" />
     <result column="userId" jdbcType="INTEGER" property="userid" />
   </resultMap>
+  
   <sql id="Base_Column_List">
     hOrderId, hotelName, roomType, roomDate, roomPrice, userName, userPhone, userCard, 
     orderDate, userId
   </sql>
+  
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
     from hotelorder
     where hOrderId = #{horderid,jdbcType=INTEGER}
   </select>
+  
+  <select id="getAll" resultType="com.etc.entity.HotelOrder">
+  select * from hotelorder
+  </select>
+  
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from hotelorder
     where hOrderId = #{horderid,jdbcType=INTEGER}
   </delete>
+  
   <insert id="insert" parameterType="com.etc.entity.HotelOrder">
     insert into hotelorder (hOrderId, hotelName, roomType, 
       roomDate, roomPrice, userName, 
@@ -37,6 +45,7 @@
       #{userphone,jdbcType=DOUBLE}, #{usercard,jdbcType=DOUBLE}, #{orderdate,jdbcType=TIMESTAMP}, 
       #{userid,jdbcType=INTEGER})
   </insert>
+  
   <insert id="insertSelective" parameterType="com.etc.entity.HotelOrder">
     insert into hotelorder
     <trim prefix="(" suffix=")" suffixOverrides=",">

@@ -18,7 +18,7 @@
   </select>
   
   <!-- 查询所有 -->
-  <select id="getAll" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+  <select id="getAll" resultType="com.etc.entity.Admin" resultMap="BaseResultMap">
   select * from admin
   </select> 
   

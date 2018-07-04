@@ -16,23 +16,16 @@ import com.etc.service.CommentService;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations= {"classpath:applicationContext.xml","classpath:mybatis_config.xml"})
-public class TestAddComment {
+public class TestGetComment {
 	
 	@Resource(name="commentService")
 	CommentService as;
 	
 	@Test
-	public void addComment() {
+	public void getComment() {
 		
-		Comment c = new Comment("测试2", "hello", 1);
-		
-		boolean flag = as.addComment(c);
-		
-		if(flag) {
-			System.out.println("添加成功~");
-		}else {
-			System.out.println("添加失败");
-		}
+		List<Comment> list = as.queryC();
+		list.forEach(System.out::println);
 		
 	}
 

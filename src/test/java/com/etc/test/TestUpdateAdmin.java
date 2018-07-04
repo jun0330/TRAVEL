@@ -11,27 +11,27 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.ui.Model;
 
-import com.etc.entity.Comment;
-import com.etc.service.CommentService;
+import com.etc.entity.Admin;
+import com.etc.service.AdminService;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations= {"classpath:applicationContext.xml","classpath:mybatis_config.xml"})
-public class TestAddComment {
+public class TestUpdateAdmin {
 	
-	@Resource(name="commentService")
-	CommentService as;
+	@Resource(name="adminService")
+	AdminService as;
 	
 	@Test
-	public void addComment() {
+	public void addAdmin() {
 		
-		Comment c = new Comment("测试2", "hello", 1);
+		Admin ad = new Admin(3,"修改测试", "123321");
 		
-		boolean flag = as.addComment(c);
+		boolean flag = as.updateById(ad);
 		
 		if(flag) {
-			System.out.println("添加成功~");
+			System.out.println("修改成功~");
 		}else {
-			System.out.println("添加失败");
+			System.out.println("修改失败");
 		}
 		
 	}

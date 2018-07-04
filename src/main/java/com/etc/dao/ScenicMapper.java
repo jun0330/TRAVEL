@@ -4,19 +4,22 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
+import com.etc.entity.Room;
 import com.etc.entity.Scenic;
 
 @Repository(value="scenicMapper")
 public interface ScenicMapper {
-    int deleteByPrimaryKey(Integer scenicid);
+	boolean deleteByPrimaryKey(Integer scenicid);
 
-    int insert(Scenic record);
+	boolean insert(Scenic record);
 
-    int insertSelective(Scenic record);
+	boolean insertSelective(Scenic record);
 
     List<Scenic> selectByPrimaryKey(Integer scenicid);
 
-    int updateByPrimaryKeySelective(Scenic record);
+    boolean updateByPrimaryKeySelective(Scenic record);
 
-    int updateByPrimaryKey(Scenic record);
+    boolean updateByPrimaryKey(Scenic record);
+    //²éÑ¯ËùÓÐ
+    List<Scenic> getAll();
 }

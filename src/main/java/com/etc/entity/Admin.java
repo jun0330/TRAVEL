@@ -15,6 +15,17 @@ public class Admin {
     private String adminpwd;
 
     private Date regdate;
+    
+    public Admin() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Admin(Integer adminid, String adminname, String adminpwd) {
+		super();
+		this.adminid = adminid;
+		this.adminname = adminname;
+		this.adminpwd = adminpwd;
+	}
 
 	public Admin(String adminname, String adminpwd) {
 		super();

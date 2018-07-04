@@ -16,19 +16,19 @@ public class ScommentServiceImpl implements ScommentService {
 	@Resource(name="scommentMapper")
 	private ScommentMapper scm;
 	@Override
-	public int deleteById(Integer scommentId) {
+	public boolean deleteById(Integer scommentId) {
 		// TODO Auto-generated method stub
 		return scm.deleteByPrimaryKey(scommentId);
 	}
 
 	@Override
-	public int addScomment(Scomment scomment) {
+	public boolean addScomment(Scomment scomment) {
 		// TODO Auto-generated method stub
 		return scm.insert(scomment);
 	}
 
 	@Override
-	public int addSelective(Scomment scomment) {
+	public boolean addSelective(Scomment scomment) {
 		// TODO Auto-generated method stub
 		return scm.insertSelective(scomment);
 	}
@@ -40,15 +40,21 @@ public class ScommentServiceImpl implements ScommentService {
 	}
 
 	@Override
-	public int updateByIdSelective(Scomment scomment) {
+	public boolean updateByIdSelective(Scomment scomment) {
 		// TODO Auto-generated method stub
 		return scm.updateByPrimaryKeySelective(scomment);
 	}
 
 	@Override
-	public int updateById(Scomment scomment) {
+	public boolean updateById(Scomment scomment) {
 		// TODO Auto-generated method stub
 		return scm.updateByPrimaryKey(scomment);
+	}
+	
+	@Override
+	public List<Scomment> queryAll() {
+		// TODO Auto-generated method stub
+		return scm.getAll();
 	}
 
 }

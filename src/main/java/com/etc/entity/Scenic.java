@@ -14,7 +14,12 @@ public class Scenic {
 
     private String scenidpic;
 
-    public Integer getScenicid() {
+    public Scenic() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Integer getScenicid() {
         return scenicid;
     }
 

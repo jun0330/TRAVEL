@@ -16,19 +16,19 @@ public class ViewOrderServiceImpl implements ViewOrderService {
 	@Resource(name="viewOrderMapper")
 	private ViewOrderMapper vom;
 	@Override
-	public int deleteById(Integer vorderId) {
+	public boolean deleteById(Integer vorderId) {
 		// TODO Auto-generated method stub
 		return vom.deleteByPrimaryKey(vorderId);
 	}
 
 	@Override
-	public int addViewOrder(ViewOrder viewOrder) {
+	public boolean addViewOrder(ViewOrder viewOrder) {
 		// TODO Auto-generated method stub
 		return vom.insert(viewOrder);
 	}
 
 	@Override
-	public int addSelective(ViewOrder viewOrder) {
+	public boolean addSelective(ViewOrder viewOrder) {
 		// TODO Auto-generated method stub
 		return vom.insertSelective(viewOrder);
 	}
@@ -40,15 +40,21 @@ public class ViewOrderServiceImpl implements ViewOrderService {
 	}
 
 	@Override
-	public int updateByIdSelective(ViewOrder viewOrder) {
+	public boolean updateByIdSelective(ViewOrder viewOrder) {
 		// TODO Auto-generated method stub
 		return vom.updateByPrimaryKeySelective(viewOrder);
 	}
 
 	@Override
-	public int updateById(ViewOrder viewOrder) {
+	public boolean updateById(ViewOrder viewOrder) {
 		// TODO Auto-generated method stub
 		return vom.updateByPrimaryKey(viewOrder);
+	}
+	
+	@Override
+	public List<ViewOrder> queryAll() {
+		// TODO Auto-generated method stub
+		return vom.getAll();
 	}
 
 }

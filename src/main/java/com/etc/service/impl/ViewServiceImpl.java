@@ -16,19 +16,19 @@ public class ViewServiceImpl implements ViewService {
 	@Resource(name="viewMapper")
 	private ViewMapper vm;
 	@Override
-	public int deleteById(Integer viewId) {
+	public boolean deleteById(Integer viewId) {
 		// TODO Auto-generated method stub
 		return vm.deleteByPrimaryKey(viewId);
 	}
 
 	@Override
-	public int addView(View view) {
+	public boolean addView(View view) {
 		// TODO Auto-generated method stub
 		return vm.insert(view);
 	}
 
 	@Override
-	public int addSelective(View view) {
+	public boolean addSelective(View view) {
 		// TODO Auto-generated method stub
 		return vm.insertSelective(view);
 	}
@@ -40,15 +40,21 @@ public class ViewServiceImpl implements ViewService {
 	}
 
 	@Override
-	public int updateByIdSelective(View view) {
+	public boolean updateByIdSelective(View view) {
 		// TODO Auto-generated method stub
 		return vm.updateByPrimaryKeySelective(view);
 	}
 
 	@Override
-	public int updateById(View view) {
+	public boolean updateById(View view) {
 		// TODO Auto-generated method stub
 		return vm.updateByPrimaryKey(view);
+	}
+	
+	@Override
+	public List<View> queryAll() {
+		// TODO Auto-generated method stub
+		return vm.getAll();
 	}
 
 }

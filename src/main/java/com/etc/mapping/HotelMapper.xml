@@ -7,25 +7,34 @@
     <result column="hotelName" jdbcType="VARCHAR" property="hotelname" />
     <result column="hotelPrice" jdbcType="DOUBLE" property="hotelprice" />
   </resultMap>
+  
   <sql id="Base_Column_List">
     hotelId, hotelPic, hotelName, hotelPrice
   </sql>
+  
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
     from hotel
     where hotelId = #{hotelid,jdbcType=INTEGER}
   </select>
+  
+  <select id="getALl" resultType="com.etc.entity.Hotel">
+  select * from hotel
+  </select>
+  
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from hotel
     where hotelId = #{hotelid,jdbcType=INTEGER}
   </delete>
+  
   <insert id="insert" parameterType="com.etc.entity.Hotel">
     insert into hotel (hotelId, hotelPic, hotelName, 
       hotelPrice)
     values (#{hotelid,jdbcType=INTEGER}, #{hotelpic,jdbcType=VARCHAR}, #{hotelname,jdbcType=VARCHAR}, 
       #{hotelprice,jdbcType=DOUBLE})
   </insert>
+  
   <insert id="insertSelective" parameterType="com.etc.entity.Hotel">
     insert into hotel
     <trim prefix="(" suffix=")" suffixOverrides=",">

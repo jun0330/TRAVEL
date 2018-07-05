@@ -155,77 +155,12 @@
     <div class="list-title">景点介绍</div>
     <div class="row jdjs-main">
     
-      <div class="col-md-8">
-      
-      
-        <div class="jd-summary">
-        	<div class="row">
-          		<div class="col-md-3 img"><img src="img/yhzc.png" class="img-responsive"></div>
-         		<div class="col-md-9 content">
-            		<h4><a href="jdxx.html">Medhufushi Island Resort曼德芙岛</a><b><span class="s_star_1"><i class="s_d8"></i></span></b></h4>
-            		<em>地点：南马累环礁</em>
-            		<em>门票价格：<dfn class="Scenic-price"><i>&yen;275</i></dfn>起 </em>
-            		<p>The Residence Maldives 在2012年4月开幕。坐落在Gaafu Alifu 环礁，是世界上最大、最深的环礁。幽静的 The Residence Maldives 位於马列国际机场南面...</p>
-          		</div>
-          		<div class="clearfix"></div>
-         	</div>
-        </div>
-        
-           <div class="jd-summary">
-        	<div class="row">
-          		<div class="col-md-3 img"><img src="img/yhzc.png" class="img-responsive"></div>
-         		<div class="col-md-9 content">
-            		<h4><a href="jdxx.html">Medhufushi Island Resort曼德芙岛</a><b><span class="s_star_1"><i class="s_d8"></i></span></b></h4>
-            		<em>地点：南马累环礁</em>
-            		<em>门票价格：<dfn class="Scenic-price"><i>&yen;275</i></dfn>起 </em>
-            		<p>The Residence Maldives 在2012年4月开幕。坐落在Gaafu Alifu 环礁，是世界上最大、最深的环礁。幽静的 The Residence Maldives 位於马列国际机场南面...</p>
-          		</div>
-          		<div class="clearfix"></div>
-         	</div>
-        </div>
-        
-           <div class="jd-summary">
-        	<div class="row">
-          		<div class="col-md-3 img"><img src="img/yhzc.png" class="img-responsive"></div>
-         		<div class="col-md-9 content">
-            		<h4><a href="jdxx.html">Medhufushi Island Resort曼德芙岛</a><b><span class="s_star_1"><i class="s_d6"></i></span></b></h4>
-            		<em>地点：南马累环礁</em>
-            		<em>门票价格：<dfn class="Scenic-price"><i>&yen;275</i></dfn>起 </em>
-            		<p>The Residence Maldives 在2012年4月开幕。坐落在Gaafu Alifu 环礁，是世界上最大、最深的环礁。幽静的 The Residence Maldives 位於马列国际机场南面...</p>
-          		</div>
-          		<div class="clearfix"></div>
-         	</div>
-        </div>
-        
-           <div class="jd-summary">
-        	<div class="row">
-          		<div class="col-md-3 img"><img src="img/yhzc.png" class="img-responsive"></div>
-         		<div class="col-md-9 content">
-            		<h4><a href="jdxx.html">Medhufushi Island Resort曼德芙岛</a><b><span class="s_star_1"><i class="s_d2"></i></span></b></h4>
-            		<em>地点：南马累环礁</em>
-            		<em>门票价格：<dfn class="Scenic-price"><i>&yen;275</i></dfn>起 </em>
-            		<p>The Residence Maldives 在2012年4月开幕。坐落在Gaafu Alifu 环礁，是世界上最大、最深的环礁。幽静的 The Residence Maldives 位於马列国际机场南面...</p>
-          		</div>
-          		<div class="clearfix"></div>
-         	</div>
-        </div>
-        
-           <div class="jd-summary">
-        	<div class="row">
-          		<div class="col-md-3 img"><img src="img/yhzc.png" class="img-responsive"></div>
-         		<div class="col-md-9 content">
-            		<h4><a href="jdxx.html">Medhufushi Island Resort曼德芙岛</a><b><span class="s_star_1"><i class="s_d2"></i></span></b></h4>
-            		<em>地点：南马累环礁</em>
-            		<em>门票价格：<dfn class="Scenic-price"><i>&yen;275</i></dfn>起 </em>
-            		<p>The Residence Maldives 在2012年4月开幕。坐落在Gaafu Alifu 环礁，是世界上最大、最深的环礁。幽静的 The Residence Maldives 位於马列国际机场南面...</p>
-          		</div>
-          		<div class="clearfix"></div>
-         	</div>
-        </div>
+      <div class="col-md-8" id="scenics">
       
 
+<!-- 
          <div class="page pull-right">
-  		</div>
+  		</div> -->
   		
       </div>
       <div class="col-md-4 jd-list">
@@ -273,5 +208,21 @@
 <script src="js/jquery.min.js"></script> 
 <script src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/click.js"></script>
+<script type="text/javascript">
+		$(function(e){
+			 $.ajax({
+	             type: "GET",
+	             url: "http://localhost:8090/mvn-lvyou/api/scenic/six",
+	             dataType: "json",
+	             success: function(data){
+	            	$.each(data, function(commentIndex, comment){
+	            		var loc=comment.scenicname.substring(0,2);
+                      $("#scenics").append("<div class='jd-summary'><div class='row'><div class='col-md-3 img'><img src='scenicImg/"+comment.scenidpic+"' class='img-responsive'></div><div class='col-md-9 content'><h4><a href='jdxx.html'>"+comment.scenicname+"</a><b><span class='s_star_1'><i class='s_d8'></i></span></b></h4><em>地点："+loc+"</em><em>门票价格：<dfn class='Scenic-price'><i>&yen;"+comment.scenicprice+"</i></dfn>起 </em><p>福建景点</p></div><div class='clearfix'></div></div> </div>"); 
+                   });
+	             }
+	          });
+		})
+	</script>
+
 </body>
 </html>

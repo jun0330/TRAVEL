@@ -23,6 +23,12 @@
   select * from scenic
   </select>
   
+    <!-- 查询六条记录 -->
+  <select id="getSix" resultType="com.etc.entity.Scenic">
+  select * from scenic limit 6
+  </select>
+  
+  
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from scenic
     where scenicId = #{scenicid,jdbcType=INTEGER}

@@ -22,4 +22,6 @@ public interface ScenicMapper {
     boolean updateByPrimaryKey(Scenic record);
     //查询所有
     List<Scenic> getAll();
+    //查询六条景点记录
+    List<Scenic> getSix();  
 }

@@ -23,5 +23,7 @@ public interface ScenicMapper {
     //查询所有
     List<Scenic> getAll();
     //查询六条景点记录
-    List<Scenic> getSix();  
+    List<Scenic> getSix();
+    
+    List<Scenic> getScenicByLoc(String scenicname);  
 }

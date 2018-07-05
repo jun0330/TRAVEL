@@ -30,6 +30,15 @@ public class ScenicController {
 		return list;
 	}
 	
+	@RequestMapping(value= {"/all"},method=RequestMethod.GET)
+	@ResponseBody
+	public List<Scenic> getAllScenic(){
+		
+		List<Scenic> list = ss.queryAll();
+		
+		return list;
+	}
+	
 	@RequestMapping(value="/test")
 	public String Test() {
 		return "result";

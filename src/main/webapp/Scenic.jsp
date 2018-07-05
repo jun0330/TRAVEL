@@ -166,7 +166,7 @@
       <div class="col-md-4 jd-list">
 		<div class="list-title">景点位置</div>
 		<ul class="content-list">
-			<li>▪&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">厦门</a></li>
+			<li>▪&nbsp;&nbsp;&nbsp;&nbsp;<a href="javvascript:void(0);" >厦门</a></li>
 			<li>▪&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">泉州</a></li>
 			<li>▪&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">莆田</a></li>
 		</ul>
@@ -223,6 +223,8 @@
 	          });
 		})
 	</script>
-
+	
+	
+	
 </body>
 </html>

@@ -57,4 +57,10 @@ public class ScenicServiceImpl implements ScenicService {
 		return sm.getAll();
 	}
 
+	@Override
+	public List<Scenic> querySix() {
+		// TODO Auto-generated method stub
+		return sm.getSix();
+	}
+
 }

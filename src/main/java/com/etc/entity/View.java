@@ -17,7 +17,7 @@ public class View {
 
     private String viewjobtime;
 
-    private Double viewprice;
+    private Double scenicprice;
 
     private String viewintro;
 
@@ -84,12 +84,12 @@ public class View {
 		this.viewjobtime = viewjobtime;
 	}
 
-	public Double getViewprice() {
-		return viewprice;
+	public Double getScenicprice() {
+		return scenicprice;
 	}
 
-	public void setViewprice(Double viewprice) {
-		this.viewprice = viewprice;
+	public void setScenicprice(Double scenicprice) {
+		this.scenicprice = scenicprice;
 	}
 
 	public String getViewintro() {
@@ -167,7 +167,7 @@ public class View {
 	@Override
 	public String toString() {
 		return "View [viewid=" + viewid + ", scenicpic=" + scenicpic + ", scenicname=" + scenicname + ", viewaddress="
-				+ viewaddress + ", viewjobtime=" + viewjobtime + ", viewprice=" + viewprice + ", viewintro=" + viewintro
+				+ viewaddress + ", viewjobtime=" + viewjobtime + ", scenicprice=" + scenicprice + ", viewintro=" + viewintro
 				+ ", viewpic1=" + viewpic1 + ", viewpic2=" + viewpic2 + ", viewpic3=" + viewpic3 + ", viewpic4="
 				+ viewpic4 + ", viewpic5=" + viewpic5 + ", viewpic6=" + viewpic6 + ", viewpic7=" + viewpic7
 				+ ", scenicid=" + scenicid + "]";

@@ -22,4 +22,6 @@ public interface ScenicService {
     boolean updateById(Scenic scenic);
 	//查询所有的service
 	List<Scenic> queryAll();
+	//查询六条服务
+	List<Scenic> querySix();
 }

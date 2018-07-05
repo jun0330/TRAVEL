@@ -17,6 +17,8 @@ public interface ViewService {
 	boolean addSelective(View view);
 
     List<View> selectById(Integer viewId);
+    
+    List<View> queryById(Integer scenicId);
 
     boolean updateByIdSelective(View view);
 

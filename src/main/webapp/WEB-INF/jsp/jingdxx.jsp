@@ -80,13 +80,13 @@ color:#FFA500;
     <div class="row jdjs-main">
       <div class="col-md-10">
         <div class="row parameter">
-          <div class="col-md-6"><img src="${pageContext.request.contextPath}/scenicImg/${view.viewpic1}" id="img" class="img-responsive"></div>
+          <div class="col-md-6"><img src="${pageContext.request.contextPath}/scenicImg/${view.scenicpic}" id="img" class="img-responsive"></div>
           <div class="col-md-6">
-            <h3><a href="">${view.viewname}</a></h3>
+            <h3><a href="">${view.scenicname}</a></h3>
              <em>${view.viewaddress}<span style="margin-left:10px"><a href="?#hotel">
                                   查看地图</a></span></em><em>${view.viewjobtime}</em> <em>电话号码：+110 1101000</em><em>精彩活动：<a href="" style="color:#FF4500;">王者齐聚欢乐谷,激爽夏日在方特</a></em><em>服务保障：<span><a href="" style="color:blue;margin-right:15px;">入园保障</a></span><span><a href="" style="color:blue;margin-right:15px;">如实描述</a></span><span><a href="" style="color:blue">贵就赔</a></span></em><em><span style="color:#FFA500;font-size:24px;">97.6%</span>好评率</em> <a href="?#disport"><em>查看<span style="color:#FFA500">1010</span>条评论</em></a></div>
               
-              <span style="color:#FF4500;font-size:24px;margin-right:20px" id="span" ><span  style="color:#FF4500;font-size:18px">￥</span>220<span  style="color:#000000;font-size:14px">起</span></span><a href="?#about"><button id="btn" style="width:100px;height:35px;background:#FFA500;border-radius:7px; border-style:none;color:#F8F8FF; font-size:16px;">立即预定</button></a>
+              <span style="color:#FF4500;font-size:24px;margin-right:20px" id="span" ><span  style="color:#FF4500;font-size:18px">￥</span>${view.scenicprice}<span  style="color:#000000;font-size:14px">起</span></span><a href="?#about"><button id="btn" style="width:100px;height:35px;background:#FFA500;border-radius:7px; border-style:none;color:#F8F8FF; font-size:16px;">立即预定</button></a>
         </div>
         <ul class="about col-md-12">
             <li class="col-md-2"><a href="?#about">景点门票</a></li>

@@ -491,12 +491,12 @@
 		$(function(e){
 			 $.ajax({
 	             type: "GET",
-	             url: "http://localhost:8090/mvn-lvyou/api/scenic/six",
+	             url: "${pageContext.request.contextPath}/api/scenic/six",
 	             dataType: "json",
 	             success: function(data){
 	            	$.each(data, function(commentIndex, comment){
 	            		
-                      $("#scenics").append("<div class='col-md-4 col-sm-4 col-xs-12 Scenic'><a class='Scenic-href'><img src='scenicImg/"+comment.scenidpic+"' class='Scenic-img'></a><div class='Scenic-info'><p><span class='Scenic-tit1'>景区门票|<i class='Scenic-tit2'>"+comment.scenicname+"</i></span></p><p><dfn class='Scenic-price'><i>&yen;"+comment.scenicprice+"</i></dfn>起</p></div></div> "); 
+                      $("#scenics").append("<div class='col-md-4 col-sm-4 col-xs-12 Scenic'><a class='Scenic-href' href='${pageContext.request.contextPath}/view/list?scenicId=1'><img src='scenicImg/"+comment.scenidpic+"' class='Scenic-img'></a><div class='Scenic-info'><p><span class='Scenic-tit1'>景区门票|<i class='Scenic-tit2'>"+comment.scenicname+"</i></span></p><p><dfn class='Scenic-price'><i>&yen;"+comment.scenicprice+"</i></dfn>起</p></div></div> "); 
                    });
 	             }
 	          });

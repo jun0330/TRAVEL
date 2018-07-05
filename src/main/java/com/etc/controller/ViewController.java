@@ -22,10 +22,10 @@ public class ViewController {
 	private ViewService viewService;
 	
 	@RequestMapping(value="/list")
-	public String getView(Model model,Integer viewId)
+	public String getView(Model model,Integer scenicId)
 	{
 	
-		List<View> list=viewService.selectById(viewId);
+		List<View> list=viewService.queryById(scenicId);
 		//model.addAttribute(list);//添加一个属性的值 ,没有说key  => userList 
 		model.addAttribute("list", list);//一个key ,一个value
 		

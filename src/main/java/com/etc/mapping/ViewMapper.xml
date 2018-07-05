@@ -4,10 +4,10 @@
   <resultMap id="BaseResultMap" type="com.etc.entity.View">
     <id column="viewId" jdbcType="INTEGER" property="viewid" />
     <result column="scenicPic" jdbcType="VARCHAR" property="scenicpic" />
-    <result column="viewName" jdbcType="VARCHAR" property="viewname" />
+    <result column="scenicName" jdbcType="VARCHAR" property="scenicname" />
     <result column="viewAddress" jdbcType="VARCHAR" property="viewaddress" />
     <result column="viewJobTime" jdbcType="TIMESTAMP" property="viewjobtime" />
-    <result column="viewPrice" jdbcType="DOUBLE" property="viewprice" />
+    <result column="scenicPrice" jdbcType="DOUBLE" property="scenicprice" />
     <result column="viewIntro" jdbcType="VARCHAR" property="viewintro" />
     <result column="viewPic1" jdbcType="VARCHAR" property="viewpic1" />
     <result column="viewPic2" jdbcType="VARCHAR" property="viewpic2" />
@@ -18,7 +18,7 @@
   </resultMap>
   
   <sql id="Base_Column_List">
-    viewId, scenicPic, viewName, viewAddress, viewJobTime, viewPrice, viewIntro, viewPic1, 
+    viewId, scenicPic, scenicName, viewAddress, viewJobTime, scenicPrice, viewIntro, viewPic1, 
     viewPic2, viewPic3, viewPic4, viewPic5, scenicId
   </sql>
   
@@ -29,9 +29,17 @@
     where viewId = #{viewid,jdbcType=INTEGER}
   </select>
   
+    <select id="selectById" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from view
+    where scenicId = #{scenicid,jdbcType=INTEGER}
+    </select>
+  
   <select id="getAll" resultType="com.etc.entity.View">
   select * from view
   </select>
+
   
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from view
@@ -39,13 +47,13 @@
   </delete>
   
   <insert id="insert" parameterType="com.etc.entity.View">
-    insert into view (viewId, scenicPic, viewName, 
-      viewAddress, viewJobTime, viewPrice, 
+    insert into view (viewId, scenicPic, scenicName, 
+      viewAddress, viewJobTime, scenicPrice, 
       viewIntro, viewPic1, viewPic2, 
       viewPic3, viewPic4, viewPic5, 
       scenicId)
-    values (#{viewid,jdbcType=INTEGER}, #{scenicpic,jdbcType=VARCHAR}, #{viewname,jdbcType=VARCHAR}, 
-      #{viewaddress,jdbcType=VARCHAR}, #{viewjobtime,jdbcType=TIMESTAMP}, #{viewprice,jdbcType=DOUBLE}, 
+    values (#{viewid,jdbcType=INTEGER}, #{scenicpic,jdbcType=VARCHAR}, #{scenicname,jdbcType=VARCHAR}, 
+      #{viewaddress,jdbcType=VARCHAR}, #{viewjobtime,jdbcType=TIMESTAMP}, #{scenicprice,jdbcType=DOUBLE}, 
       #{viewintro,jdbcType=VARCHAR}, #{viewpic1,jdbcType=VARCHAR}, #{viewpic2,jdbcType=VARCHAR}, 
       #{viewpic3,jdbcType=VARCHAR}, #{viewpic4,jdbcType=VARCHAR}, #{viewpic5,jdbcType=VARCHAR}, 
       #{scenicid,jdbcType=INTEGER})
@@ -60,8 +68,8 @@
       <if test="scenicpic != null">
         scenicPic,
       </if>
-      <if test="viewname != null">
-        viewName,
+      <if test="scenicname != null">
+        scenicName,
       </if>
       <if test="viewaddress != null">
         viewAddress,
@@ -69,8 +77,8 @@
       <if test="viewjobtime != null">
         viewJobTime,
       </if>
-      <if test="viewprice != null">
-        viewPrice,
+      <if test="scenicprice != null">
+        scenicPrice,
       </if>
       <if test="viewintro != null">
         viewIntro,
@@ -102,7 +110,7 @@
         #{scenicpic,jdbcType=VARCHAR},
       </if>
       <if test="viewname != null">
-        #{viewname,jdbcType=VARCHAR},
+        #{scenicname,jdbcType=VARCHAR},
       </if>
       <if test="viewaddress != null">
         #{viewaddress,jdbcType=VARCHAR},
@@ -110,8 +118,8 @@
       <if test="viewjobtime != null">
         #{viewjobtime,jdbcType=TIMESTAMP},
       </if>
-      <if test="viewprice != null">
-        #{viewprice,jdbcType=DOUBLE},
+      <if test="scenicprice != null">
+        #{scenicprice,jdbcType=DOUBLE},
       </if>
       <if test="viewintro != null">
         #{viewintro,jdbcType=VARCHAR},
@@ -142,8 +150,8 @@
       <if test="scenicpic != null">
         scenicPic = #{scenicpic,jdbcType=VARCHAR},
       </if>
-      <if test="viewname != null">
-        viewName = #{viewname,jdbcType=VARCHAR},
+      <if test="scenicname != null">
+        scenicName = #{scenicname,jdbcType=VARCHAR},
       </if>
       <if test="viewaddress != null">
         viewAddress = #{viewaddress,jdbcType=VARCHAR},
@@ -151,8 +159,8 @@
       <if test="viewjobtime != null">
         viewJobTime = #{viewjobtime,jdbcType=TIMESTAMP},
       </if>
-      <if test="viewprice != null">
-        viewPrice = #{viewprice,jdbcType=DOUBLE},
+      <if test="scenicprice != null">
+        scenicPrice = #{scenicprice,jdbcType=DOUBLE},
       </if>
       <if test="viewintro != null">
         viewIntro = #{viewintro,jdbcType=VARCHAR},
@@ -181,10 +189,10 @@
   <update id="updateByPrimaryKey" parameterType="com.etc.entity.View">
     update view
     set scenicPic = #{scenicpic,jdbcType=VARCHAR},
-      viewName = #{viewname,jdbcType=VARCHAR},
+      scenicName = #{scenicname,jdbcType=VARCHAR},
       viewAddress = #{viewaddress,jdbcType=VARCHAR},
       viewJobTime = #{viewjobtime,jdbcType=TIMESTAMP},
-      viewPrice = #{viewprice,jdbcType=DOUBLE},
+      scenicPrice = #{scenicprice,jdbcType=DOUBLE},
       viewIntro = #{viewintro,jdbcType=VARCHAR},
       viewPic1 = #{viewpic1,jdbcType=VARCHAR},
       viewPic2 = #{viewpic2,jdbcType=VARCHAR},

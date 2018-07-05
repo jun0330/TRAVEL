@@ -56,5 +56,11 @@ public class ViewServiceImpl implements ViewService {
 		// TODO Auto-generated method stub
 		return vm.getAll();
 	}
+	
+@Override
+public List<View> queryById(Integer scenicId) {
+	// TODO Auto-generated method stub
+	return vm.selectById(scenicId);
+}
 
 }

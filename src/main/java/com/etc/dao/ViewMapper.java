@@ -16,6 +16,8 @@ public interface ViewMapper {
 	boolean insertSelective(View record);
 
     List<View> selectByPrimaryKey(Integer viewid);
+    
+    List<View> selectById(Integer scenicId);
 
     boolean updateByPrimaryKeySelective(View record);
 

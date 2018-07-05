@@ -198,74 +198,8 @@
 			
 			<div class="col-md-12 column">
 				<div class="tab-content">
-					<div class="row products">
+					<div class="row products" id="scenics">
 					
-						<div class="col-md-4 col-sm-4 col-xs-12 Scenic">
-							<a class="Scenic-href"><img src="img/main1.png" class="Scenic-img"></a>
-							<div class="Scenic-info">
-								<p>
-									<span class="Scenic-tit1">景区门票|<i class="Scenic-tit2">广州长隆野生动物世界</i></span>
-								</p>
-								<p>
-									<dfn class="Scenic-price"><i>&yen;275</i></dfn>起
-								</p>
-							</div>
-						</div>
-						<div class="col-md-4 col-sm-4 col-xs-12 Scenic">
-							<a class="Scenic-href"><img src="img/main1.png" class="Scenic-img"></a>
-							<div class="Scenic-info">
-								<p>
-									<span class="Scenic-tit1">景区门票|<i class="Scenic-tit2">广州长隆野生动物世界</i></span>
-								</p>
-								<p>
-									<dfn class="Scenic-price"><i>&yen;275</i></dfn>起
-								</p>
-							</div>
-						</div>
-						<div class="col-md-4 col-sm-4 col-xs-12 Scenic">
-							<a class="Scenic-href"><img src="img/main1.png" class="Scenic-img"></a>
-							<div class="Scenic-info">
-								<p>
-									<span class="Scenic-tit1">景区门票|<i class="Scenic-tit2">广州长隆野生动物世界</i></span>
-								</p>
-								<p>
-									<dfn class="Scenic-price"><i>&yen;275</i></dfn>起
-								</p>
-							</div>
-						</div>
-						<div class="col-md-4 col-sm-4 col-xs-12 Scenic">
-							<a class="Scenic-href"><img src="img/main1.png" class="Scenic-img"></a>
-							<div class="Scenic-info">
-								<p>
-									<span class="Scenic-tit1">景区门票|<i class="Scenic-tit2">广州长隆野生动物世界</i></span>
-								</p>
-								<p>
-									<dfn class="Scenic-price"><i>&yen;275</i></dfn>起
-								</p>
-							</div>
-						</div>
-						<div class="col-md-4 col-sm-4 col-xs-12 Scenic">
-							<a class="Scenic-href"><img src="img/main1.png" class="Scenic-img"></a>
-							<div class="Scenic-info">
-								<p>
-									<span class="Scenic-tit1">景区门票|<i class="Scenic-tit2">广州长隆野生动物世界</i></span>
-								</p>
-								<p>
-									<dfn class="Scenic-price"><i>&yen;275</i></dfn>起
-								</p>
-							</div>
-						</div>
-						<div class="col-md-4 col-sm-4 col-xs-12 Scenic">
-							<a class="Scenic-href"><img src="img/main1.png" class="Scenic-img"></a>
-							<div class="Scenic-info">
-								<p>
-									<span class="Scenic-tit1">景区门票|<i class="Scenic-tit2">广州长隆野生动物世界</i></span>
-								</p>
-								<p>
-									<dfn class="Scenic-price"><i>&yen;275</i></dfn>起
-								</p>
-							</div>
-						</div>
 						
 					</div>
 				</div>
@@ -552,5 +486,21 @@
 		});
 	</script>
 	<script type="text/javascript" src="js/click.js"></script>
+	<!-- 读取景点数据 -->
+	<script type="text/javascript">
+		$(function(e){
+			 $.ajax({
+	             type: "GET",
+	             url: "http://localhost:8090/mvn-lvyou/api/scenic/six",
+	             dataType: "json",
+	             success: function(data){
+	            	$.each(data, function(commentIndex, comment){
+                      //console.log(comment.scenicname);
+                      $("#scenics").append("<div class='col-md-4 col-sm-4 col-xs-12 Scenic'><a class='Scenic-href'><img src='scenicImg/"+comment.scenidpic+"' class='Scenic-img'></a><div class='Scenic-info'><p><span class='Scenic-tit1'>景区门票|<i class='Scenic-tit2'>"+comment.scenicname+"</i></span></p><p><dfn class='Scenic-price'><i>&yen;"+comment.scenicprice+"</i></dfn>起</p></div></div> "); 
+                   });
+	             }
+	          });
+		})
+	</script>
 </body>
 </html>

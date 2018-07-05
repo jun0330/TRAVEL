@@ -8,7 +8,7 @@ package com.etc.entity;
 public class HotelInfo {
     private Integer hotelinfoid;
 
-    private String hotelinfoname;
+    private String hotelname;
 
     private String hotelinfoaddress;
 
@@ -27,118 +27,133 @@ public class HotelInfo {
     private String hotelinfopic5;
 
     private String hotelinfopic6;
+    
+    private String hotelinfopic7;
 
     private Integer hotelid;
-
     
-    public HotelInfo() {
+    
+
+	public HotelInfo() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
 	public Integer getHotelinfoid() {
-        return hotelinfoid;
-    }
+		return hotelinfoid;
+	}
 
-    public void setHotelinfoid(Integer hotelinfoid) {
-        this.hotelinfoid = hotelinfoid;
-    }
+	public void setHotelinfoid(Integer hotelinfoid) {
+		this.hotelinfoid = hotelinfoid;
+	}
 
-    public String getHotelinfoname() {
-        return hotelinfoname;
-    }
+	public String getHotelname() {
+		return hotelname;
+	}
 
-    public void setHotelinfoname(String hotelinfoname) {
-        this.hotelinfoname = hotelinfoname == null ? null : hotelinfoname.trim();
-    }
+	public void setHotelname(String hotelname) {
+		this.hotelname = hotelname;
+	}
 
-    public String getHotelinfoaddress() {
-        return hotelinfoaddress;
-    }
+	public String getHotelinfoaddress() {
+		return hotelinfoaddress;
+	}
 
-    public void setHotelinfoaddress(String hotelinfoaddress) {
-        this.hotelinfoaddress = hotelinfoaddress == null ? null : hotelinfoaddress.trim();
-    }
+	public void setHotelinfoaddress(String hotelinfoaddress) {
+		this.hotelinfoaddress = hotelinfoaddress;
+	}
 
-    public Double getHotelinfoprice() {
-        return hotelinfoprice;
-    }
+	public Double getHotelinfoprice() {
+		return hotelinfoprice;
+	}
 
-    public void setHotelinfoprice(Double hotelinfoprice) {
-        this.hotelinfoprice = hotelinfoprice;
-    }
+	public void setHotelinfoprice(Double hotelinfoprice) {
+		this.hotelinfoprice = hotelinfoprice;
+	}
 
-    public String getHotelinfointro() {
-        return hotelinfointro;
-    }
+	public String getHotelinfointro() {
+		return hotelinfointro;
+	}
 
-    public void setHotelinfointro(String hotelinfointro) {
-        this.hotelinfointro = hotelinfointro == null ? null : hotelinfointro.trim();
-    }
+	public void setHotelinfointro(String hotelinfointro) {
+		this.hotelinfointro = hotelinfointro;
+	}
 
-    public String getHotelinfopic1() {
-        return hotelinfopic1;
-    }
+	public String getHotelinfopic1() {
+		return hotelinfopic1;
+	}
 
-    public void setHotelinfopic1(String hotelinfopic1) {
-        this.hotelinfopic1 = hotelinfopic1 == null ? null : hotelinfopic1.trim();
-    }
+	public void setHotelinfopic1(String hotelinfopic1) {
+		this.hotelinfopic1 = hotelinfopic1;
+	}
 
-    public String getHotelinfopic2() {
-        return hotelinfopic2;
-    }
+	public String getHotelinfopic2() {
+		return hotelinfopic2;
+	}
 
-    public void setHotelinfopic2(String hotelinfopic2) {
-        this.hotelinfopic2 = hotelinfopic2 == null ? null : hotelinfopic2.trim();
-    }
+	public void setHotelinfopic2(String hotelinfopic2) {
+		this.hotelinfopic2 = hotelinfopic2;
+	}
 
-    public String getHotelinfopic3() {
-        return hotelinfopic3;
-    }
+	public String getHotelinfopic3() {
+		return hotelinfopic3;
+	}
 
-    public void setHotelinfopic3(String hotelinfopic3) {
-        this.hotelinfopic3 = hotelinfopic3 == null ? null : hotelinfopic3.trim();
-    }
+	public void setHotelinfopic3(String hotelinfopic3) {
+		this.hotelinfopic3 = hotelinfopic3;
+	}
 
-    public String getHotelinfopic4() {
-        return hotelinfopic4;
-    }
+	public String getHotelinfopic4() {
+		return hotelinfopic4;
+	}
 
-    public void setHotelinfopic4(String hotelinfopic4) {
-        this.hotelinfopic4 = hotelinfopic4 == null ? null : hotelinfopic4.trim();
-    }
+	public void setHotelinfopic4(String hotelinfopic4) {
+		this.hotelinfopic4 = hotelinfopic4;
+	}
 
-    public String getHotelinfopic5() {
-        return hotelinfopic5;
-    }
+	public String getHotelinfopic5() {
+		return hotelinfopic5;
+	}
 
-    public void setHotelinfopic5(String hotelinfopic5) {
-        this.hotelinfopic5 = hotelinfopic5 == null ? null : hotelinfopic5.trim();
-    }
+	public void setHotelinfopic5(String hotelinfopic5) {
+		this.hotelinfopic5 = hotelinfopic5;
+	}
 
-    public String getHotelinfopic6() {
-        return hotelinfopic6;
-    }
+	public String getHotelinfopic6() {
+		return hotelinfopic6;
+	}
 
-    public void setHotelinfopic6(String hotelinfopic6) {
-        this.hotelinfopic6 = hotelinfopic6 == null ? null : hotelinfopic6.trim();
-    }
+	public void setHotelinfopic6(String hotelinfopic6) {
+		this.hotelinfopic6 = hotelinfopic6;
+	}
 
-    public Integer getHotelid() {
-        return hotelid;
-    }
+	public String getHotelinfopic7() {
+		return hotelinfopic7;
+	}
 
-    public void setHotelid(Integer hotelid) {
-        this.hotelid = hotelid;
-    }
+	public void setHotelinfopic7(String hotelinfopic7) {
+		this.hotelinfopic7 = hotelinfopic7;
+	}
+
+	public Integer getHotelid() {
+		return hotelid;
+	}
+
+	public void setHotelid(Integer hotelid) {
+		this.hotelid = hotelid;
+	}
 
 	@Override
 	public String toString() {
-		return "HotelInfo [hotelinfoid=" + hotelinfoid + ", hotelinfoname=" + hotelinfoname + ", hotelinfoaddress="
+		return "HotelInfo [hotelinfoid=" + hotelinfoid + ", hotelname=" + hotelname + ", hotelinfoaddress="
 				+ hotelinfoaddress + ", hotelinfoprice=" + hotelinfoprice + ", hotelinfointro=" + hotelinfointro
 				+ ", hotelinfopic1=" + hotelinfopic1 + ", hotelinfopic2=" + hotelinfopic2 + ", hotelinfopic3="
 				+ hotelinfopic3 + ", hotelinfopic4=" + hotelinfopic4 + ", hotelinfopic5=" + hotelinfopic5
-				+ ", hotelinfopic6=" + hotelinfopic6 + ", hotelid=" + hotelid + "]";
+				+ ", hotelinfopic6=" + hotelinfopic6 + ", hotelinfopic7=" + hotelinfopic7 + ", hotelid=" + hotelid
+				+ "]";
 	}
+    
+    
+
     
 }

@@ -32,6 +32,8 @@ public class View {
     private String viewpic5;
     
     private String viewpic6;
+    
+    private String viewpic7;
 
     private Integer scenicid;
     
@@ -146,6 +148,14 @@ public class View {
 		this.viewpic6 = viewpic6;
 	}
 
+	public String getViewpic7() {
+		return viewpic7;
+	}
+
+	public void setViewpic7(String viewpic7) {
+		this.viewpic7 = viewpic7;
+	}
+
 	public Integer getScenicid() {
 		return scenicid;
 	}
@@ -159,10 +169,13 @@ public class View {
 		return "View [viewid=" + viewid + ", scenicpic=" + scenicpic + ", scenicname=" + scenicname + ", viewaddress="
 				+ viewaddress + ", viewjobtime=" + viewjobtime + ", viewprice=" + viewprice + ", viewintro=" + viewintro
 				+ ", viewpic1=" + viewpic1 + ", viewpic2=" + viewpic2 + ", viewpic3=" + viewpic3 + ", viewpic4="
-				+ viewpic4 + ", viewpic5=" + viewpic5 + ", viewpic6=" + viewpic6 + ", scenicid=" + scenicid + "]";
+				+ viewpic4 + ", viewpic5=" + viewpic5 + ", viewpic6=" + viewpic6 + ", viewpic7=" + viewpic7
+				+ ", scenicid=" + scenicid + "]";
 	}
     
     
+
+	
 
     
 }

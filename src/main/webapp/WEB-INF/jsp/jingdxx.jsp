@@ -80,7 +80,7 @@ color:#FFA500;
     <div class="row jdjs-main">
       <div class="col-md-10">
         <div class="row parameter">
-          <div class="col-md-6"><img src="${pageContext.request.contextPath}/viewImg/${view.viewpic1}" id="img" class="img-responsive"></div>
+          <div class="col-md-6"><img src="${pageContext.request.contextPath}/scenicImg/${view.viewpic1}" id="img" class="img-responsive"></div>
           <div class="col-md-6">
             <h3><a href="">${view.viewname}</a></h3>
              <em>${view.viewaddress}<span style="margin-left:10px"><a href="?#hotel">
@@ -211,12 +211,12 @@ color:#FFA500;
              <div id="images">
         	<div class="tit">相关图片</div>
             <div class="row">
-                <div class="col-md-6 img"><img src="${pageContext.request.contextPath}/viewImg/${view.viewpic1}"></div>
-                <div class="col-md-6 img"><img src="${pageContext.request.contextPath}/viewImg/${view.viewpic2}" ></div>
-                <div class="col-md-6 img"><img src="${pageContext.request.contextPath}/viewImg/${view.viewpic3}"></div>
-                <div class="col-md-6 img"><img src="${pageContext.request.contextPath}/viewImg/${view.viewpic4}" ></div>
-                <div class="col-md-6 img"><img src="${pageContext.request.contextPath}/viewImg/${view.viewpic5}"></div>
-                <div class="col-md-6 img"><img src="${pageContext.request.contextPath}/viewImg/${view.viewpic6}" ></div>
+                <div class="col-md-6 img"><img src="${pageContext.request.contextPath}/scenicImg/${view.viewpic1}"></div>
+                <div class="col-md-6 img"><img src="${pageContext.request.contextPath}/scenicImg/${view.viewpic2}" ></div>
+                <div class="col-md-6 img"><img src="${pageContext.request.contextPath}/scenicImg/${view.viewpic3}"></div>
+                <div class="col-md-6 img"><img src="${pageContext.request.contextPath}/scenicImg/${view.viewpic4}" ></div>
+                <div class="col-md-6 img"><img src="${pageContext.request.contextPath}/scenicImg/${view.viewpic5}"></div>
+                <div class="col-md-6 img"><img src="${pageContext.request.contextPath}/scenicImg/${view.viewpic6}" ></div>
             </div>
         </div>
         <div id="hotel">

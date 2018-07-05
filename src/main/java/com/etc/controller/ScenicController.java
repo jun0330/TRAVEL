@@ -7,6 +7,8 @@ import java.util.List;
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -36,6 +38,12 @@ public class ScenicController {
 		
 		List<Scenic> list = ss.queryAll();
 		
+		return list;
+	}
+	@RequestMapping(value= {"/like"},method=RequestMethod.GET)
+	@ResponseBody
+	public List<Scenic> getScenicByLoc(String scenicname){
+		List<Scenic> list = ss.queryScenicByLoc(scenicname);
 		return list;
 	}
 	

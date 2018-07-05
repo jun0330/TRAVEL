@@ -24,4 +24,10 @@ public interface ScenicService {
 	List<Scenic> queryAll();
 	//查询六条服务
 	List<Scenic> querySix();
+	
+	
+	//查询六条服务
+	List<Scenic> queryScenicByLoc(String scenicname);
+		
+	
 }

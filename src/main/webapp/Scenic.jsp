@@ -53,13 +53,13 @@
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-        <a class="navbar-brand" href="index.jsp">首页</a> </div>
+        <a class="navbar-brand" href="index.jsp" target="_blank">首页</a> </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
      		<li><a href="Scenic.jsp">景点</a></li>
-          <li><a href="hotel.jsp">酒店</a></li>
-          <li><a href="strategy.jsp">攻略</a></li>
-          <li><a href="about.jsp">关于我们</a></li>
+          <li><a href="hotel.jsp" target="_blank">酒店</a></li>
+          <li><a href="strategy.jsp" target="_blank">攻略</a></li>
+          <li><a href="about.jsp" target="_blank">关于我们</a></li>
         </ul>
       </div>
     </div>
@@ -166,9 +166,9 @@
       <div class="col-md-4 jd-list">
 		<div class="list-title">景点位置</div>
 		<ul class="content-list">
-			<li>▪&nbsp;&nbsp;&nbsp;&nbsp;<a href="javvascript:void(0);" >厦门</a></li>
-			<li>▪&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">泉州</a></li>
-			<li>▪&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">莆田</a></li>
+			<li>▪&nbsp;&nbsp;&nbsp;&nbsp;<a href="javvascript:void(0);" class="loc">厦门</a></li>
+			<li>▪&nbsp;&nbsp;&nbsp;&nbsp;<a href="javvascript:void(0);" class="loc">泉州</a></li>
+			<li>▪&nbsp;&nbsp;&nbsp;&nbsp;<a href="javvascript:void(0);" class="loc">莆田</a></li>
 		</ul>
 	</div>
       
@@ -221,10 +221,26 @@
                    });
 	             }
 	          });
+		 	$(".loc").click(function(e){
+				var scenicname=$(this).text();
+				$("#scenics").empty();
+				  $.ajax({
+		             type: "GET",
+		             data:{'scenicname':scenicname},
+		             url: "http://localhost:8090/mvn-lvyou/api/scenic/like",
+		             dataType: "json",
+		             success: function(data){
+		            	$.each(data, function(commentIndex, comment){
+		            		alert("33");
+		            		var loc=comment.scenicname.substring(0,2);
+	                      $("#scenics").append("<div class='jd-summary'><div class='row'><div class='col-md-3 img'><img src='scenicImg/"+comment.scenidpic+"' class='img-responsive'></div><div class='col-md-9 content'><h4><a href='jdxx.html'>"+comment.scenicname+"</a><b><span class='s_star_1'><i class='s_d8'></i></span></b></h4><em>地点："+loc+"</em><em>门票价格：<dfn class='Scenic-price'><i>&yen;"+comment.scenicprice+"</i></dfn>起 </em><p>福建景点</p></div><div class='clearfix'></div></div> </div>"); 
+	                   });
+		             }
+		          }); 
+			}); 
+			
 		})
+		
 	</script>
-	
-	
-	
 </body>
 </html>

@@ -63,4 +63,10 @@ public class ScenicServiceImpl implements ScenicService {
 		return sm.getSix();
 	}
 
+	@Override
+	public List<Scenic> queryScenicByLoc(String scenicname) {
+		// TODO Auto-generated method stub
+		return sm.getScenicByLoc(scenicname);
+	}
+
 }

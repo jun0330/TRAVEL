@@ -22,8 +22,11 @@ public interface ScenicMapper {
     boolean updateByPrimaryKey(Scenic record);
     //查询所有
     List<Scenic> getAll();
+    
     //查询六条景点记录
     List<Scenic> getSix();
     
-    List<Scenic> getScenicByLoc(String scenicname);  
+    //景点名模糊查询
+    List<Scenic> getScenicByLoc(String scenicname);
+    
 }

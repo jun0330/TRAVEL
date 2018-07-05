@@ -50,13 +50,13 @@
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-        <a class="navbar-brand" href="index.jsp">首页</a> </div>
+        <a class="navbar-brand" href="index.jsp" target="_blank">首页</a> </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-        	<li><a href="Scenic.jsp">景点</a></li>
-          <li><a href="hotel.jsp">酒店</a></li>
-          <li><a href="strategy.jsp">攻略</a></li>
-          <li><a href="about.jsp">关于我们</a></li>
+        	<li><a href="Scenic.jsp" target="_blank">景点</a></li>
+          <li><a href="hotel.jsp" target="_blank">酒店</a></li>
+          <li><a href="strategy.jsp" target="_blank">攻略</a></li>
+          <li><a href="about.jsp" target="_blank">关于我们</a></li>
         </ul>
       </div>
     </div>

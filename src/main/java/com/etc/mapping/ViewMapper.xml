@@ -14,12 +14,14 @@
     <result column="viewPic3" jdbcType="VARCHAR" property="viewpic3" />
     <result column="viewPic4" jdbcType="VARCHAR" property="viewpic4" />
     <result column="viewPic5" jdbcType="VARCHAR" property="viewpic5" />
+    <result column="viewPic6" jdbcType="VARCHAR" property="viewpic6" />
+    <result column="viewPic7" jdbcType="VARCHAR" property="viewpic7" />
     <result column="scenicId" jdbcType="INTEGER" property="scenicid" />
   </resultMap>
   
   <sql id="Base_Column_List">
     viewId, scenicPic, scenicName, viewAddress, viewJobTime, scenicPrice, viewIntro, viewPic1, 
-    viewPic2, viewPic3, viewPic4, viewPic5, scenicId
+    viewPic2, viewPic3, viewPic4, viewPic5, viewPic6,viewPic7, scenicId
   </sql>
   
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">

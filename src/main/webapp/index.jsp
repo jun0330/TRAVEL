@@ -118,7 +118,7 @@
 					</div>
 				</div>
 				<div class="item">
-					<img src="img/banner2.jpg" alt="...">
+					<img src="img/banner2.jpg" alt="..." >
 					<div class="carousel-caption-con">
 						<div class="container">
 							<div class="col-md-4 col-sm-4 col-xs-12">
@@ -144,7 +144,7 @@
 					</div>
 				</div>
 				<div class="item">
-					<img src="img/banner3.jpg" alt="...">
+					<img src="img/banner3.jpg" alt="..." style="width:1917px;height:450px;">
 					<div class="carousel-caption-con">
 						<div class="container">
 							<div class="col-md-4 col-sm-4 col-xs-12">
@@ -496,7 +496,7 @@
 	             success: function(data){
 	            	$.each(data, function(commentIndex, comment){
 	            		
-                      $("#scenics").append("<div class='col-md-4 col-sm-4 col-xs-12 Scenic'><a class='Scenic-href' href='${pageContext.request.contextPath}/view/list?scenicId=1'><img src='scenicImg/"+comment.scenidpic+"' class='Scenic-img'></a><div class='Scenic-info'><p><span class='Scenic-tit1'>景区门票|<i class='Scenic-tit2'>"+comment.scenicname+"</i></span></p><p><dfn class='Scenic-price'><i>&yen;"+comment.scenicprice+"</i></dfn>起</p></div></div> "); 
+                      $("#scenics").append("<div class='col-md-4 col-sm-4 col-xs-12 Scenic'><a class='Scenic-href' target='_blank' href='${pageContext.request.contextPath}/view/list?scenicId="+comment.scenicid+"'><img src='scenicImg/"+comment.scenidpic+"' class='Scenic-img'></a><div class='Scenic-info'><p><span class='Scenic-tit1'>景区门票|<i class='Scenic-tit2'>"+comment.scenicname+"</i></span></p><p><dfn class='Scenic-price'><i>&yen;"+comment.scenicprice+"</i></dfn>起</p></div></div> "); 
                    });
 	             }
 	          });

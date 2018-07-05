@@ -32,7 +32,7 @@ color:#FFA500;
 <div class="wrapper header col-xs-12">
   <div class="container nav-wrapper">
     <div class="head-top">
-      <div class="logo col-md-6 col-sm-4 col-xs-12"><img src="img/login.png"></div>
+      <div class="logo col-md-6 col-sm-4 col-xs-12"><img src="${pageContext.request.contextPath }/img/login.png"></div>
       <div class="logo-right col-md-6 col-sm-8 col-xs-12">
         <div class="search col-md-12 col-sm-12"> <i class="taobao"></i> <i class="sina"></i> <i class="wx"></i>
           <form class="navbar-form col-xs-6" role="search">
@@ -84,7 +84,7 @@ color:#FFA500;
           <div class="col-md-6">
             <h3><a href="">${view.scenicname}</a></h3>
              <em>${view.viewaddress}<span style="margin-left:10px"><a href="?#hotel">
-                                  查看地图</a></span></em><em>${view.viewjobtime}</em> <em>电话号码：+110 1101000</em><em>精彩活动：<a href="" style="color:#FF4500;">王者齐聚欢乐谷,激爽夏日在方特</a></em><em>服务保障：<span><a href="" style="color:blue;margin-right:15px;">入园保障</a></span><span><a href="" style="color:blue;margin-right:15px;">如实描述</a></span><span><a href="" style="color:blue">贵就赔</a></span></em><em><span style="color:#FFA500;font-size:24px;">97.6%</span>好评率</em> <a href="?#disport"><em>查看<span style="color:#FFA500">1010</span>条评论</em></a></div>
+                                  查看地图</a></span></em><em>营业时间：${view.viewjobtime}</em> <em>电话号码：+110 1101000</em><em>精彩活动：<a href="" style="color:#FF4500;">王者齐聚欢乐谷,激爽夏日在方特</a></em><em>服务保障：<span><a href="" style="color:blue;margin-right:15px;">入园保障</a></span><span><a href="" style="color:blue;margin-right:15px;">如实描述</a></span><span><a href="" style="color:blue">贵就赔</a></span></em><em><span style="color:#FFA500;font-size:24px;">97.6%</span>好评率</em> <a href="?#disport"><em>查看<span style="color:#FFA500">1010</span>条评论</em></a></div>
               
               <span style="color:#FF4500;font-size:24px;margin-right:20px" id="span" ><span  style="color:#FF4500;font-size:18px">￥</span>${view.scenicprice}<span  style="color:#000000;font-size:14px">起</span></span><a href="?#about"><button id="btn" style="width:100px;height:35px;background:#FFA500;border-radius:7px; border-style:none;color:#F8F8FF; font-size:16px;">立即预定</button></a>
         </div>
@@ -211,12 +211,12 @@ color:#FFA500;
              <div id="images">
         	<div class="tit">相关图片</div>
             <div class="row">
-                <div class="col-md-6 img"><img src="${pageContext.request.contextPath}/scenicImg/${view.viewpic1}"></div>
-                <div class="col-md-6 img"><img src="${pageContext.request.contextPath}/scenicImg/${view.viewpic2}" ></div>
-                <div class="col-md-6 img"><img src="${pageContext.request.contextPath}/scenicImg/${view.viewpic3}"></div>
-                <div class="col-md-6 img"><img src="${pageContext.request.contextPath}/scenicImg/${view.viewpic4}" ></div>
-                <div class="col-md-6 img"><img src="${pageContext.request.contextPath}/scenicImg/${view.viewpic5}"></div>
-                <div class="col-md-6 img"><img src="${pageContext.request.contextPath}/scenicImg/${view.viewpic6}" ></div>
+                <div class="col-md-6 img"><img src="${pageContext.request.contextPath}/scenicImg/${view.viewpic1}" style="height:300px;"></div>
+                <div class="col-md-6 img"><img src="${pageContext.request.contextPath}/scenicImg/${view.viewpic2}" style="height:300px;"></div>
+                <div class="col-md-6 img"><img src="${pageContext.request.contextPath}/scenicImg/${view.viewpic3}" style="height:300px;"></div>
+                <div class="col-md-6 img"><img src="${pageContext.request.contextPath}/scenicImg/${view.viewpic4}" style="height:300px;"></div>
+                <div class="col-md-6 img"><img src="${pageContext.request.contextPath}/scenicImg/${view.viewpic5}" style="height:300px;"></div>
+                <div class="col-md-6 img"><img src="${pageContext.request.contextPath}/scenicImg/${view.viewpic6}" style="height:300px;"></div>
             </div>
         </div>
         <div id="hotel">
@@ -282,8 +282,8 @@ color:#FFA500;
             var p0 = json.point.split("|")[0];
             var p1 = json.point.split("|")[1];
             var point = new BMap.Point(p0,p1);
-			//var iconImg = createIcon(json.icon);
-			var iconImg = new BMap.Icon('img.biaoji01.jpg',new BMap.Size(32,32));
+			var iconImg = createIcon(json.icon);
+			//var iconImg = new BMap.Icon('img.biaoji01.jpg',new BMap.Size(32,32));
             var marker = new BMap.Marker(point,{icon:iconImg});
 			var iw = createInfoWindow(i);
 			var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
@@ -401,9 +401,9 @@ color:#FFA500;
   </div>
   <div class="container">
     <div class="friendlink">
-      <div class="col-md-4 col-sm-4 col-xs-12"><a href="#"><img src="img/wx_link.png" class="img-responsive"></a></div>
-      <div class="col-md-4 col-sm-4 col-xs-12"><a href="#"><img src="img/taobao_link.png" class="img-responsive"></a></div>
-      <div class="col-md-4 col-sm-4 col-xs-12"><a href="#"><img src="img/wb_link.png" class="img-responsive"></a></div>
+      <div class="col-md-4 col-sm-4 col-xs-12"><a href="#"><img src="${pageContext.request.contextPath}/img/wx_link.png" class="img-responsive"></a></div>
+      <div class="col-md-4 col-sm-4 col-xs-12"><a href="#"><img src="${pageContext.request.contextPath}/img/taobao_link.png" class="img-responsive"></a></div>
+      <div class="col-md-4 col-sm-4 col-xs-12"><a href="#"><img src="${pageContext.request.contextPath}/img/wb_link.png" class="img-responsive"></a></div>
     </div>
     <div class="copyright col-md-12">
       <p>版权所有：人和假期旅游咨询   咨询电话：15611549285 传真：010-66094197</p>

@@ -11,7 +11,7 @@ public class View {
 
     private String scenicpic;
 
-    private String viewname;
+    private String scenicname;
 
     private String viewaddress;
 
@@ -30,47 +30,51 @@ public class View {
     private String viewpic4;
 
     private String viewpic5;
+    
+    private String viewpic6;
 
     private Integer scenicid;
+    
+    
 
-    public View() {
+	public View() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
 	public Integer getViewid() {
-        return viewid;
-    }
+		return viewid;
+	}
 
-    public void setViewid(Integer viewid) {
-        this.viewid = viewid;
-    }
+	public void setViewid(Integer viewid) {
+		this.viewid = viewid;
+	}
 
-    public String getScenicpic() {
-        return scenicpic;
-    }
+	public String getScenicpic() {
+		return scenicpic;
+	}
 
-    public void setScenicpic(String scenicpic) {
-        this.scenicpic = scenicpic == null ? null : scenicpic.trim();
-    }
+	public void setScenicpic(String scenicpic) {
+		this.scenicpic = scenicpic;
+	}
 
-    public String getViewname() {
-        return viewname;
-    }
+	public String getScenicname() {
+		return scenicname;
+	}
 
-    public void setViewname(String viewname) {
-        this.viewname = viewname == null ? null : viewname.trim();
-    }
+	public void setScenicname(String scenicname) {
+		this.scenicname = scenicname;
+	}
 
-    public String getViewaddress() {
-        return viewaddress;
-    }
+	public String getViewaddress() {
+		return viewaddress;
+	}
 
-    public void setViewaddress(String viewaddress) {
-        this.viewaddress = viewaddress == null ? null : viewaddress.trim();
-    }
+	public void setViewaddress(String viewaddress) {
+		this.viewaddress = viewaddress;
+	}
 
-    public String getViewjobtime() {
+	public String getViewjobtime() {
 		return viewjobtime;
 	}
 
@@ -79,75 +83,86 @@ public class View {
 	}
 
 	public Double getViewprice() {
-        return viewprice;
-    }
+		return viewprice;
+	}
 
-    public void setViewprice(Double viewprice) {
-        this.viewprice = viewprice;
-    }
+	public void setViewprice(Double viewprice) {
+		this.viewprice = viewprice;
+	}
 
-    public String getViewintro() {
-        return viewintro;
-    }
+	public String getViewintro() {
+		return viewintro;
+	}
 
-    public void setViewintro(String viewintro) {
-        this.viewintro = viewintro == null ? null : viewintro.trim();
-    }
+	public void setViewintro(String viewintro) {
+		this.viewintro = viewintro;
+	}
 
-    public String getViewpic1() {
-        return viewpic1;
-    }
+	public String getViewpic1() {
+		return viewpic1;
+	}
 
-    public void setViewpic1(String viewpic1) {
-        this.viewpic1 = viewpic1 == null ? null : viewpic1.trim();
-    }
+	public void setViewpic1(String viewpic1) {
+		this.viewpic1 = viewpic1;
+	}
 
-    public String getViewpic2() {
-        return viewpic2;
-    }
+	public String getViewpic2() {
+		return viewpic2;
+	}
 
-    public void setViewpic2(String viewpic2) {
-        this.viewpic2 = viewpic2 == null ? null : viewpic2.trim();
-    }
+	public void setViewpic2(String viewpic2) {
+		this.viewpic2 = viewpic2;
+	}
 
-    public String getViewpic3() {
-        return viewpic3;
-    }
+	public String getViewpic3() {
+		return viewpic3;
+	}
 
-    public void setViewpic3(String viewpic3) {
-        this.viewpic3 = viewpic3 == null ? null : viewpic3.trim();
-    }
+	public void setViewpic3(String viewpic3) {
+		this.viewpic3 = viewpic3;
+	}
 
-    public String getViewpic4() {
-        return viewpic4;
-    }
+	public String getViewpic4() {
+		return viewpic4;
+	}
 
-    public void setViewpic4(String viewpic4) {
-        this.viewpic4 = viewpic4 == null ? null : viewpic4.trim();
-    }
+	public void setViewpic4(String viewpic4) {
+		this.viewpic4 = viewpic4;
+	}
 
-    public String getViewpic5() {
-        return viewpic5;
-    }
+	public String getViewpic5() {
+		return viewpic5;
+	}
 
-    public void setViewpic5(String viewpic5) {
-        this.viewpic5 = viewpic5 == null ? null : viewpic5.trim();
-    }
+	public void setViewpic5(String viewpic5) {
+		this.viewpic5 = viewpic5;
+	}
 
-    public Integer getScenicid() {
-        return scenicid;
-    }
+	public String getViewpic6() {
+		return viewpic6;
+	}
 
-    public void setScenicid(Integer scenicid) {
-        this.scenicid = scenicid;
-    }
+	public void setViewpic6(String viewpic6) {
+		this.viewpic6 = viewpic6;
+	}
+
+	public Integer getScenicid() {
+		return scenicid;
+	}
+
+	public void setScenicid(Integer scenicid) {
+		this.scenicid = scenicid;
+	}
 
 	@Override
 	public String toString() {
-		return "View [viewid=" + viewid + ", scenicpic=" + scenicpic + ", viewname=" + viewname + ", viewaddress="
+		return "View [viewid=" + viewid + ", scenicpic=" + scenicpic + ", scenicname=" + scenicname + ", viewaddress="
 				+ viewaddress + ", viewjobtime=" + viewjobtime + ", viewprice=" + viewprice + ", viewintro=" + viewintro
 				+ ", viewpic1=" + viewpic1 + ", viewpic2=" + viewpic2 + ", viewpic3=" + viewpic3 + ", viewpic4="
-				+ viewpic4 + ", viewpic5=" + viewpic5 + ", scenicid=" + scenicid + "]";
+				+ viewpic4 + ", viewpic5=" + viewpic5 + ", viewpic6=" + viewpic6 + ", scenicid=" + scenicid + "]";
 	}
+    
+    
+
     
 }

@@ -37,6 +37,10 @@ public class View {
 
     private Integer scenicid;
     
+    private String mappoint;
+    
+    private String point;
+    
     
 
 	public View() {
@@ -164,14 +168,34 @@ public class View {
 		this.scenicid = scenicid;
 	}
 
+	public String getMappoint() {
+		return mappoint;
+	}
+
+	public void setMappoint(String mappoint) {
+		this.mappoint = mappoint;
+	}
+
+	public String getPoint() {
+		return point;
+	}
+
+	public void setPoint(String point) {
+		this.point = point;
+	}
+
 	@Override
 	public String toString() {
 		return "View [viewid=" + viewid + ", scenicpic=" + scenicpic + ", scenicname=" + scenicname + ", viewaddress="
-				+ viewaddress + ", viewjobtime=" + viewjobtime + ", scenicprice=" + scenicprice + ", viewintro=" + viewintro
-				+ ", viewpic1=" + viewpic1 + ", viewpic2=" + viewpic2 + ", viewpic3=" + viewpic3 + ", viewpic4="
-				+ viewpic4 + ", viewpic5=" + viewpic5 + ", viewpic6=" + viewpic6 + ", viewpic7=" + viewpic7
-				+ ", scenicid=" + scenicid + "]";
+				+ viewaddress + ", viewjobtime=" + viewjobtime + ", scenicprice=" + scenicprice + ", viewintro="
+				+ viewintro + ", viewpic1=" + viewpic1 + ", viewpic2=" + viewpic2 + ", viewpic3=" + viewpic3
+				+ ", viewpic4=" + viewpic4 + ", viewpic5=" + viewpic5 + ", viewpic6=" + viewpic6 + ", viewpic7="
+				+ viewpic7 + ", scenicid=" + scenicid + ", mappoint=" + mappoint + ", point=" + point + "]";
 	}
+    
+    
+
+	
     
     
 

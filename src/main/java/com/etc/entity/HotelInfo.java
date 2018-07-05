@@ -12,7 +12,7 @@ public class HotelInfo {
 
     private String hotelinfoaddress;
 
-    private Double hotelinfoprice;
+    private Double hotelprice;
 
     private String hotelinfointro;
 
@@ -31,6 +31,24 @@ public class HotelInfo {
     private String hotelinfopic7;
 
     private Integer hotelid;
+    
+    private String roomtypeone;
+    
+    private int roompriceone;
+    
+    private String roomimgone;
+    
+   private String roomtypetwo;
+    
+    private int roompricetwo;
+    
+    private String roomimgtwo;
+    
+   private String roomtypethree;
+    
+    private int roompricethree;
+    
+    private String roomimgthree;
     
     
 
@@ -63,12 +81,12 @@ public class HotelInfo {
 		this.hotelinfoaddress = hotelinfoaddress;
 	}
 
-	public Double getHotelinfoprice() {
-		return hotelinfoprice;
+	public Double getHotelprice() {
+		return hotelprice;
 	}
 
-	public void setHotelinfoprice(Double hotelinfoprice) {
-		this.hotelinfoprice = hotelinfoprice;
+	public void setHotelprice(Double hotelprice) {
+		this.hotelprice = hotelprice;
 	}
 
 	public String getHotelinfointro() {
@@ -143,17 +161,94 @@ public class HotelInfo {
 		this.hotelid = hotelid;
 	}
 
+	public String getRoomtypeone() {
+		return roomtypeone;
+	}
+
+	public void setRoomtypeone(String roomtypeone) {
+		this.roomtypeone = roomtypeone;
+	}
+
+	public int getRoompriceone() {
+		return roompriceone;
+	}
+
+	public void setRoompriceone(int roompriceone) {
+		this.roompriceone = roompriceone;
+	}
+
+	public String getRoomimgone() {
+		return roomimgone;
+	}
+
+	public void setRoomimgone(String roomimgone) {
+		this.roomimgone = roomimgone;
+	}
+
+	public String getRoomtypetwo() {
+		return roomtypetwo;
+	}
+
+	public void setRoomtypetwo(String roomtypetwo) {
+		this.roomtypetwo = roomtypetwo;
+	}
+
+	public int getRoompricetwo() {
+		return roompricetwo;
+	}
+
+	public void setRoompricetwo(int roompricetwo) {
+		this.roompricetwo = roompricetwo;
+	}
+
+	public String getRoomimgtwo() {
+		return roomimgtwo;
+	}
+
+	public void setRoomimgtwo(String roomimgtwo) {
+		this.roomimgtwo = roomimgtwo;
+	}
+
+	public String getRoomtypethree() {
+		return roomtypethree;
+	}
+
+	public void setRoomtypethree(String roomtypethree) {
+		this.roomtypethree = roomtypethree;
+	}
+
+	public int getRoompricethree() {
+		return roompricethree;
+	}
+
+	public void setRoompricethree(int roompricethree) {
+		this.roompricethree = roompricethree;
+	}
+
+	public String getRoomimgthree() {
+		return roomimgthree;
+	}
+
+	public void setRoomimgthree(String roomimgthree) {
+		this.roomimgthree = roomimgthree;
+	}
+
 	@Override
 	public String toString() {
 		return "HotelInfo [hotelinfoid=" + hotelinfoid + ", hotelname=" + hotelname + ", hotelinfoaddress="
-				+ hotelinfoaddress + ", hotelinfoprice=" + hotelinfoprice + ", hotelinfointro=" + hotelinfointro
+				+ hotelinfoaddress + ", hotelprice=" + hotelprice + ", hotelinfointro=" + hotelinfointro
 				+ ", hotelinfopic1=" + hotelinfopic1 + ", hotelinfopic2=" + hotelinfopic2 + ", hotelinfopic3="
 				+ hotelinfopic3 + ", hotelinfopic4=" + hotelinfopic4 + ", hotelinfopic5=" + hotelinfopic5
 				+ ", hotelinfopic6=" + hotelinfopic6 + ", hotelinfopic7=" + hotelinfopic7 + ", hotelid=" + hotelid
-				+ "]";
+				+ ", roomtypeone=" + roomtypeone + ", roompriceone=" + roompriceone + ", roomimgone=" + roomimgone
+				+ ", roomtypetwo=" + roomtypetwo + ", roompricetwo=" + roompricetwo + ", roomimgtwo=" + roomimgtwo
+				+ ", roomtypethree=" + roomtypethree + ", roompricethree=" + roompricethree + ", roomimgthree="
+				+ roomimgthree + "]";
 	}
     
     
+
+	
 
     
 }

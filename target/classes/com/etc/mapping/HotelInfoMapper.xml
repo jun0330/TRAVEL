@@ -14,27 +14,12 @@
     <result column="hotelInfoPic5" jdbcType="VARCHAR" property="hotelinfopic5" />
     <result column="hotelInfoPic6" jdbcType="VARCHAR" property="hotelinfopic6" />
     <result column="hotelId" jdbcType="INTEGER" property="hotelid" />
-    <result column="roomTypeOne" jdbcType="VARCHAR" property="roomtypeone" />
-    <result column="roomPriceOne" jdbcType="INTEGER" property="roompriceone" />
-    <result column="roomImgOne" jdbcType="VARCHAR" property="roomimgone" />
-       <result column="roomTypeTwo" jdbcType="VARCHAR" property="roomtypetwo" />
-    <result column="roomPriceTwo" jdbcType="INTEGER" property="roompricetwo" />
-    <result column="roomImgTwo" jdbcType="VARCHAR" property="roomimgtwo" />
-       <result column="roomTypeThree" jdbcType="VARCHAR" property="roomtypethree" />
-    <result column="roomPriceThree" jdbcType="INTEGER" property="roompricethree" />
-    <result column="roomImgThree" jdbcType="VARCHAR" property="roomimgthree" />
-      <result column="mapPoint" jdbcType="VARCHAR" property="mappoint" />
-    <result column="point" jdbcType="VARCHAR" property="point" />
-    <result column="title" jdbcType="VARCHAR" property="title" />
-             
-
-                    
   </resultMap>
   <sql id="Base_Column_List">
-    hotelInfoId, hotelInfoName, hotelInfoAddress, hotelInfoPrice, hotelInfoIntro, hotelInfoPic1, 
-    hotelInfoPic2, hotelInfoPic3, hotelInfoPic4, hotelInfoPic5, hotelInfoPic6, hotelId,roomTypeOne,
-    roomPriceOne,roomImgOne,roomTypeTwo,roomPriceTwo,roomImgTwo,roomTypeThree,roomPriceThree,roomImgThree,
-    mapPoint,point,title
+    hotelInfoId, hotelinfoname, hotelInfoAddress, hotelinfoprice, hotelInfoIntro, hotelInfoPic1, 
+    hotelInfoPic2, hotelInfoPic3, hotelInfoPic4, hotelInfoPic5, hotelInfoPic6, hotelInfoPic7, 
+    hotelId, roomTypeOne, roomPriceOne, roomImgOne, roomTypeTwo, roomPriceTwo, roomImgTwo, 
+    roomTypeThree, roomPriceThree, roomImgThree, title, mapPoint, point
   </sql>
   
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
@@ -48,38 +33,50 @@
   select * from hotelinfo
   </select>
   
+  <select id="getAll" resultType="com.etc.entity.HotelInfo">
+  select * from hotelinfo
+  </select>
+  
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from hotelinfo
     where hotelInfoId = #{hotelinfoid,jdbcType=INTEGER}
   </delete>
   
   <insert id="insert" parameterType="com.etc.entity.HotelInfo">
-    insert into hotelinfo (hotelInfoId, hotelInfoName, hotelInfoAddress, 
-      hotelInfoPrice, hotelInfoIntro, hotelInfoPic1, 
+    insert into hotelinfo (hotelInfoId, hotelinfoname, hotelInfoAddress, 
+      hotelinfoprice, hotelInfoIntro, hotelInfoPic1, 
       hotelInfoPic2, hotelInfoPic3, hotelInfoPic4, 
-      hotelInfoPic5, hotelInfoPic6, hotelId
-      )
+      hotelInfoPic5, hotelInfoPic6, hotelInfoPic7, 
+      hotelId, roomTypeOne, roomPriceOne, 
+      roomImgOne, roomTypeTwo, roomPriceTwo, 
+      roomImgTwo, roomTypeThree, roomPriceThree, 
+      roomImgThree, title, mapPoint, 
+      point)
     values (#{hotelinfoid,jdbcType=INTEGER}, #{hotelinfoname,jdbcType=VARCHAR}, #{hotelinfoaddress,jdbcType=VARCHAR}, 
       #{hotelinfoprice,jdbcType=DOUBLE}, #{hotelinfointro,jdbcType=VARCHAR}, #{hotelinfopic1,jdbcType=VARCHAR}, 
       #{hotelinfopic2,jdbcType=VARCHAR}, #{hotelinfopic3,jdbcType=VARCHAR}, #{hotelinfopic4,jdbcType=VARCHAR}, 
-      #{hotelinfopic5,jdbcType=VARCHAR}, #{hotelinfopic6,jdbcType=VARCHAR}, #{hotelid,jdbcType=INTEGER}
-      )
+      #{hotelinfopic5,jdbcType=VARCHAR}, #{hotelinfopic6,jdbcType=VARCHAR}, 1, 
+      #{hotelid,jdbcType=INTEGER}, #{roomtypeone,jdbcType=VARCHAR}, #{roompriceone,jdbcType=INTEGER}, 
+      #{roomimgone,jdbcType=VARCHAR}, #{roomtypetwo,jdbcType=VARCHAR}, #{roompricetwo,jdbcType=INTEGER}, 
+      #{roomimgtwo,jdbcType=VARCHAR}, #{roomtypethree,jdbcType=VARCHAR}, #{roompricethree,jdbcType=INTEGER}, 
+      #{roomimgthree,jdbcType=VARCHAR}, 1, #{mappoint,jdbcType=VARCHAR}, 
+      #{point,jdbcType=VARCHAR})
   </insert>
   
   <insert id="insertSelective" parameterType="com.etc.entity.HotelInfo">
-    insert into hotelinfo
+   insert into hotelinfo
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="hotelinfoid != null">
         hotelInfoId,
       </if>
       <if test="hotelinfoname != null">
-        hotelInfoName,
+        hotelinfoname,
       </if>
       <if test="hotelinfoaddress != null">
         hotelInfoAddress,
       </if>
       <if test="hotelinfoprice != null">
-        hotelInfoPrice,
+        hotelinfoprice,
       </if>
       <if test="hotelinfointro != null">
         hotelInfoIntro,
@@ -102,8 +99,47 @@
       <if test="hotelinfopic6 != null">
         hotelInfoPic6,
       </if>
+      <if test="hotelinfopic7 != null">
+        hotelInfoPic7,
+      </if>
       <if test="hotelid != null">
         hotelId,
+      </if>
+      <if test="roomtypeone != null">
+        roomTypeOne,
+      </if>
+      <if test="roompriceone != null">
+        roomPriceOne,
+      </if>
+      <if test="roomimgone != null">
+        roomImgOne,
+      </if>
+      <if test="roomtypetwo != null">
+        roomTypeTwo,
+      </if>
+      <if test="roompricetwo != null">
+        roomPriceTwo,
+      </if>
+      <if test="roomimgtwo != null">
+        roomImgTwo,
+      </if>
+      <if test="roomtypethree != null">
+        roomTypeThree,
+      </if>
+      <if test="roompricethree != null">
+        roomPriceThree,
+      </if>
+      <if test="roomimgthree != null">
+        roomImgThree,
+      </if>
+      <if test="title != null">
+        title,
+      </if>
+      <if test="mappoint != null">
+        mapPoint,
+      </if>
+      <if test="point != null">
+        point,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
@@ -140,8 +176,47 @@
       <if test="hotelinfopic6 != null">
         #{hotelinfopic6,jdbcType=VARCHAR},
       </if>
+      <if test="hotelinfopic7 != null">
+        #{hotelinfopic7,jdbcType=VARCHAR},
+      </if>
       <if test="hotelid != null">
         #{hotelid,jdbcType=INTEGER},
+      </if>
+      <if test="roomtypeone != null">
+        #{roomtypeone,jdbcType=VARCHAR},
+      </if>
+      <if test="roompriceone != null">
+        #{roompriceone,jdbcType=INTEGER},
+      </if>
+      <if test="roomimgone != null">
+        #{roomimgone,jdbcType=VARCHAR},
+      </if>
+      <if test="roomtypetwo != null">
+        #{roomtypetwo,jdbcType=VARCHAR},
+      </if>
+      <if test="roompricetwo != null">
+        #{roompricetwo,jdbcType=INTEGER},
+      </if>
+      <if test="roomimgtwo != null">
+        #{roomimgtwo,jdbcType=VARCHAR},
+      </if>
+      <if test="roomtypethree != null">
+        #{roomtypethree,jdbcType=VARCHAR},
+      </if>
+      <if test="roompricethree != null">
+        #{roompricethree,jdbcType=INTEGER},
+      </if>
+      <if test="roomimgthree != null">
+        #{roomimgthree,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null">
+        #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="mappoint != null">
+        #{mappoint,jdbcType=VARCHAR},
+      </if>
+      <if test="point != null">
+        #{point,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -150,13 +225,13 @@
     update hotelinfo
     <set>
       <if test="hotelinfoname != null">
-        hotelInfoName = #{hotelinfoname,jdbcType=VARCHAR},
+        hotelinfoname = #{hotelinfoname,jdbcType=VARCHAR},
       </if>
       <if test="hotelinfoaddress != null">
         hotelInfoAddress = #{hotelinfoaddress,jdbcType=VARCHAR},
       </if>
       <if test="hotelinfoprice != null">
-        hotelInfoPrice = #{hotelinfoprice,jdbcType=DOUBLE},
+        hotelinfoprice = #{hotelinfoprice,jdbcType=DOUBLE},
       </if>
       <if test="hotelinfointro != null">
         hotelInfoIntro = #{hotelinfointro,jdbcType=VARCHAR},
@@ -179,18 +254,56 @@
       <if test="hotelinfopic6 != null">
         hotelInfoPic6 = #{hotelinfopic6,jdbcType=VARCHAR},
       </if>
+      <if test="hotelinfopic7 != null">
+        hotelInfoPic7 = #{hotelinfopic7,jdbcType=VARCHAR},
+      </if>
       <if test="hotelid != null">
         hotelId = #{hotelid,jdbcType=INTEGER},
+      </if>
+      <if test="roomtypeone != null">
+        roomTypeOne = #{roomtypeone,jdbcType=VARCHAR},
+      </if>
+      <if test="roompriceone != null">
+        roomPriceOne = #{roompriceone,jdbcType=INTEGER},
+      </if>
+      <if test="roomimgone != null">
+        roomImgOne = #{roomimgone,jdbcType=VARCHAR},
+      </if>
+      <if test="roomtypetwo != null">
+        roomTypeTwo = #{roomtypetwo,jdbcType=VARCHAR},
+      </if>
+      <if test="roompricetwo != null">
+        roomPriceTwo = #{roompricetwo,jdbcType=INTEGER},
+      </if>
+      <if test="roomimgtwo != null">
+        roomImgTwo = #{roomimgtwo,jdbcType=VARCHAR},
+      </if>
+      <if test="roomtypethree != null">
+        roomTypeThree = #{roomtypethree,jdbcType=VARCHAR},
+      </if>
+      <if test="roompricethree != null">
+        roomPriceThree = #{roompricethree,jdbcType=INTEGER},
+      </if>
+      <if test="roomimgthree != null">
+        roomImgThree = #{roomimgthree,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null">
+        title = #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="mappoint != null">
+        mapPoint = #{mappoint,jdbcType=VARCHAR},
+      </if>
+      <if test="point != null">
+        point = #{point,jdbcType=VARCHAR},
       </if>
     </set>
     where hotelInfoId = #{hotelinfoid,jdbcType=INTEGER}
   </update>
-  
   <update id="updateByPrimaryKey" parameterType="com.etc.entity.HotelInfo">
     update hotelinfo
-    set hotelInfoName = #{hotelinfoname,jdbcType=VARCHAR},
+    set hotelinfoname = #{hotelinfoname,jdbcType=VARCHAR},
       hotelInfoAddress = #{hotelinfoaddress,jdbcType=VARCHAR},
-      hotelInfoPrice = #{hotelinfoprice,jdbcType=DOUBLE},
+      hotelinfoprice = #{hotelinfoprice,jdbcType=DOUBLE},
       hotelInfoIntro = #{hotelinfointro,jdbcType=VARCHAR},
       hotelInfoPic1 = #{hotelinfopic1,jdbcType=VARCHAR},
       hotelInfoPic2 = #{hotelinfopic2,jdbcType=VARCHAR},
@@ -198,7 +311,20 @@
       hotelInfoPic4 = #{hotelinfopic4,jdbcType=VARCHAR},
       hotelInfoPic5 = #{hotelinfopic5,jdbcType=VARCHAR},
       hotelInfoPic6 = #{hotelinfopic6,jdbcType=VARCHAR},
-      hotelId = #{hotelid,jdbcType=INTEGER}
+      hotelInfoPic7 = #{hotelinfopic7,jdbcType=VARCHAR},
+      hotelId = #{hotelid,jdbcType=INTEGER},
+      roomTypeOne = #{roomtypeone,jdbcType=VARCHAR},
+      roomPriceOne = #{roompriceone,jdbcType=INTEGER},
+      roomImgOne = #{roomimgone,jdbcType=VARCHAR},
+      roomTypeTwo = #{roomtypetwo,jdbcType=VARCHAR},
+      roomPriceTwo = #{roompricetwo,jdbcType=INTEGER},
+      roomImgTwo = #{roomimgtwo,jdbcType=VARCHAR},
+      roomTypeThree = #{roomtypethree,jdbcType=VARCHAR},
+      roomPriceThree = #{roompricethree,jdbcType=INTEGER},
+      roomImgThree = #{roomimgthree,jdbcType=VARCHAR},
+      title = #{title,jdbcType=VARCHAR},
+      mapPoint = #{mappoint,jdbcType=VARCHAR},
+      point = #{point,jdbcType=VARCHAR}
     where hotelInfoId = #{hotelinfoid,jdbcType=INTEGER}
   </update>
   

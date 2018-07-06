@@ -28,14 +28,14 @@
 
         <div class="page-container">
             <h1>登录</h1>
-            <form action="" method="post">
+            <form action="${pageContext.request.contextPath}/api/user/login" method="post">
 				<div>
-					<input type="text" name="username" class="username" placeholder="昵称" autocomplete="off"/>
+					<input type="text" name="usernickname" class="userNickName" placeholder="昵称" autocomplete="off"/>
 				</div>
                 <div>
-					<input type="password" name="password" class="password" placeholder="密码" oncontextmenu="return false" onpaste="return false" />
+					<input type="password" name="userpwd" class="userpwd" placeholder="密码" oncontextmenu="return false" onpaste="return false" />
                 </div>
-                <button id="submit" type="button">登录</button>
+                <input id="submit" type="submit">登录</input>
             </form>
             <div class="connect">
                 <p>If we can only encounter each other rather than stay with each other,then I wish we had never encountered.</p>

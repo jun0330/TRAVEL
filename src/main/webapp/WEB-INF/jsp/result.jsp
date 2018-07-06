@@ -8,6 +8,10 @@
 </head>
 <body>
 <h3>文件上传成功</h3>
+<<<<<<< HEAD
 <h3>成功</h3>
+=======
+<h1>测试~</h1>
+>>>>>>> branch 'master' of https://github.com/jun0330/mvn-lvyou.git
 </body>
 </html>

@@ -57,4 +57,11 @@ public class UsersServiceImpl implements UsersService {
 		return um.getAll();
 	}
 
+	@Override
+	public Users login(String usernickname, String userpwd) {	
+		return um.login(usernickname, userpwd);
+	}
+
+	
+
 }

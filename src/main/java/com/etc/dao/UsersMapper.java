@@ -2,6 +2,7 @@ package com.etc.dao;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import com.etc.entity.Room;
@@ -9,6 +10,7 @@ import com.etc.entity.Users;
 
 @Repository(value="userMapper")
 public interface UsersMapper {
+	
 	boolean deleteByPrimaryKey(Integer userid);
 
 	boolean insert(Users record);
@@ -20,6 +22,13 @@ public interface UsersMapper {
     boolean updateByPrimaryKeySelective(Users record);
 
     boolean updateByPrimaryKey(Users record);
-    //²éÑ¯ËùÓÐ
+    //ï¿½ï¿½Ñ¯ï¿½ï¿½ï¿½ï¿½
     List<Users> getAll();
+    /**
+     * ç”¨æˆ·ç™»å½•
+     * @param usernickname
+     * @param userpwd
+     * @return
+     */
+    Users login(@Param(value="usernickname") String usernickname,@Param(value="userpwd") String userpwd);
 }

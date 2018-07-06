@@ -17,14 +17,16 @@
     <result column="viewPic6" jdbcType="VARCHAR" property="viewpic6" />
     <result column="viewPic7" jdbcType="VARCHAR" property="viewpic7" />
     <result column="scenicId" jdbcType="INTEGER" property="scenicid" />
-    <result column="mapPoint" jdbcType="VARCHAR" property="mappoint" />
-    <result column="point" jdbcType="VARCHAR" property="point" />
+    <result column="mapPoint1" jdbcType="VARCHAR" property="mappoint1" />
+     <result column="mapPoint2" jdbcType="VARCHAR" property="mappoint2" />
+    <result column="point1" jdbcType="VARCHAR" property="point1" />
+       <result column="point2" jdbcType="VARCHAR" property="point2" />
     <result column="title" jdbcType="VARCHAR" property="title" />
   </resultMap>
   
   <sql id="Base_Column_List">
     viewId, scenicPic, scenicName, viewAddress, viewJobTime, scenicPrice, viewIntro, viewPic1, 
-    viewPic2, viewPic3, viewPic4, viewPic5, viewPic6,viewPic7, scenicId,mapPoint,point,title
+    viewPic2, viewPic3, viewPic4, viewPic5, viewPic6,viewPic7, scenicId,mapPoint1,mapPoint2,point1,point2,title
   </sql>
   
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">

@@ -39,9 +39,13 @@ public class View {
     
     private String title;
     
-    private String mappoint;
+    private String mappoint1;
     
-    private String point;
+    private String mappoint2;
+    
+    private String point1;
+    
+    private String point2;
     
     
 
@@ -178,20 +182,36 @@ public class View {
 		this.title = title;
 	}
 
-	public String getMappoint() {
-		return mappoint;
+	public String getMappoint1() {
+		return mappoint1;
 	}
 
-	public void setMappoint(String mappoint) {
-		this.mappoint = mappoint;
+	public void setMappoint1(String mappoint1) {
+		this.mappoint1 = mappoint1;
 	}
 
-	public String getPoint() {
-		return point;
+	public String getMappoint2() {
+		return mappoint2;
 	}
 
-	public void setPoint(String point) {
-		this.point = point;
+	public void setMappoint2(String mappoint2) {
+		this.mappoint2 = mappoint2;
+	}
+
+	public String getPoint1() {
+		return point1;
+	}
+
+	public void setPoint1(String point1) {
+		this.point1 = point1;
+	}
+
+	public String getPoint2() {
+		return point2;
+	}
+
+	public void setPoint2(String point2) {
+		this.point2 = point2;
 	}
 
 	@Override
@@ -200,11 +220,12 @@ public class View {
 				+ viewaddress + ", viewjobtime=" + viewjobtime + ", scenicprice=" + scenicprice + ", viewintro="
 				+ viewintro + ", viewpic1=" + viewpic1 + ", viewpic2=" + viewpic2 + ", viewpic3=" + viewpic3
 				+ ", viewpic4=" + viewpic4 + ", viewpic5=" + viewpic5 + ", viewpic6=" + viewpic6 + ", viewpic7="
-				+ viewpic7 + ", scenicid=" + scenicid + ", title=" + title + ", mappoint=" + mappoint + ", point="
-				+ point + "]";
+				+ viewpic7 + ", scenicid=" + scenicid + ", title=" + title + ", mappoint1=" + mappoint1 + ", mappoint2="
+				+ mappoint2 + ", point1=" + point1 + ", point2=" + point2 + "]";
 	}
     
     
 
+	
 	
 }

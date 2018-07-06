@@ -20,6 +20,9 @@ public interface UsersService {
     boolean updateByIdSelective(Users users);
 
     boolean updateById(Users users);
-	//²éÑ¯ËùÓÐµÄservice
+	//ï¿½ï¿½Ñ¯ï¿½ï¿½ï¿½Ðµï¿½service
 	List<Users> queryAll();
+	
+	Users login(String usernickname,String userpwd);
+	
 }

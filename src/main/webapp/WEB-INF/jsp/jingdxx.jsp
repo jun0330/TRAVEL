@@ -246,7 +246,8 @@ color:#FFA500;
     //创建地图函数：
     function createMap(){
         var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
-        var point = new BMap.Point(118.193488,24.487907);//定义一个中心点坐标
+        console.log("${view.mappoint1}");
+        var point = new BMap.Point("${view.mappoint1}","${view.mappoint2}");//定义一个中心点坐标
         map.centerAndZoom(point,15);//设定地图的中心点和坐标并将地图显示在地图容器中
         window.map = map;//将map变量存储在全局
     }
@@ -273,7 +274,10 @@ color:#FFA500;
     }
     
     //标注点数组
-    var markerArr = [{title:"厦门香格里拉大酒店",content:"我的备注",point:"118.202076|24.497312",isOpen:0,icon:{w:23,h:25,l:46,t:21,x:9,lb:12}}
+    console.log("${view.title}");
+    console.log("${view.point1}");
+    
+    var markerArr = [{title:"'${view.title}'",content:"我的备注",point:"'${view.point1}'|'${view.point2}'",isOpen:0,icon:{w:23,h:25,l:46,t:21,x:9,lb:12}}
 		 ];
     //创建marker
     function addMarker(){

@@ -29,6 +29,7 @@ public class ViewController {
 		//model.addAttribute(list);//添加一个属性的值 ,没有说key  => userList 
 		model.addAttribute("list", list);//一个key ,一个value
 		
+		list.forEach(System.out::println);
 		return "jingdxx";
 	}
 	

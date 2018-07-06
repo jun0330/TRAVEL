@@ -20,8 +20,16 @@
     where userId = #{userid,jdbcType=INTEGER}
   </select>
   
+  
   <select id="getAll" resultType="com.etc.entity.Users">
   select * from users
+  </select>
+  
+<!--用户登录 -->
+  <select id="login" resultType="com.etc.entity.Users">
+    select *
+    from users where userNickName = #{usernickname,jdbcType=VARCHAR}
+    and userPwd = #{userpwd,jdbcType=VARCHAR}
   </select>
   
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">

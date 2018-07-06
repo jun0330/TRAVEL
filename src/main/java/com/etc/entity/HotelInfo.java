@@ -50,6 +50,12 @@ public class HotelInfo {
     
     private String roomimgthree;
     
+    private String title;
+    
+    private String mappoint;
+    
+    private String point;
+    
     
 
 	public HotelInfo() {
@@ -233,6 +239,30 @@ public class HotelInfo {
 		this.roomimgthree = roomimgthree;
 	}
 
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public String getMappoint() {
+		return mappoint;
+	}
+
+	public void setMappoint(String mappoint) {
+		this.mappoint = mappoint;
+	}
+
+	public String getPoint() {
+		return point;
+	}
+
+	public void setPoint(String point) {
+		this.point = point;
+	}
+
 	@Override
 	public String toString() {
 		return "HotelInfo [hotelinfoid=" + hotelinfoid + ", hotelname=" + hotelname + ", hotelinfoaddress="
@@ -243,12 +273,10 @@ public class HotelInfo {
 				+ ", roomtypeone=" + roomtypeone + ", roompriceone=" + roompriceone + ", roomimgone=" + roomimgone
 				+ ", roomtypetwo=" + roomtypetwo + ", roompricetwo=" + roompricetwo + ", roomimgtwo=" + roomimgtwo
 				+ ", roomtypethree=" + roomtypethree + ", roompricethree=" + roompricethree + ", roomimgthree="
-				+ roomimgthree + "]";
+				+ roomimgthree + ", title=" + title + ", mappoint=" + mappoint + ", point=" + point + "]";
 	}
-    
     
 
 	
-
     
 }

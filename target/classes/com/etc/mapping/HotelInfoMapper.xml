@@ -14,10 +14,27 @@
     <result column="hotelInfoPic5" jdbcType="VARCHAR" property="hotelinfopic5" />
     <result column="hotelInfoPic6" jdbcType="VARCHAR" property="hotelinfopic6" />
     <result column="hotelId" jdbcType="INTEGER" property="hotelid" />
+    <result column="roomTypeOne" jdbcType="VARCHAR" property="roomtypeone" />
+    <result column="roomPriceOne" jdbcType="INTEGER" property="roompriceone" />
+    <result column="roomImgOne" jdbcType="VARCHAR" property="roomimgone" />
+       <result column="roomTypeTwo" jdbcType="VARCHAR" property="roomtypetwo" />
+    <result column="roomPriceTwo" jdbcType="INTEGER" property="roompricetwo" />
+    <result column="roomImgTwo" jdbcType="VARCHAR" property="roomimgtwo" />
+       <result column="roomTypeThree" jdbcType="VARCHAR" property="roomtypethree" />
+    <result column="roomPriceThree" jdbcType="INTEGER" property="roompricethree" />
+    <result column="roomImgThree" jdbcType="VARCHAR" property="roomimgthree" />
+      <result column="mapPoint" jdbcType="VARCHAR" property="mappoint" />
+    <result column="point" jdbcType="VARCHAR" property="point" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+             
+
+                    
   </resultMap>
   <sql id="Base_Column_List">
     hotelInfoId, hotelInfoName, hotelInfoAddress, hotelInfoPrice, hotelInfoIntro, hotelInfoPic1, 
-    hotelInfoPic2, hotelInfoPic3, hotelInfoPic4, hotelInfoPic5, hotelInfoPic6, hotelId
+    hotelInfoPic2, hotelInfoPic3, hotelInfoPic4, hotelInfoPic5, hotelInfoPic6, hotelId,roomTypeOne,
+    roomPriceOne,roomImgOne,roomTypeTwo,roomPriceTwo,roomImgTwo,roomTypeThree,roomPriceThree,roomImgThree,
+    mapPoint,point,title
   </sql>
   
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">

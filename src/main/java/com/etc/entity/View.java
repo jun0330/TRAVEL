@@ -37,6 +37,8 @@ public class View {
 
     private Integer scenicid;
     
+    private String title;
+    
     private String mappoint;
     
     private String point;
@@ -168,6 +170,14 @@ public class View {
 		this.scenicid = scenicid;
 	}
 
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
 	public String getMappoint() {
 		return mappoint;
 	}
@@ -190,16 +200,11 @@ public class View {
 				+ viewaddress + ", viewjobtime=" + viewjobtime + ", scenicprice=" + scenicprice + ", viewintro="
 				+ viewintro + ", viewpic1=" + viewpic1 + ", viewpic2=" + viewpic2 + ", viewpic3=" + viewpic3
 				+ ", viewpic4=" + viewpic4 + ", viewpic5=" + viewpic5 + ", viewpic6=" + viewpic6 + ", viewpic7="
-				+ viewpic7 + ", scenicid=" + scenicid + ", mappoint=" + mappoint + ", point=" + point + "]";
+				+ viewpic7 + ", scenicid=" + scenicid + ", title=" + title + ", mappoint=" + mappoint + ", point="
+				+ point + "]";
 	}
     
     
 
 	
-    
-    
-
-	
-
-    
 }

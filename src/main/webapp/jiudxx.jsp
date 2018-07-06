@@ -145,7 +145,7 @@ h3{margin:10px 0;}
                    <span style="margin-right:10px;color:#FF4500;">卫浴</span><span style="margin-right:15px;">独立</span><span style="margin-right:10px;">|</span>
                           <span style="margin-right:10px;color:#FF4500;">窗户</span><span style="margin-right:15px;">无</span><span style="margin-right:10px;">|</span> <span style="margin-right:10px;color:#FF4500;">可住</span><span>2人</span>
           <em>床型<span style="margin-left:20px;">大床1.5x2.0米1张</span></em>
-           <div style="margin-top:-30px;"><span style="margin-right:130px;">特价房</span><span style="margin-right:50px;">单床</span><span style="margin-right:50px;">无窗户</span><span style="margin-right:50px;">无早餐</span><span>不可取消</span>
+           <div style="margin-top:-30px;"><span style="margin-right:130px;">特价房</span><span style="margin-right:50px;">单床</span><span style="margin-right:50px;">无窗户</span><span style="margin-right:50px;">有早餐</span><span>不可取消</span>
             <span style="color:#FF4500;font-size:24px;padding-right:20px" id="span" ><span  style="color:#FF4500;font-size:15px;">￥</span>840<span  style="color:#000000;font-size:14px">起</span></span><a href="?#about"><button id="btn" style="width:70px;height:30px;background:#FFA500;border-radius:7px; border-style:none;color:#F8F8FF; font-size:10px;">立即预定</button></a>
               </div>
                </div>
@@ -161,7 +161,7 @@ h3{margin:10px 0;}
                    <span style="margin-right:10px;color:#FF4500;">卫浴</span><span style="margin-right:15px;">独立</span><span style="margin-right:10px;">|</span>
                           <span style="margin-right:10px;color:#FF4500;">窗户</span><span style="margin-right:15px;">无</span><span style="margin-right:10px;">|</span> <span style="margin-right:10px;color:#FF4500;">可住</span><span>2人</span>
           <em>床型<span style="margin-left:20px;">单人床1.2x2.0米2张</span></em>
-          <div style="margin-top:-30px;"><span style="margin-right:100px;">标准双床房</span><span style="margin-right:50px;">双床</span><span style="margin-right:50px;">无窗户</span><span style="margin-right:50px;">无早餐</span><span>不可取消</span>
+          <div style="margin-top:-30px;"><span style="margin-right:100px;">标准双床房</span><span style="margin-right:50px;">双床</span><span style="margin-right:50px;">无窗户</span><span style="margin-right:50px;">有早餐</span><span>不可取消</span>
           <span style="color:#FF4500;font-size:24px;margin-right:20px" id="span" ><span  style="color:#FF4500;font-size:15px;">￥</span>840<span  style="color:#000000;font-size:14px">起</span></span><a href="?#about"><button id="btn" style="width:70px;height:30px;background:#FFA500;border-radius:7px; border-style:none;color:#F8F8FF; font-size:10px;">立即预定</button></a>
           </div>
            </div>

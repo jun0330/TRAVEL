@@ -28,14 +28,16 @@
 
         <div class="page-container">
             <h1>登录</h1>
-            <form action="${pageContext.request.contextPath}/api/user/login" method="post">
+            <form action="" method="post">
 				<div>
-					<input type="text" name="usernickname" class="userNickName" placeholder="昵称" autocomplete="off"/>
+					<input type="text" id="usernickname" name="usernickname" class="userNickName" placeholder="昵称" autocomplete="off"/>
+					<div id="result" style="display:inLine"></div>
 				</div>
                 <div>
-					<input type="password" name="userpwd" class="userpwd" placeholder="密码" oncontextmenu="return false" onpaste="return false" />
+					<input type="password" id="userpwd" name="userpwd" class="userpwd" placeholder="密码" oncontextmenu="return false" onpaste="return false" />
                 </div>
-                <input id="submit" type="submit">登录</input>
+                
+                <input id="btn" type="button" value="登录">
             </form>
             <div class="connect">
                 <p>If we can only encounter each other rather than stay with each other,then I wish we had never encountered.</p>
@@ -54,7 +56,32 @@
 		<script src="http://apps.bdimg.com/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
         <script src="js/supersized.3.2.7.min.js"></script>
         <script src="js/supersized-init.js"></script>
-		<script>
+        <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+        <script type="text/javascript">
+			$(function(){
+				console.log("nihao")
+				$("#btn").click(function(){
+					$.post("${pageContext.request.contextPath}/api/user/login",{"usernickname":$("#usernickname").val(),"userpwd":$("#userpwd").val()},function(data,status){
+						//alert(date+","+status);
+						//console.log(data+","+status);
+						
+						if(data=="ok"){
+							location.href="${pageContext.request.contextPath}/index.jsp";
+						}
+						
+						if(data="no"){
+								$("#result").html("用户名或密码错误");
+							}
+					
+							
+						
+					});
+						
+				});
+			});
+
+		</script>
+		<!-- <script>
 		$(".btn").click(function(){
 			is_hide();
 		})
@@ -84,7 +111,7 @@
 		}
 		function is_hide(){ $(".alert").animate({"top":"-40%"}, 300) }
 		function is_show(){ $(".alert").show().animate({"top":"45%"}, 300) }
-		</script>
+		</script> -->
     </body>
 
 </html>

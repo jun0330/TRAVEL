@@ -114,7 +114,7 @@ color:#FFA500;
             <span class="col-md-1">￥280</span>
             <span class="col-md-1">￥250</span>
             <span class="col-md-1">优惠</span>
-            <span class="col-md-2">在线支付<span><a href="?#about"><button id="btn" style="width:60px;height:30px;background:#FFA500;border-radius:4px; border-style:none;color:#F8F8FF;">预定</button></a></span></span>
+            <span class="col-md-2">在线支付<span><a href="${pageContext.request.contextPath}/ViewOrder.jsp"><button id="btn" style="width:60px;height:30px;background:#FFA500;border-radius:4px; border-style:none;color:#F8F8FF;">预定</button></a></span></span>
             
             </div>
                        <div  class="about col-md-12"style="margin-top:20px;">
@@ -124,7 +124,7 @@ color:#FFA500;
             <span class="col-md-1">￥150</span>
             <span class="col-md-1">￥130</span>
             <span class="col-md-1">优惠</span>
-            <span class="col-md-2">在线支付<span><a href="?#about"><button id="btn" style="width:60px;height:30px;background:#FFA500;border-radius:4px; border-style:none;color:#F8F8FF;">预定</button></a></span></span>
+            <span class="col-md-2">在线支付<span><a href="${pageContext.request.contextPath}/ViewOrder.jsp"><button id="btn" style="width:60px;height:30px;background:#FFA500;border-radius:4px; border-style:none;color:#F8F8FF;">预定</button></a></span></span>
             
             </div>
         
@@ -135,7 +135,7 @@ color:#FFA500;
             <span class="col-md-1">￥560</span>
             <span class="col-md-1">￥530</span>
             <span class="col-md-1">优惠</span>
-            <span class="col-md-2">在线支付<span><a href="?#about"><button id="btn" style="width:60px;height:30px;background:#FFA500;border-radius:4px; border-style:none;color:#F8F8FF;">预定</button></a></span></span>
+            <span class="col-md-2">在线支付<span><a href="${pageContext.request.contextPath}/ViewOrder.jsp"><button id="btn" style="width:60px;height:30px;background:#FFA500;border-radius:4px; border-style:none;color:#F8F8FF;">预定</button></a></span></span>
             
             </div>
              </div>
@@ -153,7 +153,7 @@ color:#FFA500;
             <span class="col-md-1">￥190</span>
             <span class="col-md-1">￥190</span>
             <span class="col-md-1">优惠</span>
-            <span class="col-md-2">在线支付<span><a href="?#about"><button id="btn" style="width:60px;height:30px;background:#FFA500;border-radius:4px; border-style:none;color:#F8F8FF;">预定</button></a></span></span>
+            <span class="col-md-2">在线支付<span><a href="${pageContext.request.contextPath}/ViewOrder.jsp"><button id="btn" style="width:60px;height:30px;background:#FFA500;border-radius:4px; border-style:none;color:#F8F8FF;">预定</button></a></span></span>
             
             </div>
                        <div  class="about col-md-12"style="margin-top:20px;">
@@ -163,7 +163,7 @@ color:#FFA500;
             <span class="col-md-1">￥110</span>
             <span class="col-md-1">￥110</span>
             <span class="col-md-1">优惠</span>
-            <span class="col-md-2">在线支付<span><a href="?#about"><button id="btn" style="width:60px;height:30px;background:#FFA500;border-radius:4px; border-style:none;color:#F8F8FF;">预定</button></a></span></span>
+            <span class="col-md-2">在线支付<span><a href="${pageContext.request.contextPath}/ViewOrder.jsp"><button id="btn" style="width:60px;height:30px;background:#FFA500;border-radius:4px; border-style:none;color:#F8F8FF;">预定</button></a></span></span>
             
             </div>
       
@@ -182,7 +182,7 @@ color:#FFA500;
             <span class="col-md-1">￥220</span>
             <span class="col-md-1">￥190</span>
             <span class="col-md-1">优惠</span>
-            <span class="col-md-2">在线支付<span><a href="?#about"><button id="btn" style="width:60px;height:30px;background:#FFA500;border-radius:4px; border-style:none;color:#F8F8FF;">预定</button></a></span></span>
+            <span class="col-md-2">在线支付<span><a href="${pageContext.request.contextPath}/ViewOrder.jsp"><button id="btn" style="width:60px;height:30px;background:#FFA500;border-radius:4px; border-style:none;color:#F8F8FF;">预定</button></a></span></span>
             
             </div>
                        <div  class="about col-md-12"style="margin-top:20px;">
@@ -192,7 +192,7 @@ color:#FFA500;
             <span class="col-md-1">￥500</span>
             <span class="col-md-1">￥430</span>
             <span class="col-md-1">优惠</span>
-            <span class="col-md-2">在线支付<span><a href="?#about"><button id="btn" style="width:60px;height:30px;background:#FFA500;border-radius:4px; border-style:none;color:#F8F8FF;">预定</button></a></span></span>
+            <span class="col-md-2">在线支付<span><a href="${pageContext.request.contextPath}/ViewOrder.jsp"><button id="btn" style="width:60px;height:30px;background:#FFA500;border-radius:4px; border-style:none;color:#F8F8FF;">预定</button></a></span></span>
             
             </div>
 

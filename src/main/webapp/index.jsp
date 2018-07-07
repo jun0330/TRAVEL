@@ -144,7 +144,7 @@
 					</div>
 				</div>
 				<div class="item">
-					<img src="img/banner3.jpg" alt="..." style="width:1917px;height:395px;">
+					<img src="img/banner3.jpg" alt="...">
 					<div class="carousel-caption-con">
 						<div class="container">
 							<div class="col-md-4 col-sm-4 col-xs-12">
@@ -217,75 +217,9 @@
 			
 			<div class="col-md-12 column">
 				<div class="tab-content">
-					<div class="row products">
+					<div class="row products" id="hotels">
 					
-						<div class="col-md-4 col-sm-4 col-xs-12 Scenic">
-							<a class="Scenic-href"><img src="img/main1.png" class="Scenic-img"></a>
-							<div class="Scenic-info">
-								<p>
-									<span class="Scenic-tit1">景区门票|<i class="Scenic-tit2">广州长隆野生动物世界</i></span>
-								</p>
-								<p>
-									<dfn class="Scenic-price"><i>&yen;275</i></dfn>起
-								</p>
-							</div>
-						</div>
-						<div class="col-md-4 col-sm-4 col-xs-12 Scenic">
-							<a class="Scenic-href"><img src="img/main1.png" class="Scenic-img"></a>
-							<div class="Scenic-info">
-								<p>
-									<span class="Scenic-tit1">景区门票|<i class="Scenic-tit2">广州长隆野生动物世界</i></span>
-								</p>
-								<p>
-									<dfn class="Scenic-price"><i>&yen;275</i></dfn>起
-								</p>
-							</div>
-						</div>
-						<div class="col-md-4 col-sm-4 col-xs-12 Scenic">
-							<a class="Scenic-href"><img src="img/main1.png" class="Scenic-img"></a>
-							<div class="Scenic-info">
-								<p>
-									<span class="Scenic-tit1">景区门票|<i class="Scenic-tit2">广州长隆野生动物世界</i></span>
-								</p>
-								<p>
-									<dfn class="Scenic-price"><i>&yen;275</i></dfn>起
-								</p>
-							</div>
-						</div>
-						<div class="col-md-4 col-sm-4 col-xs-12 Scenic">
-							<a class="Scenic-href"><img src="img/main1.png" class="Scenic-img"></a>
-							<div class="Scenic-info">
-								<p>
-									<span class="Scenic-tit1">景区门票|<i class="Scenic-tit2">广州长隆野生动物世界</i></span>
-								</p>
-								<p>
-									<dfn class="Scenic-price"><i>&yen;275</i></dfn>起
-								</p>
-							</div>
-						</div>
-						<div class="col-md-4 col-sm-4 col-xs-12 Scenic">
-							<a class="Scenic-href"><img src="img/main1.png" class="Scenic-img"></a>
-							<div class="Scenic-info">
-								<p>
-									<span class="Scenic-tit1">景区门票|<i class="Scenic-tit2">广州长隆野生动物世界</i></span>
-								</p>
-								<p>
-									<dfn class="Scenic-price"><i>&yen;275</i></dfn>起
-								</p>
-							</div>
-						</div>
-						<div class="col-md-4 col-sm-4 col-xs-12 Scenic">
-							<a class="Scenic-href"><img src="img/main1.png" class="Scenic-img"></a>
-							<div class="Scenic-info">
-								<p>
-									<span class="Scenic-tit1">景区门票|<i class="Scenic-tit2">广州长隆野生动物世界</i></span>
-								</p>
-								<p>
-									<dfn class="Scenic-price"><i>&yen;275</i></dfn>起
-								</p>
-							</div>
-						</div>
-						
+					
 					</div>
 				</div>
 			</div>		
@@ -497,6 +431,22 @@
 	            	$.each(data, function(commentIndex, comment){
 	            		
                       $("#scenics").append("<div class='col-md-4 col-sm-4 col-xs-12 Scenic'><a class='Scenic-href' target='_blank' href='${pageContext.request.contextPath}/view/list?scenicId="+comment.scenicid+"'><img src='scenicImg/"+comment.scenidpic+"' class='Scenic-img'></a><div class='Scenic-info'><p><span class='Scenic-tit1'>景区门票|<i class='Scenic-tit2'>"+comment.scenicname+"</i></span></p><p><dfn class='Scenic-price'><i>&yen;"+comment.scenicprice+"</i></dfn>起</p></div></div> "); 
+                   });
+	             }
+	          });
+		})
+	</script>
+		<!-- 读取酒店数据 -->
+	<script type="text/javascript">
+		$(function(e){
+			 $.ajax({
+	             type: "GET",
+	             url: "${pageContext.request.contextPath}/api/hotel/six",
+	             dataType: "json",
+	             success: function(data){
+	            	$.each(data, function(commentIndex, comment){
+	            		
+	            		 $("#hotels").append("<div class='col-md-4 col-sm-4 col-xs-12 Scenic'><a class='Scenic-href' target='_blank' href='${pageContext.request.contextPath}/hotelInfo/list?hotelId="+comment.hotelid+"'><img src='hotelImg/"+comment.hotelpic+"' class='Scenic-img'></a><div class='Scenic-info'><p><span class='Scenic-tit1'>酒店|<i class='Scenic-tit2'>"+comment.hotelname+"</i></span></p><p><dfn class='Scenic-price'><i>&yen;"+comment.hotelprice+"</i></dfn>起</p></div></div> "); 
                    });
 	             }
 	          });

@@ -168,7 +168,9 @@
 		<ul class="content-list">
 			<li>▪&nbsp;&nbsp;&nbsp;&nbsp;<a href="javvascript:void(0);" class="loc">厦门</a></li>
 			<li>▪&nbsp;&nbsp;&nbsp;&nbsp;<a href="javvascript:void(0);" class="loc">泉州</a></li>
-			<li>▪&nbsp;&nbsp;&nbsp;&nbsp;<a href="javvascript:void(0);" class="loc">莆田</a></li>
+			<li>▪&nbsp;&nbsp;&nbsp;&nbsp;<a href="javvascript:void(0);" class="loc">福州</a></li>
+			<li>▪&nbsp;&nbsp;&nbsp;&nbsp;<a href="javvascript:void(0);" class="loc">宁德</a></li>
+			<li>▪&nbsp;&nbsp;&nbsp;&nbsp;<a href="javvascript:void(0);" class="loc">漳州</a></li>
 		</ul>
 	</div>
       
@@ -212,7 +214,7 @@
 		$(function(e){
 			 $.ajax({
 	             type: "GET",
-	             url: "http://localhost:8090/mvn-lvyou/api/scenic/six",
+	             url: "${pageContext.request.contextPath}/api/scenic/six",
 	             dataType: "json",
 	             success: function(data){
 	            	$.each(data, function(commentIndex, comment){
@@ -227,11 +229,11 @@
 				  $.ajax({
 		             type: "GET",
 		             data:{'scenicname':scenicname},
-		             url: "http://localhost:8090/mvn-lvyou/api/scenic/like",
+		             url: "${pageContext.request.contextPath}/api/scenic/like",
 		             dataType: "json",
 		             success: function(data){
 		            	$.each(data, function(commentIndex, comment){
-		            		alert("33");
+		            		
 		            		var loc=comment.scenicname.substring(0,2);
 	                      $("#scenics").append("<div class='jd-summary'><div class='row'><div class='col-md-3 img'><img src='scenicImg/"+comment.scenidpic+"' class='img-responsive'></div><div class='col-md-9 content'><h4><a href='jdxx.html'>"+comment.scenicname+"</a><b><span class='s_star_1'><i class='s_d8'></i></span></b></h4><em>地点："+loc+"</em><em>门票价格：<dfn class='Scenic-price'><i>&yen;"+comment.scenicprice+"</i></dfn>起 </em><p>福建景点</p></div><div class='clearfix'></div></div> </div>"); 
 	                   });

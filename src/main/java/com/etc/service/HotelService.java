@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 
 import com.etc.entity.Admin;
 import com.etc.entity.Hotel;
+import com.etc.entity.Scenic;
 
 public interface HotelService {
 	
@@ -22,4 +23,10 @@ public interface HotelService {
     boolean updateById(Hotel hotel);
 	//查询所有的service
 	List<Hotel> queryAll();
+	//查询六条服务
+	List<Hotel> querySix();
+	
+	
+	//查询六条服务
+	List<Hotel> queryHotelByLoc(String hotelname);
 }

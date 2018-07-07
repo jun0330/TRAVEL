@@ -22,6 +22,17 @@
   <select id="getALl" resultType="com.etc.entity.Hotel">
   select * from hotel
   </select>
+
+  
+    <!-- 查询六条记录 -->
+  <select id="getSix" resultType="com.etc.entity.Hotel">
+  select * from hotel limit 6
+  </select>
+  
+ <!-- 查询六条记录 -->
+  <select id="getHotelByLoc" resultType="com.etc.entity.Hotel">
+  select * from hotel where hotelName like concat(concat('%',#{hotelname}),'%')
+  </select>
   
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from hotel

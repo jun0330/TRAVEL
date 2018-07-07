@@ -62,6 +62,16 @@ public class UsersServiceImpl implements UsersService {
 		return um.login(usernickname, userpwd);
 	}
 
+	@Override
+	public Users queryUsersByname(String usernickname) {
+		// TODO Auto-generated method stub
+		return um.queryUsersByname(usernickname);
+	}
 	
+	@Override
+	public boolean addUsers(Users users) {
+		// TODO Auto-generated method stub
+		return um.addUsers(users);
+	}
 
 }

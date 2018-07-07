@@ -56,5 +56,17 @@ public class HotelServiceImpl implements HotelService {
 		// TODO Auto-generated method stub
 		return hm.getAll();
 	}
+	
+	@Override
+	public List<Hotel> queryHotelByLoc(String hotelname) {
+		// TODO Auto-generated method stub
+		return hm.getHotelByLoc(hotelname);
+	}
+	
+	@Override
+	public List<Hotel> querySix() {
+		// TODO Auto-generated method stub
+		return hm.getSix();
+	}
 
 }

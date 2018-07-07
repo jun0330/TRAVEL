@@ -14,10 +14,14 @@ public interface UsersService {
 	boolean regUsers(Users users);
 
 	boolean regUsersSelective(Users users);
+	
+	Users queryUsersByname(String usernickname);
 
     List<Users> selectById(Integer userId);
 
     boolean updateByIdSelective(Users users);
+    
+    boolean addUsers(Users users);
 
     boolean updateById(Users users);
 	//��ѯ���е�service

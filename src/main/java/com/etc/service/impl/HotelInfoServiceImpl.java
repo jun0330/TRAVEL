@@ -56,5 +56,10 @@ public class HotelInfoServiceImpl implements HotelInfoService {
 		// TODO Auto-generated method stub
 		return hm.getAll();
 	}
+	@Override
+	public List<HotelInfo> queryById(Integer hotelId) {
+		// TODO Auto-generated method stub
+		return hm.selectById(hotelId);
+	}
 
 }

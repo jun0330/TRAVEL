@@ -144,7 +144,7 @@
 					</div>
 				</div>
 				<div class="item">
-					<img src="img/banner3.jpg" alt="..." style="width:1917px;height:450px;">
+					<img src="img/banner3.jpg" alt="..." style="width:1917px;height:395px;">
 					<div class="carousel-caption-con">
 						<div class="container">
 							<div class="col-md-4 col-sm-4 col-xs-12">

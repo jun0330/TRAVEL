@@ -22,6 +22,17 @@ public class Users {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+    
+    
+
+	public Users(String useremail, String usernickname, String userpwd) {
+		super();
+		this.useremail = useremail;
+		this.usernickname = usernickname;
+		this.userpwd = userpwd;
+	}
+
+
 
 	public Integer getUserid() {
         return userid;

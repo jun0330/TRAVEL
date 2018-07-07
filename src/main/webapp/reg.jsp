@@ -49,26 +49,32 @@
 			<!-- 登录 -->
 
 			<div class="signup f-l">
+			<form action="" method="">
 				<div class="form-group">
 					<div class="signup-form">
-						<input type="text" placeholder="邮箱" class="email-mobile" onBlur="verify.verifyEmail(this)">
+						<input type="text" id="email" placeholder="邮箱" class="email-mobile" onBlur="verify.verifyEmail(this)">
 						<!-- <a href="javascript:;" class="signup-select">手机注册</a> -->
 					</div>
 					<span class="error-notic">邮箱格式不正确</span>
 				</div>
 				<div class="signup-email">
 					<div class="form-group">
-						<input type="text" placeholder="您的名字">
+						<input type="text" id="name" placeholder="您的名字">
+						<div id="result" style="display:inLine"></div>
 					</div>
 					<div class="form-group">
-						<input type="password" placeholder="密码（字母、数字，至少6位）" onBlur="verify.PasswordLenght(this)">
+						<input type="password" id="pwd" placeholder="密码（字母、数字，至少6位）" onBlur="verify.PasswordLenght(this)">
 						<span class="error-notic">密码长度不够</span>
 					</div>
 					<div class="form-group">
-						<button type="submit" class="tran pr">
+						<!-- <button type="submit" class="tran pr">
 							<a href="javascript:;" class="tran">注册</a>
+							<img class="loading" src="images/loading.gif">
+						</button> -->
+						<button id="btn">注册</button>
+		
 							<!-- <img class="loading" src="images/loading.gif"> -->
-						</button>
+						
 					</div>
 					<p class="view-clause">点击注册，即同意我们的 <a href="#">用户隐私条款</a></p>
 				</div><!-- 邮箱注册 -->
@@ -89,7 +95,7 @@
 			<!-- 	<div class="form-group">
 					<a href="javascript:;" class="move-login a-tag tran blue-border">已有帐号？登录<i class="iconfont tran">&#xe606;</i></a>
 				</div> -->
-				
+				</form>
 			</div>
 			<!-- 注册 -->
 <!-- 
@@ -181,7 +187,40 @@
 		<p>Copyright© 2014-2015 Powered by <a href="http://www.17sucai.com/">17素材网</a> </p>
 		<p>沪ICP备13043785号-1</p>
 	</div>-->
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 	<script>
+	$(function(){
+		$("#name").blur(function(){
+			$.post("${pageContext.request.contextPath}/api/user/reg","usernickname="+$("#name").val(),function(data,status){
+				//alert(date+","+status);
+				//console.log(data+","+status);
+				if(data=="该用户已被注册"){
+					$("#result").html(data);
+				}
+			
+				
+			});
+				
+		});
+	});
+	$(function(){
+		$("#btn").click(function(){
+			$.post("${pageContext.request.contextPath}/api/user/addUsers",{"usernickname":$("#name").val(),"useremail":$("#email").val(),"userpwd":$("#pwd").val()},function(data,status){
+				//alert(date+","+status);
+				//console.log(data+","+status);
+				if(data="true"){
+					alert("注册成功")
+					location.href="${pageContext.request.contextPath}/login.jsp"
+				}else{
+					alert("注册失败")
+				}
+					
+				
+				
+			});
+				
+		});
+	});
 		var _handle='';//储存电话是否填写正确
 		$(function(){
 			$(".signup-form input").on("focus",function(){

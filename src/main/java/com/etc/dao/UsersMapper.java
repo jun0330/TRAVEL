@@ -14,8 +14,12 @@ public interface UsersMapper {
 	boolean deleteByPrimaryKey(Integer userid);
 
 	boolean insert(Users record);
+	
+	Users queryUsersByname(String usernickname);
 
 	boolean insertSelective(Users record);
+	
+	boolean addUsers(Users users);
 
     List<Users> selectByPrimaryKey(Integer userid);
 

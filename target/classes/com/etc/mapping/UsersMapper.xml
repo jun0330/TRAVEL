@@ -20,6 +20,8 @@
     where userId = #{userid,jdbcType=INTEGER}
   </select>
   
+
+  
   
   <select id="getAll" resultType="com.etc.entity.Users">
   select * from users
@@ -32,16 +34,22 @@
     and userPwd = #{userpwd,jdbcType=VARCHAR}
   </select>
   
+    <select id="queryUsersByname" resultType="com.etc.entity.Users">
+    select *
+    from users where userNickName = #{usernickname,jdbcType=VARCHAR}
+    
+  </select>
+  
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from users
     where userId = #{userid,jdbcType=INTEGER}
   </delete>
   
-  <insert id="insert" parameterType="com.etc.entity.Users">
+  <insert id="addUsers" parameterType="com.etc.entity.Users">
     insert into users (userId, userEmail, userNickName, 
       userPwd, regDate)
-    values (#{userid,jdbcType=INTEGER}, #{useremail,jdbcType=VARCHAR}, #{usernickname,jdbcType=VARCHAR}, 
-      #{userpwd,jdbcType=VARCHAR}, #{regdate,jdbcType=TIMESTAMP})
+    values (NULL, #{useremail,jdbcType=VARCHAR}, #{usernickname,jdbcType=VARCHAR}, 
+      #{userpwd,jdbcType=VARCHAR}, NOW())
   </insert>
   
   <insert id="insertSelective" parameterType="com.etc.entity.Users">

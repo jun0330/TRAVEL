@@ -13,13 +13,29 @@
     <result column="hotelInfoPic4" jdbcType="VARCHAR" property="hotelinfopic4" />
     <result column="hotelInfoPic5" jdbcType="VARCHAR" property="hotelinfopic5" />
     <result column="hotelInfoPic6" jdbcType="VARCHAR" property="hotelinfopic6" />
+     <result column="hotelInfoPic7" jdbcType="VARCHAR" property="hotelinfopic7" />
+
     <result column="hotelId" jdbcType="INTEGER" property="hotelid" />
+          <result column="roomTypeOne" jdbcType="VARCHAR" property="roomtypeone" />
+            <result column="roomPriceOne" jdbcType="VARCHAR" property="roompriceone" />
+              <result column="roomImgOne" jdbcType="VARCHAR" property="roomimgone"/>
+              <result column="roomTypeTwo" jdbcType="VARCHAR" property="roomtypetwo" />
+            <result column="roomPriceTwo" jdbcType="VARCHAR" property="roompricetwo" />
+              <result column="roomImgTwo" jdbcType="VARCHAR" property="roomimgtwo"/>
+              <result column="roomTypeThree" jdbcType="VARCHAR" property="roomtypethree" />
+            <result column="roomPriceThree" jdbcType="VARCHAR" property="roompricethree" />
+              <result column="roomImgThree" jdbcType="VARCHAR" property="roomimgthree"/>
+              <result column="title" jdbcType="VARCHAR" property="title"/>
+              <result column="mappoint1" jdbcType="VARCHAR" property="mappoint1"/>
+             <result column="mappoint2" jdbcType="VARCHAR" property="mappoint2"/>
+                <result column="point1" jdbcType="VARCHAR" property="point1"/>
+                <result column="point2" jdbcType="VARCHAR" property="point2"/>
   </resultMap>
   <sql id="Base_Column_List">
     hotelInfoId, hotelinfoname, hotelInfoAddress, hotelinfoprice, hotelInfoIntro, hotelInfoPic1, 
     hotelInfoPic2, hotelInfoPic3, hotelInfoPic4, hotelInfoPic5, hotelInfoPic6, hotelInfoPic7, 
     hotelId, roomTypeOne, roomPriceOne, roomImgOne, roomTypeTwo, roomPriceTwo, roomImgTwo, 
-    roomTypeThree, roomPriceThree, roomImgThree, title, mapPoint, point
+    roomTypeThree, roomPriceThree, roomImgThree, title, mappoint1,mappoint2, point1,point2
   </sql>
   
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
@@ -36,6 +52,13 @@
   <select id="getAll" resultType="com.etc.entity.HotelInfo">
   select * from hotelinfo
   </select>
+  
+      <select id="selectById" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from hotelinfo
+    where hotelId = #{hotelid,jdbcType=INTEGER}
+    </select>
   
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from hotelinfo

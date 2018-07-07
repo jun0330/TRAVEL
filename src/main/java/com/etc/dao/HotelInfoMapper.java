@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.stereotype.Repository;
 
 import com.etc.entity.HotelInfo;
+import com.etc.entity.View;
 
 @Repository(value="hotelInfoMapper")
 public interface HotelInfoMapper {
@@ -22,4 +23,6 @@ public interface HotelInfoMapper {
     boolean updateByPrimaryKey(HotelInfo record);
     //²éÑ¯ËùÓÐ
     List<HotelInfo> getAll();
+    
+    List<HotelInfo> selectById(Integer hotelId);
 }

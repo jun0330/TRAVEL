@@ -24,19 +24,20 @@
             </div>
             <button type="submit" class="btn btn-default">搜索</button>
            	&nbsp;
-            <button type="button" class="btn btn-default btn-sm">
-    							<span class="glyphicon glyphicon-log-in"></span>&nbsp;登录
-							</button>
-							&nbsp;
-							<button type="button" class="btn btn-default btn-sm">
+            <button type="button" class="btn btn-default btn-sm" id="login" >
+    			<span class="glyphicon glyphicon-log-in"></span>&nbsp;登录
+			</button>
+			&nbsp;
+			<button type="button" class="btn btn-default btn-sm" id="reg">
     							<span class="glyphicon glyphicon-user"></span>&nbsp;注册
-							</button>
+			</button>
+			
 				 &nbsp;
-         	<button type="button" class="btn btn-default btn-sm" style="display:none">
+         	<button type="button" class="btn btn-default btn-sm" style="display:none" id="center">
     			<span class="glyphicon glyphicon-user"></span>&nbsp;个人中心
 			</button>
 			&nbsp;
-			<button type="button" class="btn btn-default btn-sm" style="display:none">
+			<button type="button" class="btn btn-default btn-sm" style="display:none" id="exit">
     			<span class="glyphicon glyphicon-log-out"></span>&nbsp;退出
 			</button>
           </form>
@@ -55,7 +56,7 @@
         <a class="navbar-brand" href="index.jsp">首页</a> </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-     		<li><a href="Scenic.jsp" target="_blank">景点</a></li>
+     		<li><a href="Scenic.jsp">景点</a></li>
           <li><a href="hotel.jsp" target="_blank">酒店</a></li>
           <li><a href="strategy.jsp" target="_blank">攻略</a></li>
           <li><a href="about.jsp" target="_blank">关于我们</a></li>
@@ -154,85 +155,22 @@
     <div class="list-title">酒店介绍</div>
     <div class="row jdjs-main">
     
-      <div class="col-md-8">
-      
-      
-        <div class="jd-summary">
-        	<div class="row">
-          		<div class="col-md-3 img"><img src="img/yhzc.png" class="img-responsive"></div>
-         		<div class="col-md-9 content">
-            		<h4><a href="jdxx.html">Medhufushi Island Resort曼德芙岛</a><b><span class="s_star_1"><i class="s_d8"></i></span></b></h4>
-            		<em>地点：南马累环礁</em>
-            		<em>门票价格：<dfn class="Scenic-price"><i>&yen;275</i></dfn>起 </em>
-            		<p>The Residence Maldives 在2012年4月开幕。坐落在Gaafu Alifu 环礁，是世界上最大、最深的环礁。幽静的 The Residence Maldives 位於马列国际机场南面...</p>
-          		</div>
-          		<div class="clearfix"></div>
-         	</div>
-        </div>
-        
-           <div class="jd-summary">
-        	<div class="row">
-          		<div class="col-md-3 img"><img src="img/yhzc.png" class="img-responsive"></div>
-         		<div class="col-md-9 content">
-            		<h4><a href="jdxx.html">Medhufushi Island Resort曼德芙岛</a><b><span class="s_star_1"><i class="s_d8"></i></span></b></h4>
-            		<em>地点：南马累环礁</em>
-            		<em>门票价格：<dfn class="Scenic-price"><i>&yen;275</i></dfn>起 </em>
-            		<p>The Residence Maldives 在2012年4月开幕。坐落在Gaafu Alifu 环礁，是世界上最大、最深的环礁。幽静的 The Residence Maldives 位於马列国际机场南面...</p>
-          		</div>
-          		<div class="clearfix"></div>
-         	</div>
-        </div>
-        
-           <div class="jd-summary">
-        	<div class="row">
-          		<div class="col-md-3 img"><img src="img/yhzc.png" class="img-responsive"></div>
-         		<div class="col-md-9 content">
-            		<h4><a href="jdxx.html">Medhufushi Island Resort曼德芙岛</a><b><span class="s_star_1"><i class="s_d6"></i></span></b></h4>
-            		<em>地点：南马累环礁</em>
-            		<em>门票价格：<dfn class="Scenic-price"><i>&yen;275</i></dfn>起 </em>
-            		<p>The Residence Maldives 在2012年4月开幕。坐落在Gaafu Alifu 环礁，是世界上最大、最深的环礁。幽静的 The Residence Maldives 位於马列国际机场南面...</p>
-          		</div>
-          		<div class="clearfix"></div>
-         	</div>
-        </div>
-        
-           <div class="jd-summary">
-        	<div class="row">
-          		<div class="col-md-3 img"><img src="img/yhzc.png" class="img-responsive"></div>
-         		<div class="col-md-9 content">
-            		<h4><a href="jdxx.html">Medhufushi Island Resort曼德芙岛</a><b><span class="s_star_1"><i class="s_d2"></i></span></b></h4>
-            		<em>地点：南马累环礁</em>
-            		<em>门票价格：<dfn class="Scenic-price"><i>&yen;275</i></dfn>起 </em>
-            		<p>The Residence Maldives 在2012年4月开幕。坐落在Gaafu Alifu 环礁，是世界上最大、最深的环礁。幽静的 The Residence Maldives 位於马列国际机场南面...</p>
-          		</div>
-          		<div class="clearfix"></div>
-         	</div>
-        </div>
-        
-           <div class="jd-summary">
-        	<div class="row">
-          		<div class="col-md-3 img"><img src="img/yhzc.png" class="img-responsive"></div>
-         		<div class="col-md-9 content">
-            		<h4><a href="jdxx.html">Medhufushi Island Resort曼德芙岛</a><b><span class="s_star_1"><i class="s_d2"></i></span></b></h4>
-            		<em>地点：南马累环礁</em>
-            		<em>门票价格：<dfn class="Scenic-price"><i>&yen;275</i></dfn>起 </em>
-            		<p>The Residence Maldives 在2012年4月开幕。坐落在Gaafu Alifu 环礁，是世界上最大、最深的环礁。幽静的 The Residence Maldives 位於马列国际机场南面...</p>
-          		</div>
-          		<div class="clearfix"></div>
-         	</div>
-        </div>
+      <div class="col-md-8" id="hotels">
       
 
+<!-- 
          <div class="page pull-right">
-  		</div>
+  		</div> -->
   		
       </div>
       <div class="col-md-4 jd-list">
 		<div class="list-title">酒店位置</div>
 		<ul class="content-list">
-			<li>▪&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">厦门</a></li>
-			<li>▪&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">泉州</a></li>
-			<li>▪&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">莆田</a></li>
+			<li>▪&nbsp;&nbsp;&nbsp;&nbsp;<a href="javvascript:void(0);" class="loc">厦门</a></li>
+			<li>▪&nbsp;&nbsp;&nbsp;&nbsp;<a href="javvascript:void(0);" class="loc">泉州</a></li>
+			<li>▪&nbsp;&nbsp;&nbsp;&nbsp;<a href="javvascript:void(0);" class="loc">福州</a></li>
+			<li>▪&nbsp;&nbsp;&nbsp;&nbsp;<a href="javvascript:void(0);" class="loc">宁德</a></li>
+			<li>▪&nbsp;&nbsp;&nbsp;&nbsp;<a href="javvascript:void(0);" class="loc">漳州</a></li>
 		</ul>
 	</div>
       
@@ -271,5 +209,39 @@
 </div>
 <script src="js/jquery.min.js"></script> 
 <script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/click.js"></script>
+<script type="text/javascript">
+$(function(e){
+	 $.ajax({
+        type: "GET",
+        url: "${pageContext.request.contextPath}/api/hotel/six",
+        dataType: "json",
+        success: function(data){
+       	$.each(data, function(commentIndex, comment){
+       		var loc=comment.hotelname.substring(0,2);
+             $("#hotels").append("<div class='jd-summary'><div class='row'><div class='col-md-3 img'><img src='hotelImg/"+comment.hotelpic+"' class='img-responsive'></div><div class='col-md-9 content'><h4><a href='jdxx.html'>"+comment.hotelname+"</a><b><span class='s_star_1'><i class='s_d8'></i></span></b></h4><em>地点："+loc+"</em><em>酒店价格：<dfn class='Hotel-price'><i>&yen;"+comment.hotelprice+"</i></dfn>起 </em><p>福建</p></div><div class='clearfix'></div></div> </div>"); 
+          });
+        }
+     });
+	$(".loc").click(function(e){
+		var hotelname=$(this).text();
+		$("#hotels").empty();
+		  $.ajax({
+            type: "GET",
+            data:{'hotelname':hotelname},
+            url: "${pageContext.request.contextPath}/api/hotel/like",
+            dataType: "json",
+            success: function(data){
+           	$.each(data, function(commentIndex, comment){
+           		
+           		var loc=comment.hotelname.substring(0,2);
+                 $("#hotels").append("<div class='jd-summary'><div class='row'><div class='col-md-3 img'><img src='hotelImg/"+comment.hotelpic+"' class='img-responsive'></div><div class='col-md-9 content'><h4><a href='${pageContext.request.contextPath}/hotelInfo/list?hotelId="+comment.hotelid+"'>"+comment.hotelname+"</a><b><span class='s_star_1'><i class='s_d8'></i></span></b></h4><em>地点："+loc+"</em><em>酒店价格：<dfn class='Hotel-price'><i>&yen;"+comment.hotelprice+"</i></dfn>起 </em><p>福建</p></div><div class='clearfix'></div></div> </div>"); 
+              });
+            }
+         }); 
+	}); 
+	
+})
+	</script>
 </body>
 </html>

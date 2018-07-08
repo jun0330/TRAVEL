@@ -27,7 +27,9 @@ public class HotelController {
 	public List<Hotel> getHotel(){
 		
 		List<Hotel> list = hs.querySix();
-		
+		for (Hotel hotel : list) {
+			System.out.println(hotel);
+		}
 		return list;
 	}
 	

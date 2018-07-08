@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="utf-8" />
-<title>福建旅游</title>
+<title>爱出行旅游网</title>
 <link rel="stylesheet" href="css/bootstrap.min.css" />
 <link rel="stylesheet" href="css/style.css">
 <!-- 排版css -->
@@ -78,7 +78,7 @@
 				<ul class="nav navbar-nav">
 					<li><a href="Scenic.jsp" target="_blank">景点</a></li>
 					<li><a href="hotel.jsp" target="_blank">酒店</a></li>
-					<li><a href="strategy.jsp" target="_blank">攻略</a></li>
+					<li><a href="strategy.jsp" target="_blank">旅游攻略</a></li>
 					<li><a href="about.jsp" target="_blank">关于我们</a></li>
 				</ul>
 			</div>
@@ -399,7 +399,7 @@
 	<script language="javascript">
 		var myDate = new Date();
 		var y = myDate.getFullYear(); //获取完整的年份(4位,1970-????)
-		var M = myDate.getMonth(); //获取当前月份(0-11,0代表1月)
+		var M = (myDate.getMonth()+1); //获取当前月份(0-11,0代表1月)
 		var D = myDate.getDate(); //获取当前日(1-31)
 		var week = myDate.getDay(); //获取当前星期X(0-6,0代表星期天)
 		var days = [ "日 ", "一 ", "二 ", "三 ", "四 ", "五 ", "六 ", ]

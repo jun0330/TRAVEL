@@ -57,9 +57,42 @@ public class HotelInfo {
     
     
 
-	public HotelInfo(String string, String string2, double d, String string3, String string4, String string5, String string6, String string7, String string8, String string9, String string10, int i, String string11, int j, String string12, String string13, int k, String string14, String string15, int l, String string16, String string17, String string18, String string19) {
+
+
+	public HotelInfo(String hotelinfoname, String hotelinfoaddress, Double hotelinfoprice,
+			String hotelinfointro, String hotelinfopic1, String hotelinfopic2, String hotelinfopic3,
+			String hotelinfopic4, String hotelinfopic5, String hotelinfopic6, String hotelinfopic7, Integer hotelid,
+			String roomtypeone, Integer roompriceone, String roomimgone, String roomtypetwo, Integer roompricetwo,
+			String roomimgtwo, String roomtypethree, Integer roompricethree, String roomimgthree, String title,
+			String mappoint1, String mappoint2) {
 		super();
-		// TODO Auto-generated constructor stub
+		this.hotelinfoid = hotelinfoid;
+		this.hotelinfoname = hotelinfoname;
+		this.hotelinfoaddress = hotelinfoaddress;
+		this.hotelinfoprice = hotelinfoprice;
+		this.hotelinfointro = hotelinfointro;
+		this.hotelinfopic1 = hotelinfopic1;
+		this.hotelinfopic2 = hotelinfopic2;
+		this.hotelinfopic3 = hotelinfopic3;
+		this.hotelinfopic4 = hotelinfopic4;
+		this.hotelinfopic5 = hotelinfopic5;
+		this.hotelinfopic6 = hotelinfopic6;
+		this.hotelinfopic7 = hotelinfopic7;
+		this.hotelid = hotelid;
+		this.roomtypeone = roomtypeone;
+		this.roompriceone = roompriceone;
+		this.roomimgone = roomimgone;
+		this.roomtypetwo = roomtypetwo;
+		this.roompricetwo = roompricetwo;
+		this.roomimgtwo = roomimgtwo;
+		this.roomtypethree = roomtypethree;
+		this.roompricethree = roompricethree;
+		this.roomimgthree = roomimgthree;
+		this.title = title;
+		this.mappoint1 = mappoint1;
+		this.mappoint2 = mappoint2;
+		this.point1 = point1;
+		this.point2 = point2;
 	}
 
 	public Integer getHotelinfoid() {

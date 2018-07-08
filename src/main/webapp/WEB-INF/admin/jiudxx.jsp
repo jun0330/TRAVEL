@@ -81,13 +81,14 @@ h3{margin:10px 0;}
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-        <a class="navbar-brand" href="index.jsp">首页</a> </div>
+        <a class="navbar-brand" href="${pageContext.request.contextPath}/index.jsp">首页</a> </div>
+       
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-           <li><a href="" target="_blank">景点</a></li>
-          <li><a href="" target="_blank">酒店</a></li>
-          <li><a href="" target="_blank">攻略</a></li>
-          <li><a href="" target="_blank">关于我们</a></li>
+          	<li><a href="${pageContext.request.contextPath}/Scenic.jsp" target="_blank">景点</a></li>
+					<li><a href="${pageContext.request.contextPath}/hotel.jsp" target="_blank">酒店</a></li>
+					<li><a href="${pageContext.request.contextPath}/lygl.jsp" target="_blank">旅游攻略</a></li>
+					<li><a href="${pageContext.request.contextPath}/about.jsp" target="_blank">关于我们</a></li>
         </ul>
       </div>
     </div>
@@ -200,12 +201,12 @@ h3{margin:10px 0;}
              <div id="images">
         	<div class="tit">相关图片</div>
             <div class="row">
-                <div class="col-md-6 img"><img src="${pageContext.request.contextPath}/hotelImg/${hotel.hotelinfopic2}"></div>
-               <div class="col-md-6 img"><img src="${pageContext.request.contextPath}/hotelImg/${hotel.hotelinfopic3}"></div>
-              <div class="col-md-6 img"><img src="${pageContext.request.contextPath}/hotelImg/${hotel.hotelinfopic4}"></div>
-            <div class="col-md-6 img"><img src="${pageContext.request.contextPath}/hotelImg/${hotel.hotelinfopic5}"></div>
-                <div class="col-md-6 img"><img src="${pageContext.request.contextPath}/hotelImg/${hotel.hotelinfopic6}"></div>
-               <div class="col-md-6 img"><img src="${pageContext.request.contextPath}/hotelImg/${hotel.hotelinfopic7}"></div>
+                <div class="col-md-6 img"><img src="${pageContext.request.contextPath}/hotelImg/${hotel.hotelinfopic2}" style="height:300px;"></div>
+               <div class="col-md-6 img"><img src="${pageContext.request.contextPath}/hotelImg/${hotel.hotelinfopic3}" style="height:300px;"></div>
+              <div class="col-md-6 img"><img src="${pageContext.request.contextPath}/hotelImg/${hotel.hotelinfopic4}" style="height:300px;"></div>
+            <div class="col-md-6 img"><img src="${pageContext.request.contextPath}/hotelImg/${hotel.hotelinfopic5}" style="height:300px;"></div>
+                <div class="col-md-6 img"><img src="${pageContext.request.contextPath}/hotelImg/${hotel.hotelinfopic6}" style="height:300px;"></div>
+               <div class="col-md-6 img"><img src="${pageContext.request.contextPath}/hotelImg/${hotel.hotelinfopic7}" style="height:300px;"></div>
             </div>
         </div>
         <div id="hotel">

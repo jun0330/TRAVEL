@@ -11,15 +11,43 @@
 <!-- 排版css -->
 <link rel="stylesheet" href="css/paiban.css">
 <script type="text/javascript" src="js/jquer.min.js"></script>
+<style type="text/css">
+#p{
+font-size:15px;
+margin-left:800px;
+}
+#p1{
+font-size:15px;
+margin-left:20px;
 
+}
+#p2{
+font-size:15px;
+margin-left:20px;
+}
+#p3{
+font-size:15px;
+margin-left:20px;
+}
+
+</style>
 </head>
 <body>
 
 	<div class="wrapper header col-xs-12">
+	<div>
+	<span id="p">欢迎，个人中心</span>
+	<span id="p1" onclick="center()" style="cursor:pointer">个人中心</span>
+	<span id="p2" style="cursor:pointer">帮助</span>
+	<span id="p3" style="cursor:pointer">退出</span>
+	</div>
 		<div class="container nav-wrapper">
+		
 			<div class="head-top">
+		
 				<div class="logo col-md-6 col-sm-4 col-xs-12">
-					<img src="img/login.png">
+					<img src="img/login.png" style="margin-top:-20px;">
+						
 				</div>
 				<div class="logo-right col-md-6 col-sm-8 col-xs-12">
 					
@@ -30,17 +58,17 @@
 						 <i class="wx"></i> -->
 						<form class="navbar-form col-xs-6" role="search">
 							<div class="form-group">
-								<input type="text" class="form-control" name="search" value="" placeholder="请输入关键字">
+								<input type="text" class="form-control" style="margin-top:-20px;" name="search" value="" placeholder="请输入关键字">
 							</div>
-							<button type="submit" class="btn btn-default">搜索</button>
+							<button type="submit" class="btn btn-default" style="margin-top:-20px;">搜索</button>
             				&nbsp;
             				
-            				<button type="button" class="btn btn-default btn-sm" id="login">
-    							<span class="glyphicon glyphicon-log-in"></span>&nbsp;登录
+            				<button type="button" style="margin-top:-20px;" class="btn btn-default btn-sm" id="login">
+    							<span class="glyphicon glyphicon-log-in" ></span>&nbsp;登录
 							</button>
 							&nbsp;
-							<button type="button" class="btn btn-default btn-sm" onclick="reg()" id="reg">
-    							<span class="glyphicon glyphicon-user"></span>&nbsp;注册
+							<button type="button" style="margin-top:-20px;" class="btn btn-default btn-sm" onclick="reg()" id="reg">
+    							<span class="glyphicon glyphicon-user" ></span>&nbsp;注册
 							</button>
 								 &nbsp;
          					<button type="button" class="btn btn-default btn-sm" style="display:none" id="center">
@@ -78,7 +106,7 @@
 				<ul class="nav navbar-nav">
 					<li><a href="Scenic.jsp" target="_blank">景点</a></li>
 					<li><a href="hotel.jsp" target="_blank">酒店</a></li>
-					<li><a href="strategy.jsp" target="_blank">旅游攻略</a></li>
+					<li><a href="lygl.jsp" target="_blank">旅游攻略</a></li>
 					<li><a href="about.jsp" target="_blank">关于我们</a></li>
 				</ul>
 			</div>
@@ -451,6 +479,10 @@
 	             }
 	          });
 		})
+		
+		function center(){
+			location.href="${pageContext.request.contextPath}/center.jsp";
+		}
 	</script>
 </body>
 </html>

@@ -26,10 +26,10 @@ public class HotelInfoController {
 	{
 	
 		List<HotelInfo> list=hotelInfoService.queryById(hotelId);
-		//model.addAttribute(list);//Ìí¼ÓÒ»¸öÊôÐÔµÄÖµ ,Ã»ÓÐËµkey  => userList 
-		model.addAttribute("list", list);//Ò»¸ökey ,Ò»¸övalue
+		//model.addAttribute(list);//ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ôµï¿½Öµ ,Ã»ï¿½ï¿½Ëµkey  => userList 
+		model.addAttribute("list", list);//Ò»ï¿½ï¿½key ,Ò»ï¿½ï¿½value
 		
-		list.forEach(System.out::println);
+	
 		return "jiudxx";
 	}
 	

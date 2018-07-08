@@ -56,10 +56,10 @@
         <a class="navbar-brand" href="index.jsp">首页</a> </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-     		<li><a href="Scenic.jsp">景点</a></li>
-          <li><a href="hotel.jsp" target="_blank">酒店</a></li>
-          <li><a href="strategy.jsp" target="_blank">攻略</a></li>
-          <li><a href="about.jsp" target="_blank">关于我们</a></li>
+     	<li><a href="Scenic.jsp" target="_blank">景点</a></li>
+					<li><a href="hotel.jsp" target="_blank">酒店</a></li>
+					<li><a href="lygl.jsp" target="_blank">旅游攻略</a></li>
+					<li><a href="about.jsp" target="_blank">关于我们</a></li>
         </ul>
       </div>
     </div>
@@ -220,7 +220,7 @@
 	             success: function(data){
 	            	$.each(data, function(commentIndex, comment){
 	            		var loc=comment.scenicname.substring(0,2);
-                      $("#scenics").append("<div class='jd-summary'><div class='row'><div class='col-md-3 img'><img src='scenicImg/"+comment.scenidpic+"' class='img-responsive'></div><div class='col-md-9 content'><h4><a href='jdxx.html'>"+comment.scenicname+"</a><b><span class='s_star_1'><i class='s_d8'></i></span></b></h4><em>地点："+loc+"</em><em>门票价格：<dfn class='Scenic-price'><i>&yen;"+comment.scenicprice+"</i></dfn>起 </em><p>福建景点</p></div><div class='clearfix'></div></div> </div>"); 
+                      $("#scenics").append("<div class='jd-summary'><div class='row'><div class='col-md-3 img'><img src='scenicImg/"+comment.scenidpic+"' class='img-responsive'></div><div class='col-md-9 content'><h4><a href='${pageContext.request.contextPath}/view/list?scenicId="+comment.scenicid+"'>"+comment.scenicname+"</a><b><span class='s_star_1'><i class='s_d8'></i></span></b></h4><em>地点："+loc+"</em><em>门票价格：<dfn class='Scenic-price'><i>&yen;"+comment.scenicprice+"</i></dfn>起 </em><p>福建景点</p></div><div class='clearfix'></div></div> </div>"); 
                    });
 	             }
 	          });
@@ -236,7 +236,7 @@
 		            	$.each(data, function(commentIndex, comment){
 		            		
 		            		var loc=comment.scenicname.substring(0,2);
-	                      $("#scenics").append("<div class='jd-summary'><div class='row'><div class='col-md-3 img'><img src='scenicImg/"+comment.scenidpic+"' class='img-responsive'></div><div class='col-md-9 content'><h4><a href='jdxx.html'>"+comment.scenicname+"</a><b><span class='s_star_1'><i class='s_d8'></i></span></b></h4><em>地点："+loc+"</em><em>门票价格：<dfn class='Scenic-price'><i>&yen;"+comment.scenicprice+"</i></dfn>起 </em><p>福建景点</p></div><div class='clearfix'></div></div> </div>"); 
+	                      $("#scenics").append("<div class='jd-summary'><div class='row'><div class='col-md-3 img'><img src='scenicImg/"+comment.scenidpic+"' class='img-responsive'></div><div class='col-md-9 content'><h4><a href='${pageContext.request.contextPath}/view/list?scenicId="+comment.scenicid+"'>"+comment.scenicname+"</a><b><span class='s_star_1'><i class='s_d8'></i></span></b></h4><em>地点："+loc+"</em><em>门票价格：<dfn class='Scenic-price'><i>&yen;"+comment.scenicprice+"</i></dfn>起 </em><p>福建景点</p></div><div class='clearfix'></div></div> </div>"); 
 	                   });
 		             }
 		          }); 

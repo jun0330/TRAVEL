@@ -6,10 +6,12 @@
     <result column="scenicName" jdbcType="VARCHAR" property="scenicname" />
     <result column="scenicPrice" jdbcType="DOUBLE" property="scenicprice" />
     <result column="scenidPic" jdbcType="VARCHAR" property="scenidpic" />
+    <result column="loc" jdbcType="VARCHAR" property="loc" />
+    <result column="start" jdbcType="VARCHAR" property="start" />
   </resultMap>
   
   <sql id="Base_Column_List">
-    scenicId, scenicName, scenicPrice, scenidPic
+    scenicId, scenicName, scenicPrice, scenidPic,loc,start
   </sql>
   
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
@@ -41,10 +43,12 @@
   </delete>
   
   <insert id="insert" parameterType="com.etc.entity.Scenic">
-    insert into scenic (scenicId, scenicName, scenicPrice, 
-      scenidPic)
+   insert into scenic (scenicId, scenicName, scenicPrice, 
+      scenidPic, loc, start
+      )
     values (#{scenicid,jdbcType=INTEGER}, #{scenicname,jdbcType=VARCHAR}, #{scenicprice,jdbcType=DOUBLE}, 
-      #{scenidpic,jdbcType=VARCHAR})
+      #{scenidpic,jdbcType=VARCHAR}, #{loc,jdbcType=VARCHAR}, #{start,jdbcType=VARCHAR}
+      )
   </insert>
   
   <insert id="insertSelective" parameterType="com.etc.entity.Scenic">
@@ -62,6 +66,12 @@
       <if test="scenidpic != null">
         scenidPic,
       </if>
+      <if test="loc != null">
+        loc,
+      </if>
+      <if test="start != null">
+        start,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="scenicid != null">
@@ -75,6 +85,12 @@
       </if>
       <if test="scenidpic != null">
         #{scenidpic,jdbcType=VARCHAR},
+      </if>
+      <if test="loc != null">
+        #{loc,jdbcType=VARCHAR},
+      </if>
+      <if test="start != null">
+        #{start,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -90,14 +106,22 @@
       <if test="scenidpic != null">
         scenidPic = #{scenidpic,jdbcType=VARCHAR},
       </if>
+      <if test="loc != null">
+        loc = #{loc,jdbcType=VARCHAR},
+      </if>
+      <if test="start != null">
+        start = #{start,jdbcType=VARCHAR},
+      </if>
     </set>
     where scenicId = #{scenicid,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.etc.entity.Scenic">
-    update scenic
+     update scenic
     set scenicName = #{scenicname,jdbcType=VARCHAR},
       scenicPrice = #{scenicprice,jdbcType=DOUBLE},
-      scenidPic = #{scenidpic,jdbcType=VARCHAR}
+      scenidPic = #{scenidpic,jdbcType=VARCHAR},
+      loc = #{loc,jdbcType=VARCHAR},
+      start = #{start,jdbcType=VARCHAR}
     where scenicId = #{scenicid,jdbcType=INTEGER}
   </update>
 </mapper>

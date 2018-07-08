@@ -13,6 +13,10 @@ public class Scenic {
     private Double scenicprice;
 
     private String scenidpic;
+    
+    private String loc;
+    
+    private String start;
 
     public Scenic() {
 		super();
@@ -50,11 +54,28 @@ public class Scenic {
     public void setScenidpic(String scenidpic) {
         this.scenidpic = scenidpic == null ? null : scenidpic.trim();
     }
+    
+	public String getLoc() {
+		return loc;
+	}
+
+	public void setLoc(String loc) {
+		this.loc = loc;
+	}
+
+	public String getStart() {
+		return start;
+	}
+
+	public void setStart(String start) {
+		this.start = start;
+	}
 
 	@Override
 	public String toString() {
 		return "Scenic [scenicid=" + scenicid + ", scenicname=" + scenicname + ", scenicprice=" + scenicprice
-				+ ", scenidpic=" + scenidpic + "]";
+				+ ", scenidpic=" + scenidpic + ", loc=" + loc + ", start=" + start + "]";
 	}
+	
     
 }

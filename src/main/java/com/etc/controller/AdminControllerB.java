@@ -39,10 +39,12 @@ public class AdminControllerB {
 		return "admin-add";
 	}
 	//添加操作
-	@RequestMapping(value="/adAdmin",method=RequestMethod.POST)
-	@ResponseBody
-	public boolean addAdmin(@RequestBody Admin admin) {
-		return as.regAdmin(admin);
+	@RequestMapping(value="/adAdmin")
+	public String addAdmin(Admin admin) {
+		
+		as.regAdmin(admin);
+		
+		return "redirect:showAdmin";
 	}
 	
 	//条件删除(ID)

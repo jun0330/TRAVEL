@@ -19,7 +19,7 @@
     where hotelId = #{hotelid,jdbcType=INTEGER}
   </select>
   
-  <select id="getALl" resultType="com.etc.entity.Hotel">
+  <select id="getAll" resultType="com.etc.entity.Hotel">
   select * from hotel
   </select>
 

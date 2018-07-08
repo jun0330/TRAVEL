@@ -2,10 +2,10 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.etc.dao.HotelInfoMapper">
   <resultMap id="BaseResultMap" type="com.etc.entity.HotelInfo">
-    <id column="hotelInfoId" jdbcType="INTEGER" property="hotelinfoid" />
-    <result column="hotelInfoName" jdbcType="VARCHAR" property="hotelinfoname" />
+   <id column="hotelInfoId" jdbcType="INTEGER" property="hotelinfoid" />
+    <result column="hotelinfoname" jdbcType="VARCHAR" property="hotelinfoname" />
     <result column="hotelInfoAddress" jdbcType="VARCHAR" property="hotelinfoaddress" />
-    <result column="hotelInfoPrice" jdbcType="DOUBLE" property="hotelinfoprice" />
+    <result column="hotelinfoprice" jdbcType="DOUBLE" property="hotelinfoprice" />
     <result column="hotelInfoIntro" jdbcType="VARCHAR" property="hotelinfointro" />
     <result column="hotelInfoPic1" jdbcType="VARCHAR" property="hotelinfopic1" />
     <result column="hotelInfoPic2" jdbcType="VARCHAR" property="hotelinfopic2" />
@@ -13,29 +13,29 @@
     <result column="hotelInfoPic4" jdbcType="VARCHAR" property="hotelinfopic4" />
     <result column="hotelInfoPic5" jdbcType="VARCHAR" property="hotelinfopic5" />
     <result column="hotelInfoPic6" jdbcType="VARCHAR" property="hotelinfopic6" />
-     <result column="hotelInfoPic7" jdbcType="VARCHAR" property="hotelinfopic7" />
-
+    <result column="hotelInfoPic7" jdbcType="VARCHAR" property="hotelinfopic7" />
     <result column="hotelId" jdbcType="INTEGER" property="hotelid" />
-          <result column="roomTypeOne" jdbcType="VARCHAR" property="roomtypeone" />
-            <result column="roomPriceOne" jdbcType="VARCHAR" property="roompriceone" />
-              <result column="roomImgOne" jdbcType="VARCHAR" property="roomimgone"/>
-              <result column="roomTypeTwo" jdbcType="VARCHAR" property="roomtypetwo" />
-            <result column="roomPriceTwo" jdbcType="VARCHAR" property="roompricetwo" />
-              <result column="roomImgTwo" jdbcType="VARCHAR" property="roomimgtwo"/>
-              <result column="roomTypeThree" jdbcType="VARCHAR" property="roomtypethree" />
-            <result column="roomPriceThree" jdbcType="VARCHAR" property="roompricethree" />
-              <result column="roomImgThree" jdbcType="VARCHAR" property="roomimgthree"/>
-              <result column="title" jdbcType="VARCHAR" property="title"/>
-              <result column="mappoint1" jdbcType="VARCHAR" property="mappoint1"/>
-             <result column="mappoint2" jdbcType="VARCHAR" property="mappoint2"/>
-                <result column="point1" jdbcType="VARCHAR" property="point1"/>
-                <result column="point2" jdbcType="VARCHAR" property="point2"/>
+    <result column="roomTypeOne" jdbcType="VARCHAR" property="roomtypeone" />
+    <result column="roomPriceOne" jdbcType="INTEGER" property="roompriceone" />
+    <result column="roomImgOne" jdbcType="VARCHAR" property="roomimgone" />
+    <result column="roomTypeTwo" jdbcType="VARCHAR" property="roomtypetwo" />
+    <result column="roomPriceTwo" jdbcType="INTEGER" property="roompricetwo" />
+    <result column="roomImgTwo" jdbcType="VARCHAR" property="roomimgtwo" />
+    <result column="roomTypeThree" jdbcType="VARCHAR" property="roomtypethree" />
+    <result column="roomPriceThree" jdbcType="INTEGER" property="roompricethree" />
+    <result column="roomImgThree" jdbcType="VARCHAR" property="roomimgthree" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="mappoint1" jdbcType="VARCHAR" property="mappoint1" />
+    <result column="mappoint2" jdbcType="VARCHAR" property="mappoint2" />
+    <result column="point1" jdbcType="VARCHAR" property="point1" />
+    <result column="point2" jdbcType="VARCHAR" property="point2" />
   </resultMap>
   <sql id="Base_Column_List">
     hotelInfoId, hotelinfoname, hotelInfoAddress, hotelinfoprice, hotelInfoIntro, hotelInfoPic1, 
     hotelInfoPic2, hotelInfoPic3, hotelInfoPic4, hotelInfoPic5, hotelInfoPic6, hotelInfoPic7, 
     hotelId, roomTypeOne, roomPriceOne, roomImgOne, roomTypeTwo, roomPriceTwo, roomImgTwo, 
-    roomTypeThree, roomPriceThree, roomImgThree, title, mappoint1,mappoint2, point1,point2
+    roomTypeThree, roomPriceThree, roomImgThree, title, mappoint1, mappoint2, point1, 
+    point2
   </sql>
   
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
@@ -53,7 +53,7 @@
   select * from hotelinfo
   </select>
   
-      <select id="selectById" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    <select id="selectById" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
     from hotelinfo
@@ -66,24 +66,23 @@
   </delete>
   
   <insert id="insert" parameterType="com.etc.entity.HotelInfo">
-    insert into hotelinfo (hotelInfoId, hotelinfoname, hotelInfoAddress, 
+     insert into hotelinfo (hotelInfoId, hotelinfoname, hotelInfoAddress,
       hotelinfoprice, hotelInfoIntro, hotelInfoPic1, 
       hotelInfoPic2, hotelInfoPic3, hotelInfoPic4, 
       hotelInfoPic5, hotelInfoPic6, hotelInfoPic7, 
       hotelId, roomTypeOne, roomPriceOne, 
       roomImgOne, roomTypeTwo, roomPriceTwo, 
       roomImgTwo, roomTypeThree, roomPriceThree, 
-      roomImgThree, title, mapPoint, 
-      point)
-    values (#{hotelinfoid,jdbcType=INTEGER}, #{hotelinfoname,jdbcType=VARCHAR}, #{hotelinfoaddress,jdbcType=VARCHAR}, 
-      #{hotelinfoprice,jdbcType=DOUBLE}, #{hotelinfointro,jdbcType=VARCHAR}, #{hotelinfopic1,jdbcType=VARCHAR}, 
-      #{hotelinfopic2,jdbcType=VARCHAR}, #{hotelinfopic3,jdbcType=VARCHAR}, #{hotelinfopic4,jdbcType=VARCHAR}, 
-      #{hotelinfopic5,jdbcType=VARCHAR}, #{hotelinfopic6,jdbcType=VARCHAR}, 1, 
-      #{hotelid,jdbcType=INTEGER}, #{roomtypeone,jdbcType=VARCHAR}, #{roompriceone,jdbcType=INTEGER}, 
-      #{roomimgone,jdbcType=VARCHAR}, #{roomtypetwo,jdbcType=VARCHAR}, #{roompricetwo,jdbcType=INTEGER}, 
-      #{roomimgtwo,jdbcType=VARCHAR}, #{roomtypethree,jdbcType=VARCHAR}, #{roompricethree,jdbcType=INTEGER}, 
-      #{roomimgthree,jdbcType=VARCHAR}, 1, #{mappoint,jdbcType=VARCHAR}, 
-      #{point,jdbcType=VARCHAR})
+      roomImgThree, title, mappoint1, 
+      mappoint2, point1, point2
+      )
+    values (#{hotelinfoid,jdbcType=INTEGER},#{hotelinfoname,jdbcType=VARCHAR},#{hotelinfoaddress,jdbcType=VARCHAR},
+	  #{hotelinfoprice,jdbcType=DOUBLE},#{hotelinfointro,jdbcType=VARCHAR},#{hotelinfopic1,jdbcType=VARCHAR},#{hotelinfopic2,jdbcType=VARCHAR},#{hotelinfopic3,jdbcType=VARCHAR},#{hotelinfopic4,jdbcType=VARCHAR}, 
+      #{hotelinfopic5,jdbcType=VARCHAR},#{hotelinfopic6,jdbcType=VARCHAR},#{hotelinfopic7,jdbcType=VARCHAR},#{hotelid,jdbcType=INTEGER},#{roomtypeone,jdbcType=VARCHAR},#{roompriceone,jdbcType=INTEGER}, 
+      #{roomimgone,jdbcType=VARCHAR},#{roomtypetwo,jdbcType=VARCHAR},#{roompricetwo,jdbcType=INTEGER},
+	  #{roomimgtwo,jdbcType=VARCHAR},#{roomtypethree,jdbcType=VARCHAR},#{roompricethree,jdbcType=INTEGER},
+      #{roomimgthree,jdbcType=VARCHAR},#{title,jdbcType=VARCHAR},#{mappoint1,jdbcType=VARCHAR},
+      #{mappoint2,jdbcType=VARCHAR},#{point1,jdbcType=VARCHAR}, #{point2,jdbcType=VARCHAR})
   </insert>
   
   <insert id="insertSelective" parameterType="com.etc.entity.HotelInfo">
@@ -158,11 +157,17 @@
       <if test="title != null">
         title,
       </if>
-      <if test="mappoint != null">
-        mapPoint,
+      <if test="mappoint1 != null">
+        mappoint1,
       </if>
-      <if test="point != null">
-        point,
+      <if test="mappoint2 != null">
+        mappoint2,
+      </if>
+      <if test="point1 != null">
+        point1,
+      </if>
+      <if test="point2 != null">
+        point2,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
@@ -235,11 +240,17 @@
       <if test="title != null">
         #{title,jdbcType=VARCHAR},
       </if>
-      <if test="mappoint != null">
-        #{mappoint,jdbcType=VARCHAR},
+      <if test="mappoint1 != null">
+        #{mappoint1,jdbcType=VARCHAR},
       </if>
-      <if test="point != null">
-        #{point,jdbcType=VARCHAR},
+      <if test="mappoint2 != null">
+        #{mappoint2,jdbcType=VARCHAR},
+      </if>
+      <if test="point1 != null">
+        #{point1,jdbcType=VARCHAR},
+      </if>
+      <if test="point2 != null">
+        #{point2,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -313,11 +324,17 @@
       <if test="title != null">
         title = #{title,jdbcType=VARCHAR},
       </if>
-      <if test="mappoint != null">
-        mapPoint = #{mappoint,jdbcType=VARCHAR},
+      <if test="mappoint1 != null">
+        mappoint1 = #{mappoint1,jdbcType=VARCHAR},
       </if>
-      <if test="point != null">
-        point = #{point,jdbcType=VARCHAR},
+      <if test="mappoint2 != null">
+        mappoint2 = #{mappoint2,jdbcType=VARCHAR},
+      </if>
+      <if test="point1 != null">
+        point1 = #{point1,jdbcType=VARCHAR},
+      </if>
+      <if test="point2 != null">
+        point2 = #{point2,jdbcType=VARCHAR},
       </if>
     </set>
     where hotelInfoId = #{hotelinfoid,jdbcType=INTEGER}
@@ -346,8 +363,10 @@
       roomPriceThree = #{roompricethree,jdbcType=INTEGER},
       roomImgThree = #{roomimgthree,jdbcType=VARCHAR},
       title = #{title,jdbcType=VARCHAR},
-      mapPoint = #{mappoint,jdbcType=VARCHAR},
-      point = #{point,jdbcType=VARCHAR}
+      mappoint1 = #{mappoint1,jdbcType=VARCHAR},
+      mappoint2 = #{mappoint2,jdbcType=VARCHAR},
+      point1 = #{point1,jdbcType=VARCHAR},
+      point2 = #{point2,jdbcType=VARCHAR}
     where hotelInfoId = #{hotelinfoid,jdbcType=INTEGER}
   </update>
   

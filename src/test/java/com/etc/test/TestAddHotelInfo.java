@@ -26,7 +26,7 @@ public class TestAddHotelInfo {
 	@Test
 	public void addAdmin() {
 		
-		HotelInfo hi = new HotelInfo("1", "1",2.0,"1", "1","1", "1","1", "1","1","1",1,"1",1,"1","1",1,"1","1", 1,"1","1","1","1");
+		HotelInfo hi = new HotelInfo("1", "1",2.0,"1", "1","1", "1","1", "1","1","1",1,"1",1,"1","1",1,"1","1", 1,"1","1","1","1","1","1");
 		
 		boolean flag = his.addHotelInfo(hi);
 		

@@ -19,5 +19,7 @@ public interface AdminService {
     boolean updateById(Admin admin);
     
     List<Admin> queryAll();
+    
+    Admin login(String adminname,String adminpwd);
 
 }

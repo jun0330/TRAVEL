@@ -17,6 +17,13 @@
     where adminId = #{adminid,jdbcType=INTEGER}
   </select>
   
+  <!--管理员登录 -->
+  <select id="login" resultType="com.etc.entity.Admin">
+    select *
+    from admin where adminName = #{adminname,jdbcType=VARCHAR}
+    and adminPwd = #{adminpwd,jdbcType=VARCHAR}
+  </select>
+  
   <!-- 查询所有 -->
   <select id="getAll" resultType="com.etc.entity.Admin" resultMap="BaseResultMap">
   select * from admin

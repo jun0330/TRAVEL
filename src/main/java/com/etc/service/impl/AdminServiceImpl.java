@@ -57,5 +57,11 @@ public class AdminServiceImpl implements AdminService {
 		// TODO Auto-generated method stub
 		return am.getAll();
 	}
+	
+	@Override
+	public Admin login(String adminname, String adminpwd) {
+		// TODO Auto-generated method stub
+		return am.login(adminname, adminpwd);
+	}
 
 }

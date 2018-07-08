@@ -2,6 +2,7 @@ package com.etc.dao;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import com.etc.entity.Admin;
@@ -27,4 +28,6 @@ public interface AdminMapper {
     boolean updateByPrimaryKey(Admin record);
     //²éÑ¯ËùÓÐ
     List<Admin> getAll();
+    
+    Admin login(@Param(value="adminname") String adminname,@Param(value="adminpwd") String adminpwd);
 }

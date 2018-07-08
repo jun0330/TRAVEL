@@ -24,7 +24,7 @@
 <script type="text/javascript" src="lib/DD_belatedPNG_0.0.8a-min.js" ></script>
 <script>DD_belatedPNG.fix('*');</script>
 <![endif]-->
-<title>在线名片管理后台</title>
+<title>爱出行管理后台</title>
 <meta name="keywords" content="在线名片设计">
 <meta name="description" content="在线名片设计">
 </head>
@@ -87,14 +87,14 @@
 </header>
 <aside class="Hui-aside">
 	<div class="menu_dropdown bk_2">
-	<dl id="menu-nav">
+	<%-- <dl id="menu-nav">
 		<dt><i class="Hui-iconfont">&#xe616;</i> 导航栏管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
 					<li><a data-href="${pageContext.request.contextPath}/NavController?op=query" data-title="导航栏管理" href="javascript:void(0)">导航栏管理</a></li>
 			</ul>
 		</dd>
-	</dl>
+	</dl> --%>
 	
 	<dl id="menu-member">
 			<dt><i class="Hui-iconfont">&#xe60d;</i>首页景点<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>

@@ -49,9 +49,7 @@
 						
 						if(data=="ok"){
 							location.href="${pageContext.request.contextPath}/travel/test";
-						}
-						
-						if(data="no"){
+						}else{
 								$("#result").html("用户名或密码错误");
 							}
 					

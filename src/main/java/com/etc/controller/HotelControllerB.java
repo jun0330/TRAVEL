@@ -40,9 +40,9 @@ public class HotelControllerB {
 	}
 	//酒店添加
 	@RequestMapping(value="/addHotel")
-	@ResponseBody
-	public boolean addHotel(@RequestBody Hotel hotel) {
-		return hs.addHotel(hotel);
+	public String addHotel(Hotel hotel) {
+		hs.addHotel(hotel);
+		return "forward:showAdmin";
 	}
 	//删除首页酒店信息
 	@RequestMapping(value="/delHotel/{hotelId}")

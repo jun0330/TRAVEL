@@ -44,7 +44,6 @@
 	<script type="text/javascript">
 			$(function(){
 				 $("#btn").click(function(){
-						alert("test");
 					 $.post("${pageContext.request.contextPath}/travel/loginAdmin",{"adminname":$("#adminname").val(),"adminpwd":$("#adminpwd").val()},function(data,status){
 						
 						

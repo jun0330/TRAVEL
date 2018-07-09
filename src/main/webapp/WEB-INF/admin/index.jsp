@@ -55,15 +55,15 @@
 				
 				<li class="dropDown dropDown_hover">
 				
-					<a href="#" class="dropDown_A">${sessionScope.adminAccount}<i class="Hui-iconfont">&#xe6d5;</i></a>
+					<a href="#" class="dropDown_A">${sessionScope.loginAdmin.adminname}<i class="Hui-iconfont">&#xe6d5;</i></a>
 			
 					<ul class="dropDown-menu menu radius box-shadow">
-						<li><a href="javascript:;" onClick="myselfinfo()">个人信息</a></li>
-						<li><a href="${pageContext.request.contextPath}/AdminController?op=exit">切换账户</a></li>
-						<li><a href="${pageContext.request.contextPath}/AdminController?op=exit">退出</a></li>
-				</ul>
+						<!-- <li><a href="javascript:;" onClick="myselfinfo()">个人信息</a></li> -->
+						<li><a href="${pageContext.request.contextPath}/loginBack.jsp">切换账户</a></li>
+						<li><a href="${pageContext.request.contextPath}/loginBack.jsp">退出</a></li>
+					</ul>
 			
-			</li>	
+				</li>	
 		
 			
 			
@@ -212,7 +212,7 @@ $(function(){
 	});*/
 });
 /*个人信息*/
-function myselfinfo(){
+/* function myselfinfo(){
 	layer.open({
 		type: 1,
 		area: ['400px','300px'],
@@ -220,11 +220,11 @@ function myselfinfo(){
 		maxmin: true,
 		shade:0.4,
 		title: '查看信息',
-		content: '<div style="font-size:20px"><div>ID：${sessionScope.Admin.ADMINID}</div><br><div style="margin-top:-30px">账户：${sessionScope.adminAccount}</div><br><div style="margin-top:-30px">密码：${sessionScope.Admin.ADMINPWD}</div><br><div style="margin-top:-30px">昵称：${sessionScope.Admin.ADMINNICKNAME}</div><br><div style="margin-top:-30px">个性签名：</div><br><div style="margin-top:-30px">喜欢的就是你。。。</div></div>' 
+		content: '<div style="font-size:20px"><div>ID：${sessionScope.Admin.ADMINID}</div><br><div style="margin-top:-30px">账户：${sessionScope.loginAdmin.adminname}</div><br><div style="margin-top:-30px">密码：${sessionScope.loginAdmin.adminpwd}</div><br><div style="margin-top:-30px">昵称：${sessionScope.loginAdmin.ADMINNICKNAME}</div><br><div style="margin-top:-30px">个性签名：</div><br><div style="margin-top:-30px">喜欢的就是你。。。</div></div>' 
 		
 			     
 	});
-}
+} */
 
 /*资讯-添加*/
 function article_add(title,url){

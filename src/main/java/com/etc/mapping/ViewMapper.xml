@@ -6,7 +6,6 @@
     <result column="scenicPic" jdbcType="VARCHAR" property="scenicpic" />
     <result column="scenicName" jdbcType="VARCHAR" property="scenicname" />
     <result column="viewAddress" jdbcType="VARCHAR" property="viewaddress" />
-    <result column="viewJobTime" jdbcType="TIMESTAMP" property="viewjobtime" />
     <result column="scenicPrice" jdbcType="DOUBLE" property="scenicprice" />
     <result column="viewIntro" jdbcType="VARCHAR" property="viewintro" />
     <result column="viewPic1" jdbcType="VARCHAR" property="viewpic1" />
@@ -15,18 +14,20 @@
     <result column="viewPic4" jdbcType="VARCHAR" property="viewpic4" />
     <result column="viewPic5" jdbcType="VARCHAR" property="viewpic5" />
     <result column="viewPic6" jdbcType="VARCHAR" property="viewpic6" />
-    <result column="viewPic7" jdbcType="VARCHAR" property="viewpic7" />
     <result column="scenicId" jdbcType="INTEGER" property="scenicid" />
-    <result column="mapPoint1" jdbcType="VARCHAR" property="mappoint1" />
-     <result column="mapPoint2" jdbcType="VARCHAR" property="mappoint2" />
-    <result column="point1" jdbcType="VARCHAR" property="point1" />
-       <result column="point2" jdbcType="VARCHAR" property="point2" />
+    <result column="viewPic7" jdbcType="VARCHAR" property="viewpic7" />
+    <result column="viewJobTime" jdbcType="VARCHAR" property="viewjobtime" />
     <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="mapPoint1" jdbcType="VARCHAR" property="mappoint1" />
+    <result column="mapPoint2" jdbcType="VARCHAR" property="mappoint2" />
+    <result column="point2" jdbcType="VARCHAR" property="point2" />
+    <result column="point1" jdbcType="VARCHAR" property="point1" />
   </resultMap>
   
   <sql id="Base_Column_List">
-    viewId, scenicPic, scenicName, viewAddress, viewJobTime, scenicPrice, viewIntro, viewPic1, 
-    viewPic2, viewPic3, viewPic4, viewPic5, viewPic6,viewPic7, scenicId,mapPoint1,mapPoint2,point1,point2,title
+    viewId, scenicPic, scenicName, viewAddress, scenicPrice, viewIntro, viewPic1, viewPic2, 
+    viewPic3, viewPic4, viewPic5, viewPic6, scenicId, viewPic7, viewJobTime, title, mapPoint1, 
+    mapPoint2, point2, point1
   </sql>
   
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
@@ -55,15 +56,19 @@
   
   <insert id="insert" parameterType="com.etc.entity.View">
     insert into view (viewId, scenicPic, scenicName, 
-      viewAddress, viewJobTime, scenicPrice, 
-      viewIntro, viewPic1, viewPic2, 
-      viewPic3, viewPic4, viewPic5, 
-      scenicId)
+      viewAddress, scenicPrice, viewIntro, 
+      viewPic1, viewPic2, viewPic3, 
+      viewPic4, viewPic5, viewPic6, 
+      scenicId, viewPic7, viewJobTime, 
+      title, mapPoint1, mapPoint2, 
+      point2, point1)
     values (#{viewid,jdbcType=INTEGER}, #{scenicpic,jdbcType=VARCHAR}, #{scenicname,jdbcType=VARCHAR}, 
-      #{viewaddress,jdbcType=VARCHAR}, #{viewjobtime,jdbcType=TIMESTAMP}, #{scenicprice,jdbcType=DOUBLE}, 
-      #{viewintro,jdbcType=VARCHAR}, #{viewpic1,jdbcType=VARCHAR}, #{viewpic2,jdbcType=VARCHAR}, 
-      #{viewpic3,jdbcType=VARCHAR}, #{viewpic4,jdbcType=VARCHAR}, #{viewpic5,jdbcType=VARCHAR}, 
-      #{scenicid,jdbcType=INTEGER})
+      #{viewaddress,jdbcType=VARCHAR}, #{scenicprice,jdbcType=DOUBLE}, #{viewintro,jdbcType=VARCHAR}, 
+      #{viewpic1,jdbcType=VARCHAR}, #{viewpic2,jdbcType=VARCHAR}, #{viewpic3,jdbcType=VARCHAR}, 
+      #{viewpic4,jdbcType=VARCHAR}, #{viewpic5,jdbcType=VARCHAR}, #{viewpic6,jdbcType=VARCHAR}, 
+      #{scenicid,jdbcType=INTEGER}, #{viewpic7,jdbcType=VARCHAR}, #{viewjobtime,jdbcType=VARCHAR}, 
+      #{title,jdbcType=VARCHAR}, #{mappoint1,jdbcType=VARCHAR}, #{mappoint2,jdbcType=VARCHAR}, 
+      #{point2,jdbcType=VARCHAR}, #{point1,jdbcType=VARCHAR})
   </insert>
   
   <insert id="insertSelective" parameterType="com.etc.entity.View">
@@ -80,9 +85,6 @@
       </if>
       <if test="viewaddress != null">
         viewAddress,
-      </if>
-      <if test="viewjobtime != null">
-        viewJobTime,
       </if>
       <if test="scenicprice != null">
         scenicPrice,
@@ -105,8 +107,32 @@
       <if test="viewpic5 != null">
         viewPic5,
       </if>
+      <if test="viewpic6 != null">
+        viewPic6,
+      </if>
       <if test="scenicid != null">
         scenicId,
+      </if>
+      <if test="viewpic7 != null">
+        viewPic7,
+      </if>
+      <if test="viewjobtime != null">
+        viewJobTime,
+      </if>
+      <if test="title != null">
+        title,
+      </if>
+      <if test="mappoint1 != null">
+        mapPoint1,
+      </if>
+      <if test="mappoint2 != null">
+        mapPoint2,
+      </if>
+      <if test="point2 != null">
+        point2,
+      </if>
+      <if test="point1 != null">
+        point1,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
@@ -116,14 +142,11 @@
       <if test="scenicpic != null">
         #{scenicpic,jdbcType=VARCHAR},
       </if>
-      <if test="viewname != null">
+      <if test="scenicname != null">
         #{scenicname,jdbcType=VARCHAR},
       </if>
       <if test="viewaddress != null">
         #{viewaddress,jdbcType=VARCHAR},
-      </if>
-      <if test="viewjobtime != null">
-        #{viewjobtime,jdbcType=TIMESTAMP},
       </if>
       <if test="scenicprice != null">
         #{scenicprice,jdbcType=DOUBLE},
@@ -146,8 +169,32 @@
       <if test="viewpic5 != null">
         #{viewpic5,jdbcType=VARCHAR},
       </if>
+      <if test="viewpic6 != null">
+        #{viewpic6,jdbcType=VARCHAR},
+      </if>
       <if test="scenicid != null">
         #{scenicid,jdbcType=INTEGER},
+      </if>
+      <if test="viewpic7 != null">
+        #{viewpic7,jdbcType=VARCHAR},
+      </if>
+      <if test="viewjobtime != null">
+        #{viewjobtime,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null">
+        #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="mappoint1 != null">
+        #{mappoint1,jdbcType=VARCHAR},
+      </if>
+      <if test="mappoint2 != null">
+        #{mappoint2,jdbcType=VARCHAR},
+      </if>
+      <if test="point2 != null">
+        #{point2,jdbcType=VARCHAR},
+      </if>
+      <if test="point1 != null">
+        #{point1,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -162,9 +209,6 @@
       </if>
       <if test="viewaddress != null">
         viewAddress = #{viewaddress,jdbcType=VARCHAR},
-      </if>
-      <if test="viewjobtime != null">
-        viewJobTime = #{viewjobtime,jdbcType=TIMESTAMP},
       </if>
       <if test="scenicprice != null">
         scenicPrice = #{scenicprice,jdbcType=DOUBLE},
@@ -187,8 +231,32 @@
       <if test="viewpic5 != null">
         viewPic5 = #{viewpic5,jdbcType=VARCHAR},
       </if>
+      <if test="viewpic6 != null">
+        viewPic6 = #{viewpic6,jdbcType=VARCHAR},
+      </if>
       <if test="scenicid != null">
         scenicId = #{scenicid,jdbcType=INTEGER},
+      </if>
+      <if test="viewpic7 != null">
+        viewPic7 = #{viewpic7,jdbcType=VARCHAR},
+      </if>
+      <if test="viewjobtime != null">
+        viewJobTime = #{viewjobtime,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null">
+        title = #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="mappoint1 != null">
+        mapPoint1 = #{mappoint1,jdbcType=VARCHAR},
+      </if>
+      <if test="mappoint2 != null">
+        mapPoint2 = #{mappoint2,jdbcType=VARCHAR},
+      </if>
+      <if test="point2 != null">
+        point2 = #{point2,jdbcType=VARCHAR},
+      </if>
+      <if test="point1 != null">
+        point1 = #{point1,jdbcType=VARCHAR},
       </if>
     </set>
     where viewId = #{viewid,jdbcType=INTEGER}
@@ -198,7 +266,6 @@
     set scenicPic = #{scenicpic,jdbcType=VARCHAR},
       scenicName = #{scenicname,jdbcType=VARCHAR},
       viewAddress = #{viewaddress,jdbcType=VARCHAR},
-      viewJobTime = #{viewjobtime,jdbcType=TIMESTAMP},
       scenicPrice = #{scenicprice,jdbcType=DOUBLE},
       viewIntro = #{viewintro,jdbcType=VARCHAR},
       viewPic1 = #{viewpic1,jdbcType=VARCHAR},
@@ -206,7 +273,15 @@
       viewPic3 = #{viewpic3,jdbcType=VARCHAR},
       viewPic4 = #{viewpic4,jdbcType=VARCHAR},
       viewPic5 = #{viewpic5,jdbcType=VARCHAR},
-      scenicId = #{scenicid,jdbcType=INTEGER}
+      viewPic6 = #{viewpic6,jdbcType=VARCHAR},
+      scenicId = #{scenicid,jdbcType=INTEGER},
+      viewPic7 = #{viewpic7,jdbcType=VARCHAR},
+      viewJobTime = #{viewjobtime,jdbcType=VARCHAR},
+      title = #{title,jdbcType=VARCHAR},
+      mapPoint1 = #{mappoint1,jdbcType=VARCHAR},
+      mapPoint2 = #{mappoint2,jdbcType=VARCHAR},
+      point2 = #{point2,jdbcType=VARCHAR},
+      point1 = #{point1,jdbcType=VARCHAR}
     where viewId = #{viewid,jdbcType=INTEGER}
   </update>
 </mapper>

@@ -95,7 +95,7 @@
 	<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.min.js"></script>
 	<script src="https://cdn.bootcss.com/jquery/3.3.0/jquery.min.js"></script>
 	<script type="text/javascript">
-		/*  $(function(){
+		  /* $(function(){
 			$("#regAddmin").click(function (){
 				   $.ajax({
 					type:"post",
@@ -117,7 +117,7 @@
 				
 			}); 
 			
-		});  */
+		}); */  
 		</script>
 </body>
 

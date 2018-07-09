@@ -27,4 +27,10 @@ public class UserControllerB {
 		
 		return "users-list";
 	}
+	
+	@RequestMapping(value="/toAddUser")
+	public String toAddUser() {
+		
+		return "users-add";
+	}
 }

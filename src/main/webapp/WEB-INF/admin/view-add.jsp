@@ -180,7 +180,7 @@
 						placeholder="请设置景点图片链接" id="viewpic7" name="viewpic7">
 				</div>
 				<div class="formControls col-xs-2 cols-sm-2" id="tip"></div>
-			</div>
+			</div> 
 			<!-- 对应编号14 -->
 			<div class="row cl">
 				<label class="form-label col-xs-4 col-sm-2"><span
@@ -209,7 +209,7 @@
 					class="c-red">*</span>地图坐标1:</label>
 				<div class="formControls col-xs-6 col-sm-7">
 					<input type="text" class="input-text" value=""
-						placeholder="请设置房间图片链接" id="mappoint1" name="mappoint1">
+						placeholder="请设置景点坐标1" id="mappoint1" name="mappoint1">
 				</div>
 				<div class="formControls col-xs-2 cols-sm-2" id="tip"></div>
 			</div>

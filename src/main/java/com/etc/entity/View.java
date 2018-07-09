@@ -7,15 +7,13 @@ import java.util.Date;
  *
  */
 public class View {
-    private Integer viewid;
+	private Integer viewid;
 
     private String scenicpic;
 
     private String scenicname;
 
     private String viewaddress;
-
-    private String viewjobtime;
 
     private Double scenicprice;
 
@@ -30,28 +28,82 @@ public class View {
     private String viewpic4;
 
     private String viewpic5;
-    
+
     private String viewpic6;
-    
-    private String viewpic7;
 
     private Integer scenicid;
-    
-    private String title;
-    
-    private String mappoint1;
-    
-    private String mappoint2;
-    
-    private String point1;
-    
-    private String point2;
-    
-    
 
+    private String viewpic7;
+
+    private String viewjobtime;
+
+    private String title;
+
+    private String mappoint1;
+
+    private String mappoint2;
+
+    private String point2;
+
+    private String point1;
+
+    
 	public View() {
 		super();
 		// TODO Auto-generated constructor stub
+	}
+
+	public View(String scenicpic, String scenicname, String viewaddress, Double scenicprice, String viewintro,
+			String viewpic1, String viewpic2, String viewpic3, String viewpic4, String viewpic5, String viewpic6,
+			Integer scenicid, String viewpic7, String viewjobtime, String title, String mappoint1, String mappoint2,
+			String point2, String point1) {
+		super();
+		this.scenicpic = scenicpic;
+		this.scenicname = scenicname;
+		this.viewaddress = viewaddress;
+		this.scenicprice = scenicprice;
+		this.viewintro = viewintro;
+		this.viewpic1 = viewpic1;
+		this.viewpic2 = viewpic2;
+		this.viewpic3 = viewpic3;
+		this.viewpic4 = viewpic4;
+		this.viewpic5 = viewpic5;
+		this.viewpic6 = viewpic6;
+		this.scenicid = scenicid;
+		this.viewpic7 = viewpic7;
+		this.viewjobtime = viewjobtime;
+		this.title = title;
+		this.mappoint1 = mappoint1;
+		this.mappoint2 = mappoint2;
+		this.point2 = point2;
+		this.point1 = point1;
+	}
+
+	public View(Integer viewid, String scenicpic, String scenicname, String viewaddress, Double scenicprice,
+			String viewintro, String viewpic1, String viewpic2, String viewpic3, String viewpic4, String viewpic5,
+			String viewpic6, Integer scenicid, String viewpic7, String viewjobtime, String title, String mappoint1,
+			String mappoint2, String point2, String point1) {
+		super();
+		this.viewid = viewid;
+		this.scenicpic = scenicpic;
+		this.scenicname = scenicname;
+		this.viewaddress = viewaddress;
+		this.scenicprice = scenicprice;
+		this.viewintro = viewintro;
+		this.viewpic1 = viewpic1;
+		this.viewpic2 = viewpic2;
+		this.viewpic3 = viewpic3;
+		this.viewpic4 = viewpic4;
+		this.viewpic5 = viewpic5;
+		this.viewpic6 = viewpic6;
+		this.scenicid = scenicid;
+		this.viewpic7 = viewpic7;
+		this.viewjobtime = viewjobtime;
+		this.title = title;
+		this.mappoint1 = mappoint1;
+		this.mappoint2 = mappoint2;
+		this.point2 = point2;
+		this.point1 = point1;
 	}
 
 	public Integer getViewid() {
@@ -84,14 +136,6 @@ public class View {
 
 	public void setViewaddress(String viewaddress) {
 		this.viewaddress = viewaddress;
-	}
-
-	public String getViewjobtime() {
-		return viewjobtime;
-	}
-
-	public void setViewjobtime(String viewjobtime) {
-		this.viewjobtime = viewjobtime;
 	}
 
 	public Double getScenicprice() {
@@ -158,6 +202,14 @@ public class View {
 		this.viewpic6 = viewpic6;
 	}
 
+	public Integer getScenicid() {
+		return scenicid;
+	}
+
+	public void setScenicid(Integer scenicid) {
+		this.scenicid = scenicid;
+	}
+
 	public String getViewpic7() {
 		return viewpic7;
 	}
@@ -166,12 +218,12 @@ public class View {
 		this.viewpic7 = viewpic7;
 	}
 
-	public Integer getScenicid() {
-		return scenicid;
+	public String getViewjobtime() {
+		return viewjobtime;
 	}
 
-	public void setScenicid(Integer scenicid) {
-		this.scenicid = scenicid;
+	public void setViewjobtime(String viewjobtime) {
+		this.viewjobtime = viewjobtime;
 	}
 
 	public String getTitle() {
@@ -198,14 +250,6 @@ public class View {
 		this.mappoint2 = mappoint2;
 	}
 
-	public String getPoint1() {
-		return point1;
-	}
-
-	public void setPoint1(String point1) {
-		this.point1 = point1;
-	}
-
 	public String getPoint2() {
 		return point2;
 	}
@@ -214,14 +258,22 @@ public class View {
 		this.point2 = point2;
 	}
 
+	public String getPoint1() {
+		return point1;
+	}
+
+	public void setPoint1(String point1) {
+		this.point1 = point1;
+	}
+
 	@Override
 	public String toString() {
 		return "View [viewid=" + viewid + ", scenicpic=" + scenicpic + ", scenicname=" + scenicname + ", viewaddress="
-				+ viewaddress + ", viewjobtime=" + viewjobtime + ", scenicprice=" + scenicprice + ", viewintro="
-				+ viewintro + ", viewpic1=" + viewpic1 + ", viewpic2=" + viewpic2 + ", viewpic3=" + viewpic3
-				+ ", viewpic4=" + viewpic4 + ", viewpic5=" + viewpic5 + ", viewpic6=" + viewpic6 + ", viewpic7="
-				+ viewpic7 + ", scenicid=" + scenicid + ", title=" + title + ", mappoint1=" + mappoint1 + ", mappoint2="
-				+ mappoint2 + ", point1=" + point1 + ", point2=" + point2 + "]";
+				+ viewaddress + ", scenicprice=" + scenicprice + ", viewintro=" + viewintro + ", viewpic1=" + viewpic1
+				+ ", viewpic2=" + viewpic2 + ", viewpic3=" + viewpic3 + ", viewpic4=" + viewpic4 + ", viewpic5="
+				+ viewpic5 + ", viewpic6=" + viewpic6 + ", scenicid=" + scenicid + ", viewpic7=" + viewpic7
+				+ ", viewjobtime=" + viewjobtime + ", title=" + title + ", mappoint1=" + mappoint1 + ", mappoint2="
+				+ mappoint2 + ", point2=" + point2 + ", point1=" + point1 + "]";
 	}
     
     

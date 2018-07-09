@@ -47,7 +47,7 @@
 				<label class="form-label col-xs-4 col-sm-2"><span
 					class="c-red">*</span>景点编号:</label>
 				<div class="formControls col-xs-6 col-sm-7">
-					<input type="text" class="input-text" value="${param.id}"
+					<input type="text" class="input-text" value="${param.vid}"
 						 id="viewid" name="viewid">
 				</div>
 				<div class="formControls col-xs-2 cols-sm-2" id="tip"></div>
@@ -58,7 +58,7 @@
 				<label class="form-label col-xs-4 col-sm-2"><span
 					class="c-red">*</span>首页图片:</label>
 				<div class="formControls col-xs-6 col-sm-7">
-					<input type="text" class="input-text" value="${param.img}"
+					<input type="text" class="input-text" value="${param.vimg}"
 						 id="scenicpic" name="scenicpic">
 				</div>
 				<div class="formControls col-xs-2 cols-sm-2" id="tip"></div>
@@ -68,7 +68,7 @@
 				<label class="form-label col-xs-4 col-sm-2"><span
 					class="c-red">*</span>景点名称:</label>
 				<div class="formControls col-xs-6 col-sm-7">
-					<input type="text" class="input-text" value="${param.name}"
+					<input type="text" class="input-text" value="${param.vname}"
 						 id="scenicname" name="scenicname">
 				</div>
 
@@ -91,7 +91,7 @@
 					class="c-red">*</span>营业时间:</label>
 				<div class="formControls col-xs-6 col-sm-7">
 					<!-- <textarea rows="15px" cols="70px" placeholder="请设置图片链接" id="hotelinfoid" name="hotelinfoid" style="resize:none" ></textarea> -->
-					<input type="text" class="input-text" value=""
+					<input type="text" class="input-text" value="${param.adress}"
 						placeholder="请设置营业时间" id="viewjobtime" name="viewjobtime">
 				</div>
 				<div class="formControls col-xs-2 cols-sm-2" id="tip"></div>
@@ -101,7 +101,7 @@
 				<label class="form-label col-xs-4 col-sm-2"><span
 					class="c-red">*</span>门票价格:</label>
 				<div class="formControls col-xs-6 col-sm-7">
-					<input type="text" class="input-text" value=""
+					<input type="text" class="input-text" value="${param.adress}"
 						placeholder="请设置门票价格" id="scenicprice" name="scenicprice">
 				</div>
 
@@ -123,7 +123,7 @@
 				<label class="form-label col-xs-4 col-sm-2"><span
 					class="c-red">*</span>景点图片1:</label>
 				<div class="formControls col-xs-6 col-sm-7">
-					<input type="text" class="input-text" value=""
+					<input type="text" class="input-text" value="${param.adress}"
 						placeholder="请设置景点图片链接" id="viewpic1" name="viewpic1">
 				</div>
 				<div class="formControls col-xs-2 cols-sm-2" id="tip"></div>
@@ -133,7 +133,7 @@
 				<label class="form-label col-xs-4 col-sm-2"><span
 					class="c-red">*</span>景点图片2:</label>
 				<div class="formControls col-xs-6 col-sm-7">
-					<input type="text" class="input-text" value=""
+					<input type="text" class="input-text" value="${param.adress}"
 						placeholder="请设置景点图片链接" id="viewpic2" name="viewpic2">
 				</div>
 
@@ -144,7 +144,7 @@
 				<label class="form-label col-xs-4 col-sm-2"><span
 					class="c-red">*</span>景点图片3:</label>
 				<div class="formControls col-xs-6 col-sm-7">
-					<input type="text" class="input-text" value=""
+					<input type="text" class="input-text" value="${param.adress}"
 						placeholder="请设置景点图片链接" id="viewpic3" name="viewpic3">
 				</div>
 
@@ -155,7 +155,7 @@
 				<label class="form-label col-xs-4 col-sm-2"><span
 					class="c-red">*</span>景点图片4:</label>
 				<div class="formControls col-xs-6 col-sm-7">
-					<input type="text" class="input-text" value=""
+					<input type="text" class="input-text" value="${param.adress}"
 						placeholder="请设置景点图片链接" id="viewpic4" name="viewpic4">
 				</div>
 				<div class="formControls col-xs-2 cols-sm-2" id="tip"></div>
@@ -165,7 +165,7 @@
 				<label class="form-label col-xs-4 col-sm-2"><span
 					class="c-red">*</span>景点图片5:</label>
 				<div class="formControls col-xs-6 col-sm-7">
-					<input type="text" class="input-text" value=""
+					<input type="text" class="input-text" value="${param.adress}"
 						placeholder="请设置景点房间类型" id="viewpic5" name="viewpic5">
 				</div>
 
@@ -176,7 +176,7 @@
 				<label class="form-label col-xs-4 col-sm-2"><span
 					class="c-red">*</span>景点图片6:</label>
 				<div class="formControls col-xs-6 col-sm-7">
-					<input type="text" class="input-text" value=""
+					<input type="text" class="input-text" value="${param.adress}"
 						placeholder="请设置景点房间价格" id="viewpic6" name="viewpic6">
 				</div>
 
@@ -187,7 +187,7 @@
 				<label class="form-label col-xs-4 col-sm-2"><span
 					class="c-red">*</span>景点图片7:</label>
 				<div class="formControls col-xs-6 col-sm-7">
-					<input type="text" class="input-text" value=""
+					<input type="text" class="input-text" value="${param.adress}"
 						placeholder="请设置景点图片链接" id="viewpic7" name="viewpic7">
 				</div>
 				<div class="formControls col-xs-2 cols-sm-2" id="tip"></div>
@@ -197,7 +197,7 @@
 				<label class="form-label col-xs-4 col-sm-2"><span
 					class="c-red">*</span>对应编号:</label>
 				<div class="formControls col-xs-6 col-sm-7">
-					<input type="text" class="input-text" value=""
+					<input type="text" class="input-text" value="${param.adress}"
 						placeholder="请设置景点首页" id="scenicid" name="scenicid">
 				</div>
 
@@ -208,7 +208,7 @@
 				<label class="form-label col-xs-4 col-sm-2"><span
 					class="c-red">*</span>景观名称:</label>
 				<div class="formControls col-xs-6 col-sm-7">
-					<input type="text" class="input-text" value=""
+					<input type="text" class="input-text" value="${param.adress}"
 						placeholder="请设置景点名称" id="title" name="title">
 				</div>
 
@@ -219,7 +219,7 @@
 				<label class="form-label col-xs-4 col-sm-2"><span
 					class="c-red">*</span>地图坐标1:</label>
 				<div class="formControls col-xs-6 col-sm-7">
-					<input type="text" class="input-text" value=""
+					<input type="text" class="input-text" value="${param.adress}"
 						placeholder="请设置房间图片链接" id="mappoint1" name="mappoint1">
 				</div>
 				<div class="formControls col-xs-2 cols-sm-2" id="tip"></div>
@@ -229,7 +229,7 @@
 				<label class="form-label col-xs-4 col-sm-2"><span
 					class="c-red">*</span>地图坐标2:</label>
 				<div class="formControls col-xs-6 col-sm-7">
-					<input type="text" class="input-text" value=""
+					<input type="text" class="input-text" value="${param.adress}"
 						placeholder="请设置景点坐标2" id="mappoint2" name="mappoint2">
 				</div>
 
@@ -240,7 +240,7 @@
 				<label class="form-label col-xs-4 col-sm-2"><span
 					class="c-red">*</span>坐标2:</label>
 				<div class="formControls col-xs-6 col-sm-7">
-					<input type="text" class="input-text" value=""
+					<input type="text" class="input-text" value="${param.adress}"
 						placeholder="请设置景点坐标1" id="point2" name="point2">
 				</div>
 				<div class="formControls col-xs-2 cols-sm-2" id="tip"></div>
@@ -250,7 +250,7 @@
 				<label class="form-label col-xs-4 col-sm-2"><span
 					class="c-red">*</span>坐标1:</label>
 				<div class="formControls col-xs-6 col-sm-7">
-					<input type="text" class="input-text" value=""
+					<input type="text" class="input-text" value="${param.adress}"
 						placeholder="待定~~~" id="point1" name="point1">
 				</div>
 
